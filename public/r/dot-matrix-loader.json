@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dot-matrix-loader",
+  "title": "Dot Matrix Loader",
+  "author": "Parable",
+  "description": "A matrix of dots pulsing in a diagonal wave. Accessible busy status; holds at mid-opacity under reduced-motion. Doubles as a global loading state.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/parable/ui/dot-matrix-loader.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nfunction useInjectedKeyframes(id: string, css: string) {\n  React.useEffect(() => {\n    if (typeof document === \"undefined\" || document.getElementById(id)) return;\n    const el = document.createElement(\"style\");\n    el.id = id;\n    el.textContent = css;\n    document.head.appendChild(el);\n  }, [id, css]);\n}\n\nexport interface DotMatrixLoaderProps\n  extends React.HTMLAttributes<HTMLDivElement> {\n  /** Grid columns. */\n  cols?: number;\n  /** Grid rows. */\n  rows?: number;\n  /** Dot diameter (px). */\n  dotSize?: number;\n  /** Gap between dots (px). */\n  gap?: number;\n  /** Dot colour. */\n  color?: string;\n  /** Seconds for one wave sweep. */\n  speed?: number;\n  /** Accessible status label. */\n  label?: string;\n}\n\n/**\n * DotMatrixLoader — a matrix of dots that pulse in a diagonal wave. Pure CSS\n * animation driven by per-dot delay; renders as an accessible busy status.\n * Under prefers-reduced-motion the wave stops and dots hold at mid-opacity.\n *\n * @parable/dot-matrix-loader\n */\nexport function DotMatrixLoader({\n  cols = 7,\n  rows = 7,\n  dotSize = 6,\n  gap = 6,\n  color = \"currentColor\",\n  speed = 1.6,\n  label = \"Loading\",\n  className,\n  style,\n  ...props\n}: DotMatrixLoaderProps) {\n  useInjectedKeyframes(\n    \"pb-dot-matrix-kf\",\n    \"@keyframes pb-dot-pulse{0%,100%{opacity:.18;transform:scale(.72)}50%{opacity:1;transform:scale(1)}}@media (prefers-reduced-motion:reduce){.pb-dot{animation:none!important;opacity:.5!important}}\"\n  );\n\n  const dots = React.useMemo(() => {\n    const arr: { delay: number }[] = [];\n    for (let r = 0; r < rows; r++) {\n      for (let c = 0; c < cols; c++) {\n        const diag = (r + c) / (rows + cols);\n        arr.push({ delay: diag * speed });\n      }\n    }\n    return arr;\n  }, [rows, cols, speed]);\n\n  return (\n    <div\n      role=\"status\"\n      aria-label={label}\n      aria-live=\"polite\"\n      className={cn(\"inline-grid\", className)}\n      style={{\n        gridTemplateColumns: `repeat(${cols}, ${dotSize}px)`,\n        gap: `${gap}px`,\n        color,\n        ...style,\n      }}\n      {...props}\n    >\n      {dots.map((d, i) => (\n        <span\n          key={i}\n          className=\"pb-dot rounded-full\"\n          style={{\n            width: dotSize,\n            height: dotSize,\n            background: \"currentColor\",\n            animation: `pb-dot-pulse ${speed}s ease-in-out ${d.delay}s infinite`,\n          }}\n        />\n      ))}\n      <span className=\"sr-only\">{label}…</span>\n    </div>\n  );\n}\n\nexport default DotMatrixLoader;\n",
+      "type": "registry:ui",
+      "target": "components/parable/dot-matrix-loader.tsx"
+    }
+  ],
+  "meta": {
+    "family": "component",
+    "category": "loader",
+    "tier": "free"
+  },
+  "type": "registry:ui"
+}

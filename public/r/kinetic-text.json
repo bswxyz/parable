@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "kinetic-text",
+  "title": "Kinetic Text",
+  "author": "Parable",
+  "description": "Reveals text word- or char-by-char with a spring rise-and-mask as it scrolls into view. Static, fully legible fallback under reduced-motion.",
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/parable/ui/kinetic-text.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport { motion, useInView, type Variants } from \"motion/react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface KineticTextProps\n  extends React.HTMLAttributes<HTMLSpanElement> {\n  /** The text to reveal, split per word. */\n  text: string;\n  /** Seconds between each word. */\n  stagger?: number;\n  /** Split unit. */\n  by?: \"word\" | \"char\";\n  /** Only animate once. */\n  once?: boolean;\n  /** Element to render as. */\n  as?: React.ElementType;\n}\n\nconst container = (stagger: number): Variants => ({\n  hidden: {},\n  show: { transition: { staggerChildren: stagger } },\n});\n\nconst child: Variants = {\n  hidden: { y: \"110%\", opacity: 0 },\n  show: {\n    y: \"0%\",\n    opacity: 1,\n    transition: { type: \"spring\", stiffness: 260, damping: 26 },\n  },\n};\n\n/**\n * KineticText — reveals text word-by-word (or char-by-char) with a spring\n * rise-and-mask as it scrolls into view. Falls back to static, fully-visible\n * text under prefers-reduced-motion.\n *\n * @parable/kinetic-text\n */\nexport function KineticText({\n  text,\n  stagger = 0.06,\n  by = \"word\",\n  once = true,\n  as: Tag = \"span\",\n  className,\n  ...props\n}: KineticTextProps) {\n  const ref = React.useRef<HTMLSpanElement>(null);\n  const inView = useInView(ref, { once, amount: 0.4 });\n  const [reduce, setReduce] = React.useState(false);\n\n  React.useEffect(() => {\n    setReduce(\n      window.matchMedia(\"(prefers-reduced-motion: reduce)\").matches\n    );\n  }, []);\n\n  const units =\n    by === \"word\" ? text.split(/(\\s+)/) : Array.from(text);\n\n  if (reduce) {\n    return (\n      <Tag className={className} {...props}>\n        {text}\n      </Tag>\n    );\n  }\n\n  return (\n    <Tag\n      ref={ref}\n      className={cn(\"inline-block\", className)}\n      aria-label={text}\n      {...props}\n    >\n      <motion.span\n        aria-hidden\n        variants={container(stagger)}\n        initial=\"hidden\"\n        animate={inView ? \"show\" : \"hidden\"}\n        className=\"inline-block\"\n      >\n        {units.map((u, i) =>\n          /^\\s+$/.test(u) ? (\n            <span key={i}>{u}</span>\n          ) : (\n            <span\n              key={i}\n              className=\"inline-block overflow-hidden align-bottom\"\n            >\n              <motion.span variants={child} className=\"inline-block\">\n                {u}\n              </motion.span>\n            </span>\n          )\n        )}\n      </motion.span>\n    </Tag>\n  );\n}\n\nexport default KineticText;\n",
+      "type": "registry:ui",
+      "target": "components/parable/kinetic-text.tsx"
+    }
+  ],
+  "meta": {
+    "family": "component",
+    "category": "text",
+    "tier": "free"
+  },
+  "type": "registry:ui"
+}

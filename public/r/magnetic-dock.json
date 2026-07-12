@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "magnetic-dock",
+  "title": "Magnetic Dock",
+  "author": "Parable",
+  "description": "A macOS-style dock whose items magnify with cursor proximity, spring-smoothed. Keyboard focusable; magnify disabled under reduced-motion.",
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/parable/ui/magnetic-dock.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport {\n  motion,\n  useMotionValue,\n  useSpring,\n  useTransform,\n  type MotionValue,\n} from \"motion/react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface DockItem {\n  icon: React.ReactNode;\n  label: string;\n  onClick?: () => void;\n  href?: string;\n}\n\nexport interface MagneticDockProps\n  extends React.HTMLAttributes<HTMLDivElement> {\n  items: DockItem[];\n  /** Resting icon size (px). */\n  size?: number;\n  /** Peak magnified size (px). */\n  magnification?: number;\n  /** Cursor influence radius (px). */\n  distance?: number;\n}\n\n/**\n * MagneticDock — a macOS-style dock whose items magnify based on cursor\n * proximity, spring-smoothed. Keyboard focusable; under prefers-reduced-motion\n * the magnify is disabled but hover/focus styling remains.\n *\n * @parable/magnetic-dock\n */\nexport function MagneticDock({\n  items,\n  size = 44,\n  magnification = 78,\n  distance = 140,\n  className,\n  ...props\n}: MagneticDockProps) {\n  const mouseX = useMotionValue(Infinity);\n  return (\n    <div\n      onMouseMove={(e) => mouseX.set(e.clientX)}\n      onMouseLeave={() => mouseX.set(Infinity)}\n      className={cn(\n        \"mx-auto flex h-[64px] items-end gap-3 rounded-2xl border border-white/10 bg-white/5 px-3 pb-2 backdrop-blur-md\",\n        className\n      )}\n      role=\"toolbar\"\n      aria-label=\"Dock\"\n      {...props}\n    >\n      {items.map((item, i) => (\n        <DockIcon\n          key={i}\n          mouseX={mouseX}\n          size={size}\n          magnification={magnification}\n          distance={distance}\n          item={item}\n        />\n      ))}\n    </div>\n  );\n}\n\nfunction DockIcon({\n  mouseX,\n  size,\n  magnification,\n  distance,\n  item,\n}: {\n  mouseX: MotionValue<number>;\n  size: number;\n  magnification: number;\n  distance: number;\n  item: DockItem;\n}) {\n  const ref = React.useRef<HTMLButtonElement>(null);\n  const distanceCalc = useTransform(mouseX, (val) => {\n    const bounds = ref.current?.getBoundingClientRect() ?? {\n      x: 0,\n      width: 0,\n    };\n    return val - bounds.x - bounds.width / 2;\n  });\n  const sizeTransform = useTransform(\n    distanceCalc,\n    [-distance, 0, distance],\n    [size, magnification, size]\n  );\n  const width = useSpring(sizeTransform, {\n    mass: 0.1,\n    stiffness: 170,\n    damping: 14,\n  });\n\n  const content = (\n    <motion.button\n      ref={ref}\n      style={{ width, height: width }}\n      onClick={item.onClick}\n      aria-label={item.label}\n      title={item.label}\n      className=\"flex aspect-square items-center justify-center rounded-xl bg-neutral-800 text-white shadow-sm outline-none ring-white/60 transition-colors hover:bg-neutral-700 focus-visible:ring-2\"\n    >\n      <span className=\"grid place-items-center [&_svg]:size-1/2\">\n        {item.icon}\n      </span>\n    </motion.button>\n  );\n\n  return content;\n}\n\nexport default MagneticDock;\n",
+      "type": "registry:ui",
+      "target": "components/parable/magnetic-dock.tsx"
+    }
+  ],
+  "meta": {
+    "family": "component",
+    "category": "interactive",
+    "tier": "free"
+  },
+  "type": "registry:ui"
+}

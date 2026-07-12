@@ -8,7 +8,7 @@
       "type": "registry:ui",
       "title": "Shimmer Button",
       "author": "Parable",
-      "description": "A pill button with a conic-gradient highlight that travels around the border. Self-contained, themeable via props, and disables motion under prefers-reduced-motion.",
+      "description": "A pill button with a conic-gradient highlight that travels around the border. Self-contained, themeable via props, disables motion under prefers-reduced-motion.",
       "registryDependencies": ["button"],
       "dependencies": [],
       "files": [
@@ -18,11 +18,109 @@
           "target": "components/parable/shimmer-button.tsx"
         }
       ],
-      "meta": {
-        "family": "component",
-        "category": "interactive",
-        "tier": "free"
-      }
+      "meta": { "family": "component", "category": "interactive", "tier": "free" }
+    },
+    {
+      "name": "velocity-marquee",
+      "type": "registry:ui",
+      "title": "Velocity Marquee",
+      "author": "Parable",
+      "description": "An infinite marquee that accelerates with the page's scroll velocity and eases back to a base speed. Seamless two-track loop, rAF-driven, frozen under reduced-motion.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/velocity-marquee.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/velocity-marquee.tsx"
+        }
+      ],
+      "meta": { "family": "component", "category": "text", "tier": "free" }
+    },
+    {
+      "name": "kinetic-text",
+      "type": "registry:ui",
+      "title": "Kinetic Text",
+      "author": "Parable",
+      "description": "Reveals text word- or char-by-char with a spring rise-and-mask as it scrolls into view. Static, fully legible fallback under reduced-motion.",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "files": [
+        {
+          "path": "registry/parable/ui/kinetic-text.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/kinetic-text.tsx"
+        }
+      ],
+      "meta": { "family": "component", "category": "text", "tier": "free" }
+    },
+    {
+      "name": "magnetic-dock",
+      "type": "registry:ui",
+      "title": "Magnetic Dock",
+      "author": "Parable",
+      "description": "A macOS-style dock whose items magnify with cursor proximity, spring-smoothed. Keyboard focusable; magnify disabled under reduced-motion.",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "files": [
+        {
+          "path": "registry/parable/ui/magnetic-dock.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/magnetic-dock.tsx"
+        }
+      ],
+      "meta": { "family": "component", "category": "interactive", "tier": "free" }
+    },
+    {
+      "name": "aurora-background",
+      "type": "registry:ui",
+      "title": "Aurora Background",
+      "author": "Parable",
+      "description": "A GPU-cheap animated aurora of drifting radial-gradient bands with optional grain. Fills its container behind content; freezes under reduced-motion.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/aurora-background.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/aurora-background.tsx"
+        }
+      ],
+      "meta": { "family": "component", "category": "hero", "tier": "free" }
+    },
+    {
+      "name": "dot-matrix-loader",
+      "type": "registry:ui",
+      "title": "Dot Matrix Loader",
+      "author": "Parable",
+      "description": "A matrix of dots pulsing in a diagonal wave. Accessible busy status; holds at mid-opacity under reduced-motion. Doubles as a global loading state.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/dot-matrix-loader.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/dot-matrix-loader.tsx"
+        }
+      ],
+      "meta": { "family": "component", "category": "loader", "tier": "free" }
+    },
+    {
+      "name": "magnet-lines",
+      "type": "registry:ui",
+      "title": "Magnet Lines",
+      "author": "Parable",
+      "description": "A grid of bars that rotate to point at the cursor like iron filings around a magnet. Pointer-driven, no rAF loop; holds base angle under reduced-motion.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/magnet-lines.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/magnet-lines.tsx"
+        }
+      ],
+      "meta": { "family": "component", "category": "effect", "tier": "free" }
     }
   ]
 }

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "velocity-marquee",
+  "title": "Velocity Marquee",
+  "author": "Parable",
+  "description": "An infinite marquee that accelerates with the page's scroll velocity and eases back to a base speed. Seamless two-track loop, rAF-driven, frozen under reduced-motion.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/parable/ui/velocity-marquee.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface VelocityMarqueeProps\n  extends React.HTMLAttributes<HTMLDivElement> {\n  /** Items to scroll. Strings or nodes. */\n  items: React.ReactNode[];\n  /** Base pixels/second. */\n  baseSpeed?: number;\n  /** Scroll direction. */\n  direction?: \"left\" | \"right\";\n  /** Extra px/sec added at peak scroll velocity. */\n  scrollBoost?: number;\n  /** Gap between items, any CSS length. */\n  gap?: string;\n}\n\n/**\n * VelocityMarquee — an infinite marquee that speeds up with the page's scroll\n * velocity and eases back to its base speed. rAF-driven, seamless (two tracks),\n * and frozen under prefers-reduced-motion.\n *\n * @parable/velocity-marquee\n */\nexport function VelocityMarquee({\n  items,\n  baseSpeed = 60,\n  direction = \"left\",\n  scrollBoost = 340,\n  gap = \"3rem\",\n  className,\n  ...props\n}: VelocityMarqueeProps) {\n  const trackRef = React.useRef<HTMLDivElement>(null);\n  const offset = React.useRef(0);\n  const boost = React.useRef(0);\n  const lastScroll = React.useRef(0);\n  const lastT = React.useRef(0);\n  const width = React.useRef(0);\n\n  React.useEffect(() => {\n    const track = trackRef.current;\n    if (!track) return;\n    const reduce = window.matchMedia(\n      \"(prefers-reduced-motion: reduce)\"\n    ).matches;\n    const measure = () => (width.current = track.scrollWidth / 2);\n    measure();\n    const ro = new ResizeObserver(measure);\n    ro.observe(track);\n\n    const onScroll = () => {\n      const y = window.scrollY;\n      boost.current = Math.min(1, Math.abs(y - lastScroll.current) / 40);\n      lastScroll.current = y;\n    };\n    window.addEventListener(\"scroll\", onScroll, { passive: true });\n\n    let raf = 0;\n    const dir = direction === \"left\" ? -1 : 1;\n    const tick = (t: number) => {\n      const dt = lastT.current ? (t - lastT.current) / 1000 : 0;\n      lastT.current = t;\n      const speed = baseSpeed + boost.current * scrollBoost;\n      boost.current *= 0.9; // decay back to base\n      if (!reduce) offset.current += dir * speed * dt;\n      const w = width.current || 1;\n      offset.current = ((offset.current % w) + w) % w;\n      track.style.transform = `translate3d(${\n        dir < 0 ? -offset.current : offset.current - w\n      }px,0,0)`;\n      raf = requestAnimationFrame(tick);\n    };\n    raf = requestAnimationFrame(tick);\n    return () => {\n      cancelAnimationFrame(raf);\n      ro.disconnect();\n      window.removeEventListener(\"scroll\", onScroll);\n    };\n  }, [baseSpeed, direction, scrollBoost]);\n\n  const row = (key: string) =>\n    items.map((it, i) => (\n      <span\n        key={`${key}-${i}`}\n        className=\"shrink-0 whitespace-nowrap\"\n        style={{ marginInlineEnd: gap }}\n      >\n        {it}\n      </span>\n    ));\n\n  return (\n    <div\n      className={cn(\"relative w-full overflow-hidden\", className)}\n      aria-label=\"Scrolling marquee\"\n      {...props}\n    >\n      <div ref={trackRef} className=\"flex w-max flex-nowrap will-change-transform\">\n        {row(\"a\")}\n        {row(\"b\")}\n      </div>\n    </div>\n  );\n}\n\nexport default VelocityMarquee;\n",
+      "type": "registry:ui",
+      "target": "components/parable/velocity-marquee.tsx"
+    }
+  ],
+  "meta": {
+    "family": "component",
+    "category": "text",
+    "tier": "free"
+  },
+  "type": "registry:ui"
+}

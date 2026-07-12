@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "magnet-lines",
+  "title": "Magnet Lines",
+  "author": "Parable",
+  "description": "A grid of bars that rotate to point at the cursor like iron filings around a magnet. Pointer-driven, no rAF loop; holds base angle under reduced-motion.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/parable/ui/magnet-lines.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface MagnetLinesProps\n  extends React.HTMLAttributes<HTMLDivElement> {\n  rows?: number;\n  columns?: number;\n  /** Line container size, any CSS length. */\n  lineWidth?: string;\n  lineHeight?: string;\n  color?: string;\n  /** Base (resting) rotation in degrees. */\n  baseAngle?: number;\n}\n\n/**\n * MagnetLines — a grid of little bars that all rotate to point at the cursor\n * (or touch), like iron filings around a magnet. Pointer-driven with no rAF\n * loop; under prefers-reduced-motion the bars hold their base angle.\n *\n * @parable/magnet-lines\n */\nexport function MagnetLines({\n  rows = 9,\n  columns = 9,\n  lineWidth = \"0.5vmin\",\n  lineHeight = \"4vmin\",\n  color = \"#8b5cf6\",\n  baseAngle = -10,\n  className,\n  style,\n  ...props\n}: MagnetLinesProps) {\n  const ref = React.useRef<HTMLDivElement>(null);\n\n  React.useEffect(() => {\n    const root = ref.current;\n    if (!root) return;\n    if (window.matchMedia(\"(prefers-reduced-motion: reduce)\").matches) return;\n    const spans = Array.from(\n      root.querySelectorAll<HTMLSpanElement>(\"span\")\n    );\n    const onMove = (x: number, y: number) => {\n      spans.forEach((s) => {\n        const r = s.getBoundingClientRect();\n        const cx = r.x + r.width / 2;\n        const cy = r.y + r.height / 2;\n        const b = Math.atan2(y - cy, x - cx);\n        s.style.setProperty(\"--r\", `${(b * 180) / Math.PI}deg`);\n      });\n    };\n    const mm = (e: MouseEvent) => onMove(e.clientX, e.clientY);\n    const tm = (e: TouchEvent) =>\n      e.touches[0] && onMove(e.touches[0].clientX, e.touches[0].clientY);\n    window.addEventListener(\"mousemove\", mm, { passive: true });\n    window.addEventListener(\"touchmove\", tm, { passive: true });\n    return () => {\n      window.removeEventListener(\"mousemove\", mm);\n      window.removeEventListener(\"touchmove\", tm);\n    };\n  }, []);\n\n  const total = rows * columns;\n  return (\n    <div\n      ref={ref}\n      aria-hidden\n      className={cn(\"grid place-items-center\", className)}\n      style={{\n        gridTemplateColumns: `repeat(${columns}, 1fr)`,\n        gridTemplateRows: `repeat(${rows}, 1fr)`,\n        ...style,\n      }}\n      {...props}\n    >\n      {Array.from({ length: total }).map((_, i) => (\n        <span\n          key={i}\n          className=\"origin-center transition-transform duration-300 ease-out [transform:rotate(var(--r,0deg))] motion-reduce:transition-none\"\n          style={{\n            // @ts-expect-error custom prop\n            \"--r\": `${baseAngle}deg`,\n            display: \"block\",\n            width: lineWidth,\n            height: lineHeight,\n            background: color,\n            borderRadius: \"9999px\",\n          }}\n        />\n      ))}\n    </div>\n  );\n}\n\nexport default MagnetLines;\n",
+      "type": "registry:ui",
+      "target": "components/parable/magnet-lines.tsx"
+    }
+  ],
+  "meta": {
+    "family": "component",
+    "category": "effect",
+    "tier": "free"
+  },
+  "type": "registry:ui"
+}

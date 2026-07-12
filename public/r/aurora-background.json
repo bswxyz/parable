@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "aurora-background",
+  "title": "Aurora Background",
+  "author": "Parable",
+  "description": "A GPU-cheap animated aurora of drifting radial-gradient bands with optional grain. Fills its container behind content; freezes under reduced-motion.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/parable/ui/aurora-background.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nfunction useInjectedKeyframes(id: string, css: string) {\n  React.useEffect(() => {\n    if (typeof document === \"undefined\" || document.getElementById(id)) return;\n    const el = document.createElement(\"style\");\n    el.id = id;\n    el.textContent = css;\n    document.head.appendChild(el);\n  }, [id, css]);\n}\n\nexport interface AuroraBackgroundProps\n  extends React.HTMLAttributes<HTMLDivElement> {\n  /** Two or more colours the aurora blends between. */\n  colors?: string[];\n  /** Base backdrop colour. */\n  background?: string;\n  /** Animation seconds for one cycle. */\n  speed?: number;\n  /** Blur radius of the aurora bands. */\n  blur?: string;\n  /** Show a subtle grain overlay. */\n  grain?: boolean;\n}\n\n/**\n * AuroraBackground — a GPU-cheap animated aurora made of drifting radial\n * gradient bands (transform + opacity only, no filters on the hot path except a\n * single static blur). Sits behind content via absolute fill. Freezes under\n * prefers-reduced-motion.\n *\n * @parable/aurora-background\n */\nexport function AuroraBackground({\n  colors = [\"#8b5cf6\", \"#ec4899\", \"#22d3ee\"],\n  background = \"#0a0a0c\",\n  speed = 18,\n  blur = \"72px\",\n  grain = true,\n  className,\n  children,\n  style,\n  ...props\n}: AuroraBackgroundProps) {\n  useInjectedKeyframes(\n    \"pb-aurora-kf\",\n    \"@keyframes pb-aurora-drift{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(8%,-6%) scale(1.15)}66%{transform:translate(-6%,8%) scale(0.92)}}@media (prefers-reduced-motion:reduce){.pb-aurora{animation:none!important}}\"\n  );\n\n  const bands = React.useMemo(\n    () =>\n      colors.map((c, i) => ({\n        c,\n        top: `${(i * 37) % 70}%`,\n        left: `${(i * 53) % 60}%`,\n        delay: `-${(i * speed) / colors.length}s`,\n      })),\n    [colors, speed]\n  );\n\n  return (\n    <div\n      className={cn(\"relative overflow-hidden\", className)}\n      style={{ background, ...style }}\n      {...props}\n    >\n      <div\n        aria-hidden\n        className=\"pointer-events-none absolute inset-0 [filter:saturate(1.4)]\"\n      >\n        {bands.map((b, i) => (\n          <span\n            key={i}\n            className=\"pb-aurora absolute h-[60vmax] w-[60vmax] rounded-full opacity-60 mix-blend-screen\"\n            style={{\n              top: b.top,\n              left: b.left,\n              background: `radial-gradient(circle at center, ${b.c} 0%, transparent 60%)`,\n              filter: `blur(${blur})`,\n              animation: `pb-aurora-drift ${speed}s ease-in-out ${b.delay} infinite`,\n            }}\n          />\n        ))}\n      </div>\n\n      {grain && (\n        <div\n          aria-hidden\n          className=\"pointer-events-none absolute inset-0 opacity-[0.04] mix-blend-overlay\"\n          style={{\n            backgroundImage:\n              \"url(\\\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\\\")\",\n          }}\n        />\n      )}\n\n      <div className=\"relative z-10\">{children}</div>\n    </div>\n  );\n}\n\nexport default AuroraBackground;\n",
+      "type": "registry:ui",
+      "target": "components/parable/aurora-background.tsx"
+    }
+  ],
+  "meta": {
+    "family": "component",
+    "category": "hero",
+    "tier": "free"
+  },
+  "type": "registry:ui"
+}

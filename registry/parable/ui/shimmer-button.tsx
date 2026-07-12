@@ -3,6 +3,16 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 
+function useInjectedKeyframes(id: string, css: string) {
+  React.useEffect(() => {
+    if (typeof document === "undefined" || document.getElementById(id)) return;
+    const el = document.createElement("style");
+    el.id = id;
+    el.textContent = css;
+    document.head.appendChild(el);
+  }, [id, css]);
+}
+
 export interface ShimmerButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /** Colour of the travelling shimmer highlight. */
@@ -41,6 +51,11 @@ export const ShimmerButton = React.forwardRef<
   },
   ref
 ) {
+  useInjectedKeyframes(
+    "pb-shimmer-button-kf",
+    "@keyframes pb-slide{to{transform:translate(-50%,-50%) rotate(360deg)}}.pb-shimmer{transform-origin:center}@media (prefers-reduced-motion:reduce){.pb-shimmer{animation:none!important}}"
+  );
+
   const vars = {
     "--spread": "90deg",
     "--shimmer-color": shimmerColor,
@@ -83,14 +98,6 @@ export const ShimmerButton = React.forwardRef<
           "group-hover:shadow-[inset_0_-6px_10px_#ffffff3f] group-active:shadow-[inset_0_-10px_10px_#ffffff3f]"
         )}
       />
-
-      <style>{`
-        @keyframes pb-slide { to { transform: translate(-50%, -50%) rotate(360deg); } }
-        .pb-shimmer { transform-origin: center; }
-        @media (prefers-reduced-motion: reduce) {
-          .pb-shimmer { animation: none !important; }
-        }
-      `}</style>
     </button>
   );
 });
