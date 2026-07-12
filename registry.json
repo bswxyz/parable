@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "parable",
+  "homepage": "https://parable.dev",
+  "items": [
+    {
+      "name": "shimmer-button",
+      "type": "registry:ui",
+      "title": "Shimmer Button",
+      "author": "Parable",
+      "description": "A pill button with a conic-gradient highlight that travels around the border. Self-contained, themeable via props, and disables motion under prefers-reduced-motion.",
+      "registryDependencies": ["button"],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/shimmer-button.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/shimmer-button.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "tier": "free"
+      }
+    }
+  ]
+}
