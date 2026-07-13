@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Templates",
   description:
     "Full, ready-to-ship website templates — the Parable and Formwork showcase series. Live preview, one-line install, source you own.",
+  alternates: { canonical: "/templates" },
 };
 
 export default function TemplatesPage() {

@@ -24,7 +24,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const c = getComponent(slug);
   if (!c) return {};
-  return { title: c.title, description: c.description };
+  return {
+    title: c.title,
+    description: c.description,
+    alternates: { canonical: `/components/${c.slug}` },
+  };
 }
 
 export default async function ComponentDetail({

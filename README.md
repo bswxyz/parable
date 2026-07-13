@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Parable
 
-## Getting Started
+A free, open marketplace of **motion-rich React components** and **complete
+website templates** — distributed through the [shadcn](https://ui.shadcn.com)
+registry, so the code is copied into your project and you own it. No black-box
+dependency, no lock-in.
 
-First, run the development server:
+- **7 components** across five categories (text, interactive, hero backgrounds,
+  visual effects, loaders) — all respect `prefers-reduced-motion`.
+- **52 templates** across two families (Parable · Formwork) and five stacks
+  (HTML/JS, Astro, Next.js, SvelteKit, Vite) — each a real, deployed site you
+  preview live and clone.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Install a component
+
+Add the `@parable` namespace to your `components.json`:
+
+```json
+{ "registries": { "@parable": "https://parable.dev/r/{name}.json" } }
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then add any component by name or full URL:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npx shadcn@latest add @parable/shimmer-button
+# or
+npx shadcn@latest add https://parable.dev/r/shimmer-button.json
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The source lands in `components/parable/…` and dependencies resolve
+automatically. See [`/docs`](https://parable.dev/docs) for the full guide.
 
-## Learn More
+## Clone a template
 
-To learn more about Next.js, take a look at the following resources:
+Templates are complete sites, so they're cloned, not added:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npx degit bswxyz/formwork-neon my-site
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## MCP server
 
-## Deploy on Vercel
+The catalog is also exposed over Model Context Protocol at
+[`/api/mcp`](https://parable.dev/api/mcp) so AI agents can browse and pull
+components and templates (`tools/list`, `tools/call`).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Develop
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run dev              # start the dev server (http://localhost:3000)
+npm run build            # production build
+npm run registry:build   # regenerate public/r/*.json from registry.json
+```
+
+Built with Next.js 16, React 19, Tailwind CSS v4, and Motion.

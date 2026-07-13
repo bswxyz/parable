@@ -28,15 +28,14 @@ export function InstallBlock({ slug }: { slug: string }) {
   return (
     <div className="overflow-hidden rounded-xl border bg-card">
       <div
-        role="tablist"
+        role="group"
         aria-label="Package manager"
         className="flex items-center gap-1 border-b bg-muted/40 px-2 py-1.5"
       >
         {PMS.map((p) => (
           <button
             key={p}
-            role="tab"
-            aria-selected={pm === p}
+            aria-pressed={pm === p}
             onClick={() => setPm(p)}
             className={cn(
               "rounded-md px-2.5 py-1 font-mono text-xs transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",

@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Moon, Sun } from "lucide-react";
+import { Menu, Moon, Sun, X } from "lucide-react";
 
 function GithubMark() {
   return (
@@ -24,6 +24,13 @@ const LINKS = [
 
 export function SiteNav() {
   const pathname = usePathname();
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  // Close the mobile menu whenever the route changes.
+  React.useEffect(() => {
+    setMobileOpen(false);
+  }, [pathname]);
+
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/70 backdrop-blur-xl">
       <div className="mx-auto flex h-14 max-w-6xl items-center gap-4 px-4">
@@ -66,8 +73,43 @@ export function SiteNav() {
           >
             <GithubMark />
           </a>
+          <button
+            onClick={() => setMobileOpen((o) => !o)}
+            aria-label="Toggle navigation menu"
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-nav"
+            className="inline-flex size-9 items-center justify-center rounded-lg border text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:hidden"
+          >
+            {mobileOpen ? <X className="size-4" /> : <Menu className="size-4" />}
+          </button>
         </div>
       </div>
+
+      {mobileOpen && (
+        <nav
+          id="mobile-nav"
+          aria-label="Primary"
+          className="border-t border-border/60 px-4 py-2 md:hidden"
+        >
+          {LINKS.map((l) => {
+            const active = pathname?.startsWith(l.href);
+            return (
+              <Link
+                key={l.href}
+                href={l.href}
+                className={cn(
+                  "block rounded-md px-3 py-2.5 text-sm transition-colors",
+                  active
+                    ? "bg-muted font-medium text-foreground"
+                    : "text-muted-foreground hover:bg-muted/50 hover:text-foreground"
+                )}
+              >
+                {l.label}
+              </Link>
+            );
+          })}
+        </nav>
+      )}
     </header>
   );
 }

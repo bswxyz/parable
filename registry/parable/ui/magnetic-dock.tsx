@@ -4,6 +4,7 @@ import * as React from "react";
 import {
   motion,
   useMotionValue,
+  useReducedMotion,
   useSpring,
   useTransform,
   type MotionValue,
@@ -84,6 +85,7 @@ function DockIcon({
   item: DockItem;
 }) {
   const ref = React.useRef<HTMLButtonElement>(null);
+  const reduceMotion = useReducedMotion();
   const distanceCalc = useTransform(mouseX, (val) => {
     const bounds = ref.current?.getBoundingClientRect() ?? {
       x: 0,
@@ -96,11 +98,14 @@ function DockIcon({
     [-distance, 0, distance],
     [size, magnification, size]
   );
-  const width = useSpring(sizeTransform, {
+  const springWidth = useSpring(sizeTransform, {
     mass: 0.1,
     stiffness: 170,
     damping: 14,
   });
+  // Under prefers-reduced-motion, hold each icon at its resting size (no
+  // cursor-proximity magnify); hover/focus styling still applies.
+  const width = reduceMotion ? size : springWidth;
 
   const content = (
     <motion.button

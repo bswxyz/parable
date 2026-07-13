@@ -47,7 +47,7 @@ function t(
   };
 }
 
-// ── Family: Formwork — 25 free website templates (build-step-free static) ──
+// ── Family: Formwork — free website templates (build-step-free static) ──
 const FORMWORK: Template[] = [
   t("formwork-neon", "Neon", "Synthwave page with an infinite neon three.js terrain.", "formwork", "static", ["three.js", "synthwave", "hero"]),
   t("formwork-aether", "Aether", "Dark SaaS / AI landing — aurora glass + bento grid.", "formwork", "static", ["saas", "glass", "bento"]),

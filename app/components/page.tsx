@@ -5,7 +5,8 @@ import { COMPONENTS } from "@/lib/catalog";
 export const metadata: Metadata = {
   title: "Components",
   description:
-    "Motion-rich React components — copy-paste via the shadcn CLI. Filter by category and tier, preview live, own the code.",
+    "Motion-rich React components — copy-paste via the shadcn CLI. Filter by category, preview live, own the code.",
+  alternates: { canonical: "/components" },
 };
 
 export default function ComponentsPage() {

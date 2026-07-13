@@ -9,7 +9,7 @@
       "title": "Shimmer Button",
       "author": "Parable",
       "description": "A pill button with a conic-gradient highlight that travels around the border. Self-contained, themeable via props, disables motion under prefers-reduced-motion.",
-      "registryDependencies": ["button"],
+      "registryDependencies": [],
       "dependencies": [],
       "files": [
         {

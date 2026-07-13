@@ -40,11 +40,14 @@ export function HomeHero({ componentCount }: { componentCount: number }) {
           dependency, no lock-in.
         </p>
         <div className="mt-8 flex flex-wrap items-center gap-4">
-          <Link href="/components" aria-label="Browse components">
-            <ShimmerButton className="text-base">
-              Browse components <ArrowRight className="size-4" />
-            </ShimmerButton>
-          </Link>
+          <ShimmerButton
+            as={Link}
+            href="/components"
+            aria-label="Browse components"
+            className="text-base"
+          >
+            Browse components <ArrowRight className="size-4" />
+          </ShimmerButton>
           <Link
             href="/templates"
             className="inline-flex items-center gap-2 rounded-full border px-5 py-3 text-sm font-medium transition-colors hover:bg-muted"

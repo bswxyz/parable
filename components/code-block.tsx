@@ -18,7 +18,7 @@ export async function CodeBlock({
 
   return (
     <div className={`group relative ${className ?? ""}`}>
-      <div className="absolute right-3 top-3 z-10 opacity-0 transition-opacity group-hover:opacity-100 focus-within:opacity-100">
+      <div className="absolute right-3 top-3 z-10 opacity-100 transition-opacity [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:group-hover:opacity-100 focus-within:opacity-100">
         <CopyButton value={code} label="Copy code" />
       </div>
       <div

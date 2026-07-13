@@ -1,6 +1,7 @@
 export const metadata = {
   title: "Docs — MCP server",
   description: "Parable exposes its catalog over a Model Context Protocol endpoint so AI agents can browse and pull components and templates.",
+  alternates: { canonical: "/docs/mcp" },
 };
 
 # MCP server
@@ -23,7 +24,7 @@ human-readable description and the tool list.
 
 | Tool | Arguments | Returns |
 |---|---|---|
-| `list_components` | `category?`, `tier?` | All components, optionally filtered |
+| `list_components` | `category?` | All components, optionally filtered |
 | `get_component` | `slug` | One component + its `shadcn add` command |
 | `list_templates` | `family?`, `stack?` | All templates, optionally filtered |
 | `get_template` | `slug` | One template + its `degit` clone command |

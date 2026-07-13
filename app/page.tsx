@@ -1,9 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Terminal, Download, Pencil } from "lucide-react";
 import { HomeHero } from "@/components/home-hero";
 import { HomeFeatured } from "@/components/home-featured";
 import { COMPONENTS } from "@/lib/catalog";
 import { TEMPLATES } from "@/lib/templates";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const STEPS = [
   {
@@ -72,7 +77,7 @@ export default function Home() {
                 className="group flex items-baseline justify-between gap-2 border-b border-transparent py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 <span className="truncate">{t.name}</span>
-                <span className="shrink-0 font-mono text-[10px] text-foreground/30 group-hover:text-foreground/50">
+                <span className="shrink-0 font-mono text-[10px] text-muted-foreground group-hover:text-foreground">
                   {t.stack}
                 </span>
               </Link>

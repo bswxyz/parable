@@ -25,6 +25,13 @@ export interface ShimmerButtonProps
   radius?: string;
   /** Background of the button face. */
   background?: string;
+  /**
+   * Render as a different element for navigation semantics — e.g. an `<a>` or a
+   * router `Link`. Defaults to `"button"`. Pass `href` alongside for links.
+   */
+  as?: React.ElementType;
+  /** Destination, used when rendering as a link element via `as`. */
+  href?: string;
 }
 
 /**
@@ -47,10 +54,12 @@ export const ShimmerButton = React.forwardRef<
     radius = "9999px",
     background = "rgba(10,10,12,1)",
     style,
+    as,
     ...props
   },
   ref
 ) {
+  const Comp = (as ?? "button") as React.ElementType;
   useInjectedKeyframes(
     "pb-shimmer-button-kf",
     "@keyframes pb-slide{to{transform:translate(-50%,-50%) rotate(360deg)}}.pb-shimmer{transform-origin:center}@media (prefers-reduced-motion:reduce){.pb-shimmer{animation:none!important}}"
@@ -66,7 +75,7 @@ export const ShimmerButton = React.forwardRef<
   } as React.CSSProperties;
 
   return (
-    <button
+    <Comp
       ref={ref}
       style={{ ...vars, ...style }}
       className={cn(
@@ -98,7 +107,7 @@ export const ShimmerButton = React.forwardRef<
           "group-hover:shadow-[inset_0_-6px_10px_#ffffff3f] group-active:shadow-[inset_0_-10px_10px_#ffffff3f]"
         )}
       />
-    </button>
+    </Comp>
   );
 });
 

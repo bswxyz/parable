@@ -20,7 +20,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const tpl = getTemplate(slug);
   if (!tpl) return {};
-  return { title: tpl.name, description: tpl.pitch };
+  return {
+    title: tpl.name,
+    description: tpl.pitch,
+    alternates: { canonical: `/templates/${tpl.slug}` },
+  };
 }
 
 export default async function TemplateDetail({
