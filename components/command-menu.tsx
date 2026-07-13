@@ -4,6 +4,7 @@ import * as React from "react";
 import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
 import {
+  Command,
   CommandDialog,
   CommandEmpty,
   CommandGroup,
@@ -53,34 +54,36 @@ export function CommandMenu() {
       </button>
 
       <CommandDialog open={open} onOpenChange={setOpen}>
-        <CommandInput placeholder="Search components and pages…" />
-        <CommandList>
-          <CommandEmpty>No results found.</CommandEmpty>
-          <CommandGroup heading="Pages">
-            <CommandItem onSelect={() => go("/")}>Home</CommandItem>
-            <CommandItem onSelect={() => go("/components")}>
-              Components
-            </CommandItem>
-            <CommandItem onSelect={() => go("/templates")}>
-              Templates
-            </CommandItem>
-            <CommandItem onSelect={() => go("/docs")}>Docs</CommandItem>
-          </CommandGroup>
-          <CommandGroup heading="Components">
-            {COMPONENTS.map((c) => (
-              <CommandItem
-                key={c.slug}
-                value={`${c.title} ${c.slug} ${CATEGORY_LABEL[c.category]}`}
-                onSelect={() => go(`/components/${c.slug}`)}
-              >
-                <span>{c.title}</span>
-                <span className="ml-auto font-mono text-xs text-muted-foreground">
-                  {CATEGORY_LABEL[c.category]}
-                </span>
+        <Command>
+          <CommandInput placeholder="Search components and pages…" />
+          <CommandList>
+            <CommandEmpty>No results found.</CommandEmpty>
+            <CommandGroup heading="Pages">
+              <CommandItem onSelect={() => go("/")}>Home</CommandItem>
+              <CommandItem onSelect={() => go("/components")}>
+                Components
               </CommandItem>
-            ))}
-          </CommandGroup>
-        </CommandList>
+              <CommandItem onSelect={() => go("/templates")}>
+                Templates
+              </CommandItem>
+              <CommandItem onSelect={() => go("/docs")}>Docs</CommandItem>
+            </CommandGroup>
+            <CommandGroup heading="Components">
+              {COMPONENTS.map((c) => (
+                <CommandItem
+                  key={c.slug}
+                  value={`${c.title} ${c.slug} ${CATEGORY_LABEL[c.category]}`}
+                  onSelect={() => go(`/components/${c.slug}`)}
+                >
+                  <span>{c.title}</span>
+                  <span className="ml-auto font-mono text-xs text-muted-foreground">
+                    {CATEGORY_LABEL[c.category]}
+                  </span>
+                </CommandItem>
+              ))}
+            </CommandGroup>
+          </CommandList>
+        </Command>
       </CommandDialog>
     </>
   );
