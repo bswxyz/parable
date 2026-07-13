@@ -22,7 +22,10 @@ const NAV = [
   },
   {
     group: "About",
-    items: [{ href: "/docs/changelog", label: "Changelog" }],
+    items: [
+      { href: "/docs/attribution", label: "Licensing & attribution" },
+      { href: "/docs/changelog", label: "Changelog" },
+    ],
   },
 ];
 

@@ -6,8 +6,15 @@ export type Category =
   | "hero"
   | "effect"
   | "loader"
+  | "block"
   | "template";
 export type Family = "component" | "template";
+
+/** Watermelon-style attribution: the canonical nested shape, not the legacy flat props. */
+export interface InspiredBy {
+  name: string;
+  url: string;
+}
 
 export interface CatalogItem {
   slug: string;
@@ -18,6 +25,7 @@ export interface CatalogItem {
   family: Family;
   dependencies: string[];
   registryDependencies: string[];
+  inspiredBy?: InspiredBy;
 }
 
 export const CATEGORY_LABEL: Record<Category, string> = {
@@ -26,6 +34,7 @@ export const CATEGORY_LABEL: Record<Category, string> = {
   hero: "Hero Backgrounds",
   effect: "Visual Effects",
   loader: "Loaders",
+  block: "Blocks & Slices",
   template: "Templates",
 };
 
@@ -35,6 +44,7 @@ export const CATEGORY_ORDER: Category[] = [
   "hero",
   "effect",
   "loader",
+  "block",
 ];
 
 type RawItem = {
@@ -43,7 +53,7 @@ type RawItem = {
   description?: string;
   dependencies?: string[];
   registryDependencies?: string[];
-  meta?: { family?: Family; category?: Category };
+  meta?: { family?: Family; category?: Category; inspiredBy?: InspiredBy };
 };
 
 export const COMPONENTS: CatalogItem[] = (registry.items as RawItem[]).map(
@@ -56,6 +66,7 @@ export const COMPONENTS: CatalogItem[] = (registry.items as RawItem[]).map(
     family: it.meta?.family ?? "component",
     dependencies: it.dependencies ?? [],
     registryDependencies: it.registryDependencies ?? [],
+    inspiredBy: it.meta?.inspiredBy,
   })
 );
 
@@ -79,7 +90,7 @@ export function installCommand(
   slug: string,
   pm: "npm" | "pnpm" | "yarn" | "bun" = "npm"
 ): string {
-  const url = `${REGISTRY_BASE || "https://parable.dev"}/r/${slug}.json`;
+  const url = `${REGISTRY_BASE || "https://parable-three.vercel.app"}/r/${slug}.json`;
   const runner = {
     npm: "npx shadcn@latest add",
     pnpm: "pnpm dlx shadcn@latest add",

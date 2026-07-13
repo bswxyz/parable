@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
-import { COMPONENTS, getComponent, CATEGORY_LABEL } from "@/lib/catalog";
+import {
+  COMPONENTS,
+  getComponent,
+  CATEGORY_LABEL,
+  installCommand,
+} from "@/lib/catalog";
 import { readComponentSource } from "@/lib/source";
 import { CodeBlock } from "@/components/code-block";
 import { InstallBlock } from "@/components/install-block";
@@ -61,6 +66,26 @@ export default async function ComponentDetail({
             </Badge>
           </div>
           <p className="mt-2 max-w-xl text-muted-foreground">{c.description}</p>
+          {c.inspiredBy && (
+            <p className="mt-2 font-mono text-xs text-muted-foreground">
+              Inspired by{" "}
+              <a
+                href={c.inspiredBy.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2 hover:text-foreground"
+              >
+                {c.inspiredBy.name}
+              </a>{" "}
+              — independently built, not affiliated.{" "}
+              <Link
+                href="/docs/attribution"
+                className="underline underline-offset-2 hover:text-foreground"
+              >
+                Attribution policy
+              </Link>
+            </p>
+          )}
         </div>
         <CopyPageButton markdown={markdown} />
       </div>
@@ -143,7 +168,7 @@ ${desc}
 ## Install
 
 \`\`\`bash
-npx shadcn@latest add https://parable.dev/r/${slug}.json
+${installCommand(slug, "npm")}
 \`\`\`
 
 ## Source — components/parable/${slug}.tsx

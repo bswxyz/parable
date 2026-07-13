@@ -16,8 +16,7 @@
   ],
   "meta": {
     "family": "component",
-    "category": "interactive",
-    "tier": "free"
+    "category": "interactive"
   },
   "type": "registry:ui"
 }

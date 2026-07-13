@@ -18,7 +18,10 @@
           "target": "components/parable/shimmer-button.tsx"
         }
       ],
-      "meta": { "family": "component", "category": "interactive", "tier": "free" }
+      "meta": {
+        "family": "component",
+        "category": "interactive"
+      }
     },
     {
       "name": "velocity-marquee",
@@ -35,7 +38,14 @@
           "target": "components/parable/velocity-marquee.tsx"
         }
       ],
-      "meta": { "family": "component", "category": "text", "tier": "free" }
+      "meta": {
+        "family": "component",
+        "category": "text",
+        "inspiredBy": {
+          "name": "Componentry \u2014 Velocity Scroll",
+          "url": "https://componentry.dev/docs"
+        }
+      }
     },
     {
       "name": "kinetic-text",
@@ -44,7 +54,9 @@
       "author": "Parable",
       "description": "Reveals text word- or char-by-char with a spring rise-and-mask as it scrolls into view. Static, fully legible fallback under reduced-motion.",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": [
+        "motion"
+      ],
       "files": [
         {
           "path": "registry/parable/ui/kinetic-text.tsx",
@@ -52,7 +64,10 @@
           "target": "components/parable/kinetic-text.tsx"
         }
       ],
-      "meta": { "family": "component", "category": "text", "tier": "free" }
+      "meta": {
+        "family": "component",
+        "category": "text"
+      }
     },
     {
       "name": "magnetic-dock",
@@ -61,7 +76,9 @@
       "author": "Parable",
       "description": "A macOS-style dock whose items magnify with cursor proximity, spring-smoothed. Keyboard focusable; magnify disabled under reduced-motion.",
       "registryDependencies": [],
-      "dependencies": ["motion"],
+      "dependencies": [
+        "motion"
+      ],
       "files": [
         {
           "path": "registry/parable/ui/magnetic-dock.tsx",
@@ -69,7 +86,14 @@
           "target": "components/parable/magnetic-dock.tsx"
         }
       ],
-      "meta": { "family": "component", "category": "interactive", "tier": "free" }
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "Componentry \u2014 Magnetic Dock (and the macOS Dock)",
+          "url": "https://componentry.dev/docs"
+        }
+      }
     },
     {
       "name": "aurora-background",
@@ -86,14 +110,21 @@
           "target": "components/parable/aurora-background.tsx"
         }
       ],
-      "meta": { "family": "component", "category": "hero", "tier": "free" }
+      "meta": {
+        "family": "component",
+        "category": "hero",
+        "inspiredBy": {
+          "name": "Componentry \u2014 Silk Aurora",
+          "url": "https://componentry.dev/docs"
+        }
+      }
     },
     {
       "name": "dot-matrix-loader",
       "type": "registry:ui",
       "title": "Dot Matrix Loader",
       "author": "Parable",
-      "description": "A matrix of dots pulsing in a diagonal wave. Accessible busy status; holds at mid-opacity under reduced-motion. Doubles as a global loading state.",
+      "description": "A matrix of dots choreographed purely by per-dot animation-delay math \u2014 seven variants: diagonal wave, orbit beam, boustrophedon snake, radial pulse, cascading rain, scanline sweep, and outward spiral. Accessible busy status; holds at mid-opacity under reduced-motion.",
       "registryDependencies": [],
       "dependencies": [],
       "files": [
@@ -103,7 +134,14 @@
           "target": "components/parable/dot-matrix-loader.tsx"
         }
       ],
-      "meta": { "family": "component", "category": "loader", "tier": "free" }
+      "meta": {
+        "family": "component",
+        "category": "loader",
+        "inspiredBy": {
+          "name": "dot-matrix by Shawn (@zzzzshawn)",
+          "url": "https://dotmatrix.zzzzshawn.cloud"
+        }
+      }
     },
     {
       "name": "magnet-lines",
@@ -120,7 +158,366 @@
           "target": "components/parable/magnet-lines.tsx"
         }
       ],
-      "meta": { "family": "component", "category": "effect", "tier": "free" }
+      "meta": {
+        "family": "component",
+        "category": "effect",
+        "inspiredBy": {
+          "name": "React Bits \u2014 Magnet Lines",
+          "url": "https://reactbits.dev"
+        }
+      }
+    },
+    {
+      "name": "dither-aurora",
+      "type": "registry:ui",
+      "title": "Dither Aurora",
+      "author": "Parable",
+      "description": "\u201cPrism Drift\u201d \u2014 a WebGL ordered-dither aurora: value noise domain-warped into a slow flow, mapped onto a three-stop gradient, then quantised through a 4\u00d74 Bayer matrix so it renders as a visible pixel lattice, not banding. Pointer parallax is spring-smoothed; renders one static frame under reduced-motion.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/dither-aurora.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/dither-aurora.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "hero",
+        "inspiredBy": {
+          "name": "Paper Design shaders (category)",
+          "url": "https://shaders.paper.design"
+        }
+      }
+    },
+    {
+      "name": "liquid-metal-button",
+      "type": "registry:ui",
+      "title": "Liquid Metal Button",
+      "author": "Parable",
+      "description": "A pill button ringed by a live WebGL liquid-metal shader \u2014 chromatic, silver, or gold reflections that intensify on hover. Polymorphic like Shimmer Button; the shader freezes to a single static frame under reduced-motion.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/liquid-metal-button.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/liquid-metal-button.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "metal-fx by Jakub Antalik",
+          "url": "https://github.com/Jakubantalik/metal-fx"
+        }
+      }
+    },
+    {
+      "name": "dynamic-island",
+      "type": "registry:ui",
+      "title": "Dynamic Island",
+      "author": "Parable",
+      "description": "An iOS-style black pill that spring-morphs between a compact idle pill, an expanded card, and a circular ring state, with layout-animated size and corner-radius. Works controlled or uncontrolled; collapsed it is a button (Enter/Space expand), expanded it is a dialog that Escape, its close control, or an outside click collapses, with focus handed to the panel on open and back on close. Under prefers-reduced-motion the morph is skipped and states switch instantly.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/dynamic-island.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/dynamic-island.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "Cult UI \u2014 Dynamic Island (free, MIT)",
+          "url": "https://cult-ui.com/docs"
+        }
+      }
+    },
+    {
+      "name": "expandable-card",
+      "type": "registry:ui",
+      "title": "Expandable Card",
+      "author": "Parable",
+      "description": "A card that spring-expands in place to reveal a body whose children fade and slide in with a slight stagger, while siblings in a grid stay put. Works controlled or uncontrolled with full button/aria-expanded keyboard semantics, and expands or collapses instantly under prefers-reduced-motion.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/expandable-card.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/expandable-card.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "Cult UI \u2014 Expandable Card (free, MIT)",
+          "url": "https://cult-ui.com/docs"
+        }
+      }
+    },
+    {
+      "name": "logo-carousel",
+      "type": "registry:ui",
+      "title": "Logo Carousel",
+      "author": "Parable",
+      "description": "A wall of N columns whose tiles flip through a shared pool of logos with a staggered vertical rotateX + y + fade swap \u2014 a single clock advances exactly one column per tick so two tiles never swap at once. Logos sit grayscale at 70% opacity and bloom to full colour on hover; under prefers-reduced-motion it collapses to a static grid of the first N logos with no cycling.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/logo-carousel.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/logo-carousel.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "effect",
+        "inspiredBy": {
+          "name": "Cult UI \u2014 Logo Carousel (free, MIT)",
+          "url": "https://cult-ui.com/docs"
+        }
+      }
+    },
+    {
+      "name": "gravity-dots",
+      "type": "registry:ui",
+      "title": "Gravity Dots",
+      "author": "Parable",
+      "description": "A canvas dot-grid field the cursor bends \u2014 dots within range are pulled in (or repelled) and spring home with damped overshoot, smearing into capsules while they move. Sleeps when settled, offscreen, or tab-hidden; renders a static grid under reduced motion.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/gravity-dots.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/gravity-dots.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "effect",
+        "inspiredBy": {
+          "name": "Ali Imam \u2014 Attraction (aliimam.in/docs, historical)",
+          "url": "https://aliimam.in"
+        }
+      }
+    },
+    {
+      "name": "gradient-heading",
+      "type": "registry:ui",
+      "title": "Gradient Heading",
+      "author": "Parable",
+      "description": "A polymorphic heading (h1\u2013h6/p) whose text is painted with a background-clipped brand gradient in three variants and four sizes. When motion is allowed the gradient drifts on a slow ~8s ease-in-out loop; under prefers-reduced-motion or animate={false} it renders a legible static gradient with edge-defining shadow.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/gradient-heading.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/gradient-heading.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "text",
+        "inspiredBy": {
+          "name": "Cult UI \u2014 Gradient Heading (free, MIT)",
+          "url": "https://cult-ui.com/docs"
+        }
+      }
+    },
+    {
+      "name": "revenue-chart",
+      "type": "registry:ui",
+      "title": "Revenue Chart",
+      "author": "Parable",
+      "description": "A hand-rolled SVG area chart with a smooth monotone-cubic curve, gradient fill, and a stroke-draw + fill-fade mount animation; a crosshair tooltip snaps to the nearest point on hover or arrow-key scrub. Renders complete with no draw-in under reduced-motion.",
+      "registryDependencies": [],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/revenue-chart.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/revenue-chart.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "block",
+        "inspiredBy": {
+          "name": "Watermelon UI \u2014 dashboard charts",
+          "url": "https://ui.watermelon.sh"
+        }
+      }
+    },
+    {
+      "name": "transaction-list",
+      "type": "registry:ui",
+      "title": "Transaction List",
+      "author": "Parable",
+      "description": "A dashboard transaction-list block: colour-seeded initial discs, mono reference ids, tabular-nums amounts (negative red-ish / positive green-ish), and dotted completed/pending/failed status chips. Rows stagger-fade-in on mount with a spring and raise their background on hover; under reduced motion the stagger is dropped, rows render instantly, and the pending dot stops pulsing.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/transaction-list.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/transaction-list.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "block",
+        "inspiredBy": {
+          "name": "Watermelon UI \u2014 Transaction List",
+          "url": "https://ui.watermelon.sh"
+        }
+      }
+    },
+    {
+      "name": "device-frame",
+      "type": "registry:ui",
+      "title": "Device Frame",
+      "author": "Parable",
+      "description": "Pure-CSS device mockups that clip children into a browser window (traffic lights, address bar, optional tab strip) or a phone (dynamic-island notch, side buttons, screen inner shadow). Hairline edges stay crisp in light and dark, and the phone scales proportionally at any width via container-query units. Fully static \u2014 no animation, so nothing to disable under reduced motion.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/device-frame.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/device-frame.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "block",
+        "inspiredBy": {
+          "name": "Ali Imam \u2014 Device (aliimam.in/docs, historical)",
+          "url": "https://aliimam.in"
+        }
+      }
+    },
+    {
+      "name": "sign-in-slice",
+      "type": "registry:ui",
+      "title": "Sign-In Slice",
+      "author": "Parable",
+      "description": "A complete drop-in sign-in card: spring floating-label email input, a continue button that runs an inline progress sheen then morphs into a drawn success check + \"Check your inbox\" panel, OAuth-style buttons, and mono fine print. Real form/label/aria-live semantics; shake, sheen, and springs drop to instant swaps under reduced-motion.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/sign-in-slice.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/sign-in-slice.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "block",
+        "inspiredBy": {
+          "name": "Skiper UI \u2014 product slices (approach)",
+          "url": "https://skiper-ui.com"
+        }
+      }
+    },
+    {
+      "name": "sticky-scroll-cards",
+      "type": "registry:ui",
+      "title": "Sticky Scroll Cards",
+      "author": "Parable",
+      "description": "A scroll-driven card stack: each card pins at a sticky offset while the next scrolls over it, receding with a slight scale-down, dim, and blur driven by per-card useScroll/useTransform against ordinary page scroll (no hijack). Under prefers-reduced-motion the depth transforms are dropped and cards render as a plain, static, legible stack.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/sticky-scroll-cards.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/sticky-scroll-cards.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "Componentry \u2014 Sticky Scroll Cards",
+          "url": "https://componentry.dev/docs"
+        }
+      }
+    },
+    {
+      "name": "split-flap",
+      "type": "registry:ui",
+      "title": "Split Flap",
+      "author": "Parable",
+      "description": "A Solari-board split-flap text display: mono ink cells riffle through a character set with a 3D half-flap (CSS perspective + rotateX) and settle left-to-right, animating whenever the text prop changes. Under prefers-reduced-motion it renders the final text instantly with no flips.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/split-flap.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/split-flap.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "text",
+        "inspiredBy": {
+          "name": "Componentry \u2014 Split Flap Display (and Solari boards)",
+          "url": "https://componentry.dev/docs"
+        }
+      }
+    },
+    {
+      "name": "eye-tracking",
+      "type": "registry:ui",
+      "title": "Eye Tracking",
+      "author": "Parable",
+      "description": "A set of cartoon oval eyes whose pupils chase the pointer anywhere in the viewport \u2014 spring-smoothed and geometrically clamped inside each eye \u2014 with an occasional natural blink that pauses during fast pointer flicks. Under prefers-reduced-motion the pupils rest centered and the blink is disabled.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/eye-tracking.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/eye-tracking.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "effect",
+        "inspiredBy": {
+          "name": "Componentry \u2014 Eye Tracking",
+          "url": "https://componentry.dev/docs"
+        }
+      }
     }
   ]
 }

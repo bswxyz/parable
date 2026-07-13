@@ -1,0 +1,68 @@
+export const metadata = {
+  title: "Docs — Licensing & attribution",
+  description:
+    "How Parable components are licensed, and how we credit the work that inspired them.",
+  alternates: { canonical: "/docs/attribution" },
+};
+
+# Licensing & attribution
+
+Everything in Parable is **free and MIT-licensed**. Install it, modify it, ship
+it commercially — the code is copied into your project and it's yours. There is
+no paid tier.
+
+## How components are made
+
+Parable components are **independent, original implementations**. Some are
+inspired by interaction patterns we admire elsewhere — a dock that magnifies, a
+dot-matrix loader, an aurora hero. Where that's the case, the component's page
+carries an **"Inspired by"** credit naming the source, and the registry item
+embeds the same credit as `meta.inspiredBy` — so attribution travels with the
+metadata, not just the marketing page.
+
+Three rules govern every inspired-by component:
+
+1. **Original code, always.** We recreate the *idea* of an interaction — never
+   port, transpile, or paraphrase another project's source. Interaction
+   patterns aren't anyone's property; specific code is.
+2. **Credit is visible and honest.** The credit names the inspiration and links
+   to it. It never implies the source endorses Parable, and never presents our
+   component as theirs.
+3. **Paid catalogs are reference-only.** Where a pattern also exists in a
+   commercial library, our version is built fresh from what's publicly visible
+   — we don't purchase-and-port anyone's paid product.
+
+## Sources we credit
+
+- [Componentry](https://componentry.dev/docs) by Harsh Jadhav (MIT) — velocity
+  scroll, magnetic dock, silk aurora, split-flap, eye tracking, sticky scroll
+  patterns.
+- [Cult UI](https://cult-ui.com/docs) by Jordan Gilliam (free tier, MIT) —
+  dynamic island, expandable card, logo carousel patterns.
+- [dot-matrix](https://dotmatrix.zzzzshawn.cloud) by Shawn — the dot-matrix
+  loader *category*. Our loader is a clean-room original (dot-matrix's own code
+  is not open source; we don't use any of it).
+- [metal-fx](https://github.com/Jakubantalik/metal-fx) by Jakub Antalik (MIT) —
+  the liquid-metal button effect.
+- [balloons-js](https://github.com/arturbien/balloons-js) by Artur Bień (MIT) —
+  the balloon-release success moment.
+- [Watermelon UI](https://ui.watermelon.sh) (MIT) — dashboard block patterns,
+  and the `inspiredBy` metadata convention itself, which we adopted from their
+  presentation layer.
+- [Paper Design](https://shaders.paper.design) — the dithered-shader hero
+  *category*. Our GLSL is written from scratch.
+- [Skiper UI](https://skiper-ui.com) by Gxuri — the "product slice" framing.
+  Skiper's own components are credited recreations; where a pattern clearly
+  originates further upstream (e.g. [Emil Kowalski](https://emilkowal.ski),
+  [Rauno Freiberg](https://rauno.me)), we credit the originator directly.
+- [React Bits](https://reactbits.dev) — magnet lines pattern.
+
+## Your obligations as a user
+
+None beyond MIT's notice preservation if you redistribute component source
+verbatim. Attribution to Parable is appreciated, never required.
+
+If you believe a Parable component fails the rules above — too close to
+someone's actual code, or missing a credit it should carry — open an issue on
+[GitHub](https://github.com/bswxyz/parable) and we'll fix it or pull the
+component while we do.

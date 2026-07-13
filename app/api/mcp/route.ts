@@ -1,5 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
-import { COMPONENTS, getComponent, installCommand } from "@/lib/catalog";
+import {
+  COMPONENTS,
+  getComponent,
+  installCommand,
+  REGISTRY_BASE,
+} from "@/lib/catalog";
 import { TEMPLATES, getTemplate } from "@/lib/templates";
 
 export const dynamic = "force-dynamic";
@@ -84,7 +89,7 @@ function callTool(name: string, args: Record<string, unknown>) {
       return {
         ...c,
         install: installCommand(c.slug, "npm"),
-        registryUrl: `https://parable.dev/r/${c.slug}.json`,
+        registryUrl: `${REGISTRY_BASE || "https://parable-three.vercel.app"}/r/${c.slug}.json`,
       };
     }
     case "list_templates": {

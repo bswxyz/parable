@@ -19,7 +19,10 @@
   "meta": {
     "family": "component",
     "category": "interactive",
-    "tier": "free"
+    "inspiredBy": {
+      "name": "Componentry — Magnetic Dock (and the macOS Dock)",
+      "url": "https://componentry.dev/docs"
+    }
   },
   "type": "registry:ui"
 }

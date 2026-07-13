@@ -6,10 +6,10 @@ import { COMPONENTS } from "@/lib/catalog";
 import { TEMPLATES } from "@/lib/templates";
 
 const FEATURED_COMPONENTS = [
-  "shimmer-button",
+  "liquid-metal-button",
+  "dynamic-island",
   "magnetic-dock",
-  "aurora-background",
-  "magnet-lines",
+  "gravity-dots",
 ];
 const FEATURED_TEMPLATES = [
   "formwork-neon",

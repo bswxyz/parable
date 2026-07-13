@@ -16,6 +16,19 @@ Components reference semantic tokens — `background`, `foreground`, `muted`,
 dark themes without extra work. Most also accept explicit colour props
 (`shimmerColor`, `colors`, `color`) when you want to override.
 
+## The Parable palette
+
+The marketplace itself runs on six named tokens (defined in `globals.css`, see
+the [design language](https://github.com/bswxyz/parable)): `--pb-ink` (near-black
+ground), `--pb-vellum` (off-white), and four chroma values — `--pb-violet
+#8b5cf6`, `--pb-fuchsia #ec4899`, `--pb-ember #f5a623`, `--pb-signal #22d3ee` —
+that appear **inside rendered moments only** (shaders, gradients, particles),
+never as flat UI fills. Component colour props default to these same hex values,
+so installed components match the previews without your app needing the
+variables. Motion is tokenised too: `--pb-ease-out
+cubic-bezier(.22,1,.36,1)`, `--pb-ease-snap cubic-bezier(.16,1,.3,1)`, and
+durations 150/300/500ms.
+
 ## Dark mode
 
 Parable uses `next-themes` with `attribute="class"`. Any `.dark` strategy works —

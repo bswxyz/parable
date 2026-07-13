@@ -5,8 +5,11 @@ website templates** — distributed through the [shadcn](https://ui.shadcn.com)
 registry, so the code is copied into your project and you own it. No black-box
 dependency, no lock-in.
 
-- **7 components** across five categories (text, interactive, hero backgrounds,
-  visual effects, loaders) — all respect `prefers-reduced-motion`.
+- **21 components** across six categories (text, interactive, hero backgrounds,
+  visual effects, loaders, blocks & slices) — all respect
+  `prefers-reduced-motion`. Components inspired by patterns we admire carry an
+  `inspiredBy` credit in their registry metadata; every one is an independent,
+  original implementation ([attribution policy](https://parable-three.vercel.app/docs/attribution)).
 - **52 templates** across two families (Parable · Formwork) and five stacks
   (HTML/JS, Astro, Next.js, SvelteKit, Vite) — each a real, deployed site you
   preview live and clone.
@@ -16,7 +19,7 @@ dependency, no lock-in.
 Add the `@parable` namespace to your `components.json`:
 
 ```json
-{ "registries": { "@parable": "https://parable.dev/r/{name}.json" } }
+{ "registries": { "@parable": "https://parable-three.vercel.app/r/{name}.json" } }
 ```
 
 Then add any component by name or full URL:
@@ -24,11 +27,11 @@ Then add any component by name or full URL:
 ```bash
 npx shadcn@latest add @parable/shimmer-button
 # or
-npx shadcn@latest add https://parable.dev/r/shimmer-button.json
+npx shadcn@latest add https://parable-three.vercel.app/r/shimmer-button.json
 ```
 
 The source lands in `components/parable/…` and dependencies resolve
-automatically. See [`/docs`](https://parable.dev/docs) for the full guide.
+automatically. See [`/docs`](https://parable-three.vercel.app/docs) for the full guide.
 
 ## Clone a template
 
@@ -41,7 +44,7 @@ npx degit bswxyz/formwork-neon my-site
 ## MCP server
 
 The catalog is also exposed over Model Context Protocol at
-[`/api/mcp`](https://parable.dev/api/mcp) so AI agents can browse and pull
+[`/api/mcp`](https://parable-three.vercel.app/api/mcp) so AI agents can browse and pull
 components and templates (`tools/list`, `tools/call`).
 
 ## Develop

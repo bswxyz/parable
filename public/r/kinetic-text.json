@@ -18,8 +18,7 @@
   ],
   "meta": {
     "family": "component",
-    "category": "text",
-    "tier": "free"
+    "category": "text"
   },
   "type": "registry:ui"
 }

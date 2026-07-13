@@ -6,6 +6,30 @@ export const metadata = {
 
 # Changelog
 
+## v0.2 — Wave 1: 14 new components + the design language
+
+The catalog tripled — 7 → 21 components — and the marketplace got its own
+design language.
+
+- **Prism Drift** (`dither-aurora`) — the new signature: a WebGL ordered-dither
+  aurora (original GLSL, Bayer 4×4 lattice) now rendering the home hero. The
+  hero's primary CTA is the install command for the very shader behind it.
+- **13 more components** — Liquid Metal Button, Dynamic Island, Expandable
+  Card, Logo Carousel, Gravity Dots, Split Flap, Gradient Heading, Eye
+  Tracking, Sticky Scroll Cards, and a new **Blocks & Slices** category:
+  Revenue Chart, Transaction List, Device Frame, Sign-in Slice. Dot Matrix
+  Loader grew 7 variants (wave, orbit, snake, pulse, rain, scan, spiral).
+- **Attribution, structurally** — components inspired by work we admire now
+  carry an `inspiredBy` credit in the registry JSON itself and a visible credit
+  line on their page, plus a new
+  [licensing & attribution](/docs/attribution) policy. Every inspired-by
+  component is a clean-room original.
+- **Design tokens** — the Parable palette (`--pb-ink/vellum/violet/fuchsia/
+  ember/signal`) and motion tokens (`--pb-ease-out/snap`, durations) are now
+  real CSS variables; Instrument Serif joins as the display accent face.
+- All 14 new components honour `prefers-reduced-motion`, ship focus-visible
+  states, and are self-contained single files.
+
 ## v0.1 — first cut
 
 The marketplace foundation, built in phases.
