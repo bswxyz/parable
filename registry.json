@@ -973,6 +973,365 @@
           "url": "https://ui.watermelon.sh"
         }
       }
+    },
+    {
+      "name": "texture-button",
+      "type": "registry:ui",
+      "title": "Texture Button",
+      "author": "Parable",
+      "description": "A tactile button built from stacked surface layers \u2014 a gradient face, inlined grayscale noise grain, a soft top-inner sheen, and a composed inset+drop shadow that sinks on press \u2014 in accent, surface, and glass variants. The press transform is dropped under prefers-reduced-motion while the pressed colour/shadow still fires, and the focus-visible ring is an outline sitting outside the button.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/texture-button.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/texture-button.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "Cult UI \u2014 Texture / Border-Beam buttons (free, MIT)",
+          "url": "https://cult-ui.com/docs"
+        }
+      }
+    },
+    {
+      "name": "border-beam",
+      "type": "registry:ui",
+      "title": "Border Beam",
+      "author": "Parable",
+      "description": "Wraps content in a card whose rounded border is traced by a glowing violet-to-fuchsia comet, built from a mask-composite ring and a CSS Motion Path beam. Under prefers-reduced-motion the comet is dropped and the ring falls back to a static, legible gradient border.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/border-beam.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/border-beam.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "effect",
+        "inspiredBy": {
+          "name": "Cult UI \u2014 Border Beam (free, MIT)",
+          "url": "https://cult-ui.com/docs"
+        }
+      }
+    },
+    {
+      "name": "intro-disclosure",
+      "type": "registry:ui",
+      "title": "Intro Disclosure",
+      "author": "Parable",
+      "description": "A first-run onboarding sequence: a stepped dialog card with title, body, optional media, Back/Next, a clickable progress-dots row, and Skip, where steps cross-fade and slide in the travel direction while the card height springs to fit the incoming content. It is a real role=\"dialog\" with focus trap, Escape-to-skip, and focus return; under prefers-reduced-motion the slide, blur, and height morph are dropped and steps swap instantly.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/intro-disclosure.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/intro-disclosure.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "Cult UI \u2014 Intro Disclosure / Onboarding (free, MIT)",
+          "url": "https://cult-ui.com/docs"
+        }
+      }
+    },
+    {
+      "name": "tweet-grid",
+      "type": "registry:ui",
+      "title": "Tweet Grid",
+      "author": "Parable",
+      "description": "A masonry-ish testimonial wall of tweet cards that fade and rise into view with a staggered column cascade and lift on hover, built on pure CSS multi-column layout that steps down responsively while keeping screen-reader reading order. Under prefers-reduced-motion the grid is fully static \u2014 no stagger, hover lift, or sheen \u2014 with every card legible at rest.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/tweet-grid.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/tweet-grid.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "block",
+        "inspiredBy": {
+          "name": "Cult UI \u2014 Tweet Grid (free, MIT)",
+          "url": "https://cult-ui.com/docs"
+        }
+      }
+    },
+    {
+      "name": "ai-input",
+      "type": "registry:ui",
+      "title": "AI Input",
+      "author": "Parable",
+      "description": "A polished AI chat composer: an auto-growing textarea, a leading model/attach control row, an empty-disabled send button that swaps to a brief pending spinner on submit, a soft focus glow, and empty-state suggestion chips that fill the field on click (Enter sends, Shift+Enter newlines). Under prefers-reduced-motion the glow pulse, spinner rotation, and chip/icon transitions resolve to instant, legible static states.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/ai-input.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/ai-input.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "block",
+        "inspiredBy": {
+          "name": "Skiper UI \u2014 AI Input (pattern); Vercel AI SDK chat genre",
+          "url": "https://skiper-ui.com"
+        }
+      }
+    },
+    {
+      "name": "peek-carousel",
+      "type": "registry:ui",
+      "title": "Peek Carousel",
+      "author": "Parable",
+      "description": "An Apple-style peek carousel where the active slide springs to center at full scale while the previous/next slides peek in at the edges, scaled to ~0.86 and dimmed; navigate by arrows, dots, drag (with velocity-projected snap), or wheel. Under prefers-reduced-motion it degrades to a plain CSS scroll-snap scroller with no scaling or inertia, keeping the same arrows, dots, keyboard, and labelling.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/peek-carousel.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/peek-carousel.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "Skiper UI \u2014 Apple / Dia carousel (pattern)",
+          "url": "https://skiper-ui.com"
+        }
+      }
+    },
+    {
+      "name": "parallax-hero",
+      "type": "registry:ui",
+      "title": "Parallax Hero",
+      "author": "Parable",
+      "description": "A layered parallax hero where a gradient backdrop, floating accent shapes, optional mid-ground layers, and the copy slot each drift on their own depth plane from spring-smoothed pointer input, tilting a few degrees in 3D for a diorama feel; under prefers-reduced-motion the parallax and shape drift are disabled, leaving a static, legible composition.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/parallax-hero.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/parallax-hero.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "hero",
+        "inspiredBy": {
+          "name": "Skiper UI \u2014 Interactive 3D Hero (pattern)",
+          "url": "https://skiper-ui.com"
+        }
+      }
+    },
+    {
+      "name": "ascii-render",
+      "type": "registry:ui",
+      "title": "ASCII Render",
+      "author": "Parable",
+      "description": "A live ASCII-art field: two drifting noise octaves are sampled per cell and mapped through a brightness ramp into a monospace grid, with an optional pointer ripple. A single rAF loop pauses off-screen; the first frame is deterministic so SSR agrees, and under reduced-motion that one static frame is all that renders.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/ascii-render.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/ascii-render.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "effect",
+        "inspiredBy": {
+          "name": "Skiper UI \u2014 ASCII simulation (pattern)",
+          "url": "https://skiper-ui.com"
+        }
+      }
+    },
+    {
+      "name": "mega-navbar",
+      "type": "registry:ui",
+      "title": "Mega Navbar",
+      "author": "Parable",
+      "description": "A sticky, translucent top bar with an Apple-style mega-menu: hovering or keyboard-focusing a top item springs open a rich dropdown of link columns while a shared background pill glides between active items via a Motion layout animation. Collapses to a hamburger disclosure with an accordion on mobile; under prefers-reduced-motion the pill snaps instead of gliding and the sheet opens/closes instantly.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/mega-navbar.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/mega-navbar.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "block",
+        "inspiredBy": {
+          "name": "Skiper UI \u2014 Apple Navbar V002 (pattern)",
+          "url": "https://skiper-ui.com"
+        }
+      }
+    },
+    {
+      "name": "scroll-text-reveal",
+      "type": "registry:ui",
+      "title": "Scroll Text Reveal",
+      "author": "Parable",
+      "description": "A block of copy that illuminates word-by-word as it scrolls through the viewport \u2014 a reading highlighter driven by useScroll, each word cross-fading from muted to foreground over its own slice of scroll progress. The animated layer is aria-hidden with an intact screen-reader copy; under prefers-reduced-motion every word renders fully lit with no scroll mapping.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/scroll-text-reveal.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/scroll-text-reveal.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "text",
+        "inspiredBy": {
+          "name": "Skiper UI \u2014 Horizontal / word text reveal (pattern)",
+          "url": "https://skiper-ui.com"
+        }
+      }
+    },
+    {
+      "name": "command-palette",
+      "type": "registry:ui",
+      "title": "Command Palette",
+      "author": "Parable",
+      "description": "A self-written \u2318K command palette (no cmdk): a body-portalled modal that substring/subsequence-filters grouped commands, with wrapping arrow-key navigation, Enter to run, focus trap and return, body-scroll lock, and a spring scale-and-fade entrance. Under prefers-reduced-motion every transition is instant and the ambient brand sheen holds still.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/command-palette.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/command-palette.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "cmdk by Paco Coursey (\u2318K palette genre)",
+          "url": "https://cmdk.paco.me"
+        }
+      }
+    },
+    {
+      "name": "activity-feed",
+      "type": "registry:ui",
+      "title": "Activity Feed",
+      "author": "Parable",
+      "description": "A vertical activity timeline: markers on a mask-faded gradient rail, each with an actor, a highlighted action target, a relative timestamp, and optional detail; rows stagger-fade in on mount and the newest carries a soft live pulse. Under prefers-reduced-motion the feed paints once, fully legible, with no stagger, rail-draw, or pulse.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/activity-feed.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/activity-feed.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "block",
+        "inspiredBy": {
+          "name": "Watermelon UI \u2014 activity timeline (pattern)",
+          "url": "https://ui.watermelon.sh"
+        }
+      }
+    },
+    {
+      "name": "file-drop",
+      "type": "registry:ui",
+      "title": "File Drop",
+      "author": "Parable",
+      "description": "A demo drag-and-drop dropzone (no real upload) that highlights and lifts its icon on drag-over, accepts drop or click/keyboard browse via a real hidden file input, then lists chosen files as chips with a type icon, size, a fake ease-out progress bar, and a remove button; oversize files are rejected with a shake. Under prefers-reduced-motion it drops the scale, shake, and shimmer and jumps progress straight to done.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/file-drop.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/file-drop.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "Cult UI \u2014 file upload dropzone (pattern)",
+          "url": "https://cult-ui.com/docs"
+        }
+      }
+    },
+    {
+      "name": "liquid-blobs",
+      "type": "registry:ui",
+      "title": "Liquid Blobs",
+      "author": "Parable",
+      "description": "A gooey metaball hero backdrop: soft radial blobs drift on slow sine orbits and lean gently toward the pointer, fusing like liquid where they overlap via the SVG gooey-filter trick (a wide feGaussianBlur plus an alpha-contrast feColorMatrix). A single rAF loop writes GPU-only translate/scale, the blur radius tracks the container so the goo reads the same at any size, and an IntersectionObserver idles it off-screen; under prefers-reduced-motion the blobs settle into a static, still-merged arrangement with no drift.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/liquid-blobs.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/liquid-blobs.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "hero",
+        "inspiredBy": {
+          "name": "Cult UI \u2014 Hero gradient / metaball backgrounds (pattern)",
+          "url": "https://cult-ui.com/docs"
+        }
+      }
     }
   ]
 }

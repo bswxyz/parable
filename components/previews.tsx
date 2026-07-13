@@ -40,7 +40,21 @@ import { ProgressRing } from "@/registry/parable/ui/progress-ring";
 import { StatCard } from "@/registry/parable/ui/stat-card";
 import { AnimatedCounter } from "@/registry/parable/ui/animated-counter";
 import { AvatarStack } from "@/registry/parable/ui/avatar-stack";
-import { Activity, Aperture, ArrowUpRight, Boxes, Camera, Cloud, Command, CreditCard, DollarSign, GitBranch, Heart, Hexagon, Home, ImageIcon, Layers, Lock, Mail, MessageCircle, Music, Orbit, Rocket, Search, Settings, SkipForward, Sparkles, Star, Terminal, Triangle, User, Users, Wallet, Zap } from "lucide-react";
+import { TextureButton } from "@/registry/parable/ui/texture-button";
+import { BorderBeam } from "@/registry/parable/ui/border-beam";
+import { IntroDisclosure } from "@/registry/parable/ui/intro-disclosure";
+import { TweetGrid } from "@/registry/parable/ui/tweet-grid";
+import { AiInput } from "@/registry/parable/ui/ai-input";
+import { PeekCarousel } from "@/registry/parable/ui/peek-carousel";
+import { ParallaxHero } from "@/registry/parable/ui/parallax-hero";
+import { AsciiRender } from "@/registry/parable/ui/ascii-render";
+import { MegaNavbar } from "@/registry/parable/ui/mega-navbar";
+import { ScrollTextReveal } from "@/registry/parable/ui/scroll-text-reveal";
+import { CommandPalette } from "@/registry/parable/ui/command-palette";
+import { ActivityFeed } from "@/registry/parable/ui/activity-feed";
+import { FileDrop } from "@/registry/parable/ui/file-drop";
+import { LiquidBlobs } from "@/registry/parable/ui/liquid-blobs";
+import { Activity, Aperture, ArrowRight, ArrowUpRight, BookOpen, Boxes, Camera, Cloud, Command, CreditCard, DollarSign, Download, FilePlus, GitBranch, GitPullRequest, Heart, Hexagon, Home, ImageIcon, Layers, LayoutDashboard, LifeBuoy, Lock, Mail, MessageCircle, Moon, Music, Orbit, Palette, Rocket, Search, Settings, SkipForward, Sparkles, Star, Terminal, Triangle, User, UserPlus, Users, Wallet, Zap } from "lucide-react";
 
 /** Live demo for each component, keyed by slug. Used by gallery cards + detail. */
 export const PREVIEWS: Record<string, React.ReactNode> = {
@@ -666,6 +680,302 @@ export const PREVIEWS: Record<string, React.ReactNode> = {
         { name: "Omar Haddad" },
       ]}
     />
+  ),
+  "texture-button": (
+    <div className="flex flex-col items-center gap-4">
+      <TextureButton variant="accent">
+        <Sparkles className="size-4" /> Get Parable
+      </TextureButton>
+      <div className="flex flex-wrap items-center justify-center gap-3">
+        <TextureButton variant="surface">
+          <Download className="size-4" /> Install
+        </TextureButton>
+        <TextureButton variant="glass">
+          Docs <ArrowRight className="size-4" />
+        </TextureButton>
+      </div>
+    </div>
+  ),
+  "border-beam": (
+    <div className="grid w-full place-items-center p-8">
+      <BorderBeam className="w-[280px] bg-[#0f0f10]" colorFrom="#8b5cf6" colorTo="#ec4899" duration={5}>
+        <div className="p-6">
+          <div className="flex items-center gap-2 text-sm font-semibold text-white">
+            <Sparkles className="size-4 text-violet-400" />
+            Pro plan
+          </div>
+          <p className="mt-2 text-xs leading-relaxed text-white/55">
+            A glowing beam traces the border, forever.
+          </p>
+        </div>
+      </BorderBeam>
+    </div>
+  ),
+  "intro-disclosure": (
+    <div className="relative flex h-[440px] w-full max-w-[380px] items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-[#0f0f10]">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 28% 18%, rgba(139,92,246,0.20), transparent 55%), radial-gradient(circle at 82% 84%, rgba(34,211,238,0.14), transparent 55%)",
+        }}
+      />
+      <IntroDisclosure
+        defaultOpen
+        steps={[
+          {
+            title: "Welcome to Parable",
+            body: "A living registry of motion-first React components — copy one file into your app and own it outright.",
+            media: (
+              <div className="flex h-28 items-center justify-center bg-gradient-to-br from-violet-500/30 via-fuchsia-500/20 to-transparent">
+                <Sparkles className="text-violet-200" />
+              </div>
+            ),
+          },
+          {
+            title: "Themed to your brand",
+            body: "Every component ships with --pb-* tokens, so accent and surface colours follow your own design system.",
+            media: (
+              <div className="flex h-28 items-center justify-center bg-gradient-to-br from-fuchsia-500/30 via-amber-400/15 to-transparent">
+                <Palette className="text-fuchsia-200" />
+              </div>
+            ),
+          },
+          {
+            title: "Ship in minutes",
+            body: "Reduced-motion safe, keyboard operable, and SSR-ready out of the box. Press Get started to finish the tour.",
+            media: (
+              <div className="flex h-28 items-center justify-center bg-gradient-to-br from-cyan-400/25 via-violet-500/20 to-transparent">
+                <Rocket className="text-cyan-200" />
+              </div>
+            ),
+          },
+        ]}
+      />
+    </div>
+  ),
+  "tweet-grid": (
+    <div className="w-full max-w-md p-4">
+      <TweetGrid
+        columns={2}
+        tweets={[
+          { name: "Ava Chen", handle: "avabuilds", verified: true, likes: 1284, href: "#", body: "Shipped our landing page with Parable blocks in an afternoon — the stagger-on-view is chef's kiss." },
+          { name: "Marcus Reyes", handle: "mreyes", likes: 342, body: "The reduced-motion fallback actually works. Rare." },
+          { name: "Lin Ortega", handle: "linpixels", verified: true, likes: 5600, body: "Copy, paste, done. No dependency hell.", media: <div className="h-full w-full bg-gradient-to-br from-[#8b5cf6] via-[#ec4899] to-[#f5a623]" /> },
+          { name: "Dev Patel", handle: "devp", likes: 89, body: "Masonry that still reads top-to-bottom for screen readers. Thoughtful." },
+        ]}
+      />
+    </div>
+  ),
+  "ai-input": (
+    <div className="w-full max-w-md px-4">
+      <AiInput
+        model="Sonnet 4.5"
+        placeholder="Ask anything…"
+        suggestions={["Summarize this thread", "Draft a reply", "Explain like I'm five"]}
+        onSubmit={() => new Promise((resolve) => setTimeout(resolve, 900))}
+      />
+    </div>
+  ),
+  "peek-carousel": (
+    <div className="w-full max-w-[440px] px-2">
+      <PeekCarousel
+        peek={34}
+        aria-label="Featured releases"
+        items={[
+          <div key="a" className="flex h-48 flex-col justify-end rounded-2xl bg-gradient-to-br from-[#8b5cf6] to-[#ec4899] p-5 shadow-lg shadow-black/40">
+            <span className="text-[11px] font-medium uppercase tracking-widest text-white/70">Vol. 01</span>
+            <span className="text-xl font-semibold text-white">Prism Drift</span>
+          </div>,
+          <div key="b" className="flex h-48 flex-col justify-end rounded-2xl bg-gradient-to-br from-[#ec4899] to-[#f5a623] p-5 shadow-lg shadow-black/40">
+            <span className="text-[11px] font-medium uppercase tracking-widest text-white/70">Vol. 02</span>
+            <span className="text-xl font-semibold text-white">Ember Fold</span>
+          </div>,
+          <div key="c" className="flex h-48 flex-col justify-end rounded-2xl bg-gradient-to-br from-[#22d3ee] to-[#8b5cf6] p-5 shadow-lg shadow-black/40">
+            <span className="text-[11px] font-medium uppercase tracking-widest text-white/70">Vol. 03</span>
+            <span className="text-xl font-semibold text-white">Signal Bloom</span>
+          </div>,
+          <div key="d" className="flex h-48 flex-col justify-end rounded-2xl bg-gradient-to-br from-[#f5a623] to-[#22d3ee] p-5 shadow-lg shadow-black/40">
+            <span className="text-[11px] font-medium uppercase tracking-widest text-white/70">Vol. 04</span>
+            <span className="text-xl font-semibold text-white">Halo Cast</span>
+          </div>,
+        ]}
+      />
+    </div>
+  ),
+  "parallax-hero": (
+    <ParallaxHero className="min-h-[360px] w-full rounded-xl">
+      <div className="flex max-w-md flex-col items-center gap-4 text-center">
+        <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-white/70 backdrop-blur-sm">
+          <Sparkles className="size-3.5 text-violet-300" /> Parable UI
+        </span>
+        <h1 className="bg-gradient-to-b from-white to-white/55 bg-clip-text text-3xl font-semibold tracking-tight text-transparent sm:text-4xl">
+          Depth you can feel
+        </h1>
+        <p className="text-sm text-white/55">
+          Move your cursor — every layer drifts on its own plane.
+        </p>
+        <button className="mt-1 inline-flex items-center gap-1.5 rounded-lg bg-white px-4 py-2 text-sm font-medium text-black transition-transform hover:scale-[1.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60">
+          Get started <ArrowRight className="size-4" />
+        </button>
+      </div>
+    </ParallaxHero>
+  ),
+  "ascii-render": (
+    <AsciiRender rows={22} cols={64} color="#8b5cf6" speed={1} className="w-full" />
+  ),
+  "mega-navbar": (
+    <div className="w-full overflow-hidden rounded-xl bg-[#0f0f10] ring-1 ring-white/10">
+      <MegaNavbar
+        brand={
+          <span className="inline-flex items-center gap-1.5 text-white">
+            <span className="grid size-5 place-items-center rounded-md bg-gradient-to-br from-violet-500 to-fuchsia-500">
+              <Sparkles className="size-3 text-white" />
+            </span>
+            Parable
+          </span>
+        }
+        items={[
+          {
+            label: "Product",
+            panel: [
+              {
+                title: "Build",
+                links: [
+                  { label: "Components", desc: "60+ animated primitives", icon: <Layers />, href: "#" },
+                  { label: "Templates", desc: "Ship in minutes", icon: <Rocket />, href: "#" },
+                ],
+              },
+              {
+                title: "Learn",
+                links: [
+                  { label: "Docs", desc: "Guides & full API", icon: <BookOpen />, href: "#" },
+                  { label: "Support", desc: "We're here to help", icon: <LifeBuoy />, href: "#" },
+                ],
+              },
+            ],
+          },
+          { label: "Pricing", href: "#" },
+          { label: "Docs", href: "#" },
+        ]}
+      />
+      <div className="space-y-3 p-6">
+        <div className="h-2.5 w-2/3 rounded-full bg-white/10" />
+        <div className="h-2.5 w-1/2 rounded-full bg-white/[0.06]" />
+        <div className="h-24 rounded-xl bg-gradient-to-br from-violet-500/15 via-fuchsia-500/10 to-transparent ring-1 ring-white/5" />
+      </div>
+    </div>
+  ),
+  "scroll-text-reveal": (
+    <div className="w-full max-w-md px-6">
+      <ScrollTextReveal
+        className="text-2xl font-medium leading-snug tracking-tight text-white"
+        text="Great typography feels inevitable — each word arriving exactly when the eye reaches it, lighting up one by one as you read."
+      />
+    </div>
+  ),
+  "command-palette": (
+    <div className="flex min-h-[280px] w-full items-center justify-center p-6">
+      <div className="w-full max-w-sm">
+        <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white/50 shadow-[0_12px_40px_-16px_rgba(0,0,0,0.7)]">
+          <Search className="size-4 text-white/40" />
+          <span className="flex-1">Search commands…</span>
+          <span className="flex items-center gap-1">
+            <kbd className="rounded border border-white/15 bg-white/5 px-1.5 py-0.5 font-mono text-[11px]">⌘</kbd>
+            <kbd className="rounded border border-white/15 bg-white/5 px-1.5 py-0.5 font-mono text-[11px]">K</kbd>
+          </span>
+        </div>
+        <p className="mt-3 text-center text-xs text-white/35">Press ⌘K to open the palette</p>
+        <CommandPalette
+          groups={[
+            {
+              heading: "Navigation",
+              items: [
+                { id: "dashboard", label: "Go to Dashboard", icon: <LayoutDashboard />, shortcut: "G H", keywords: ["home", "start"] },
+                { id: "profile", label: "View Profile", icon: <User />, shortcut: "G P", keywords: ["account"] },
+              ],
+            },
+            {
+              heading: "Actions",
+              items: [
+                { id: "new-doc", label: "New Document", icon: <FilePlus />, shortcut: "⌘N", keywords: ["create", "file"] },
+                { id: "settings", label: "Open Settings", icon: <Settings />, keywords: ["preferences", "config"] },
+                { id: "theme", label: "Toggle Theme", icon: <Moon />, keywords: ["dark", "light", "appearance"] },
+              ],
+            },
+          ]}
+        />
+      </div>
+    </div>
+  ),
+  "activity-feed": (
+    <div className="w-full max-w-sm px-2">
+      <ActivityFeed
+        title="Activity"
+        events={[
+          {
+            id: "1",
+            icon: <Rocket />,
+            actor: "Ava",
+            action: (
+              <>
+                deployed{" "}
+                <strong className="font-semibold text-white">api-gateway</strong> to
+                production
+              </>
+            ),
+            time: "2m ago",
+            accent: "#8b5cf6",
+            detail: "v2.4.1 · 312 files changed · 0 regressions",
+          },
+          {
+            id: "2",
+            icon: <GitPullRequest />,
+            actor: "Noah",
+            action: (
+              <>
+                merged{" "}
+                <strong className="font-semibold text-white">
+                  #1284 Rate limiter
+                </strong>
+              </>
+            ),
+            time: "1h ago",
+            accent: "#ec4899",
+          },
+          {
+            id: "3",
+            icon: <UserPlus />,
+            actor: "Mia",
+            action: (
+              <>
+                invited{" "}
+                <strong className="font-semibold text-white">3 teammates</strong> to
+                the workspace
+              </>
+            ),
+            time: "5h ago",
+            accent: "#22d3ee",
+          },
+        ]}
+      />
+    </div>
+  ),
+  "file-drop": (
+    <div className="w-full max-w-sm"><FileDrop accept="image/*,application/pdf" multiple maxSizeMB={5} /></div>
+  ),
+  "liquid-blobs": (
+    <LiquidBlobs className="grid h-64 w-full place-items-center rounded-xl">
+      <div className="text-center">
+        <span className="block font-mono text-[10px] uppercase tracking-[0.3em] text-white/60">
+          Parable
+        </span>
+        <span className="mt-2 block text-2xl font-semibold text-white">
+          Liquid Blobs
+        </span>
+      </div>
+    </LiquidBlobs>
   ),
 };
 
