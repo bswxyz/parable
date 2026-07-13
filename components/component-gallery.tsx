@@ -60,22 +60,32 @@ export function ComponentGallery() {
       ) : (
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((c) => (
-            <Link
+            <div
               key={c.slug}
-              href={`/components/${c.slug}`}
-              className="group flex flex-col overflow-hidden rounded-2xl border bg-card transition-colors hover:border-foreground/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="group relative flex flex-col overflow-hidden rounded-2xl border bg-card transition-colors focus-within:border-foreground/25 hover:border-foreground/25"
             >
               <PreviewStage
                 minH="min-h-[200px]"
                 className="rounded-none border-0 border-b"
               >
-                <div className="pointer-events-none scale-90">
+                {/* inert so nested interactive demo elements are neither
+                    focusable nor descendants-in-conflict with the card link */}
+                <div className="pointer-events-none scale-90" aria-hidden inert>
                   {PREVIEWS[c.slug]}
                 </div>
               </PreviewStage>
               <div className="flex items-start justify-between gap-3 p-4">
                 <div className="min-w-0">
-                  <h3 className="truncate text-sm font-medium">{c.title}</h3>
+                  <h3 className="truncate text-sm font-medium">
+                    {/* stretched link: covers the whole card, is not an
+                        ancestor of the preview's interactive elements */}
+                    <Link
+                      href={`/components/${c.slug}`}
+                      className="after:absolute after:inset-0 after:rounded-2xl focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-ring"
+                    >
+                      {c.title}
+                    </Link>
+                  </h3>
                   <p className="mt-1 line-clamp-2 text-xs text-muted-foreground">
                     {c.description}
                   </p>
@@ -87,7 +97,7 @@ export function ComponentGallery() {
                   {CATEGORY_LABEL[c.category]}
                 </Badge>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       )}

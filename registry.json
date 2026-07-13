@@ -518,6 +518,461 @@
           "url": "https://componentry.dev/docs"
         }
       }
+    },
+    {
+      "name": "shift-card",
+      "type": "registry:ui",
+      "title": "Shift Card",
+      "author": "Parable",
+      "description": "A layered card whose front face (title + label) slides and fades up on hover or focus to reveal a detail layer beneath (body + CTA), while the whole card takes a spring-smoothed parallax tilt toward the pointer and a cursor-tracking accent glow. Renders as a link when given an href, reveals fully on keyboard focus-within with a focus-visible ring, and under prefers-reduced-motion drops the tilt and slide for a plain opacity cross-fade.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/shift-card.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/shift-card.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "Cult Pro \u2014 Shift Cards (pattern)",
+          "url": "https://cult-ui.com"
+        }
+      }
+    },
+    {
+      "name": "notification-stack",
+      "type": "registry:ui",
+      "title": "Notification Stack",
+      "author": "Parable",
+      "description": "An iOS-lockscreen notification pile: cards stack behind the top one with a slight y-offset and scale falloff, new items spring in from the top and dismissed ones swipe/fade out, and tapping the top card fans the stack into a full list and back. Under prefers-reduced-motion it degrades to a plain, static, fully-legible list with no stack transforms, drag, or springs.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/notification-stack.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/notification-stack.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "Cult Pro \u2014 notification system (pattern)",
+          "url": "https://cult-ui.com"
+        }
+      }
+    },
+    {
+      "name": "animated-grid",
+      "type": "registry:ui",
+      "title": "Animated Grid",
+      "author": "Parable",
+      "description": "A hero backdrop of hairline grid cells with a soft radial spotlight that tracks the pointer via CSS variables (no per-cell React state), plus an optional deterministic ambient cell pulse; under prefers-reduced-motion it renders a static grid with a single centered glow.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/animated-grid.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/animated-grid.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "hero",
+        "inspiredBy": {
+          "name": "Cult Pro \u2014 animated grid background (pattern)",
+          "url": "https://cult-ui.com"
+        }
+      }
+    },
+    {
+      "name": "text-scramble",
+      "type": "registry:ui",
+      "title": "Text Scramble",
+      "author": "Parable",
+      "description": "Resolves a string out of random glyphs left-to-right, each character flickering through a short scramble tail before it locks and settles from a brand accent to the inherited color. Triggers on view, mount, or hover; renders the final text statically under reduced-motion.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/text-scramble.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/text-scramble.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "text",
+        "inspiredBy": {
+          "name": "Cult Pro \u2014 text effects (pattern)",
+          "url": "https://cult-ui.com"
+        }
+      }
+    },
+    {
+      "name": "text-highlighter",
+      "type": "registry:ui",
+      "title": "Text Highlighter",
+      "author": "Parable",
+      "description": "An inline highlighter that sweeps a marker band, drawn underline, or framed box across text left-to-right as it scrolls into view. Wraps naturally across lines and keeps the glyphs fully legible throughout; under prefers-reduced-motion the highlight is shown complete with no sweep.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/text-highlighter.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/text-highlighter.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "text",
+        "inspiredBy": {
+          "name": "Cult Pro / Componentry \u2014 text highlight (pattern)",
+          "url": "https://cult-ui.com"
+        }
+      }
+    },
+    {
+      "name": "animated-input",
+      "type": "registry:ui",
+      "title": "Animated Input",
+      "author": "Parable",
+      "description": "A text field with a spring floating label that rises on focus/fill, a centre-drawn accent underline, an optional tinting leading icon, and typed feedback \u2014 an error string shakes the field once, paints a live-announced red hint and sets aria-invalid, while success draws a check tick; controlled or uncontrolled with real label/id/aria-describedby wiring. Under prefers-reduced-motion every transition collapses to an instant, legible state (no shake, draw, or float tween) and the focus ring uses :focus-visible.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/animated-input.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/animated-input.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "Cult Pro \u2014 animated inputs (pattern)",
+          "url": "https://cult-ui.com"
+        }
+      }
+    },
+    {
+      "name": "pricing-table",
+      "type": "registry:ui",
+      "title": "Pricing Table",
+      "author": "Parable",
+      "description": "A three-tier pricing block whose keyboard-operable monthly/yearly switch spring-tweens every price and lights a save badge computed from the largest annual discount; the popular tier gets an accent border, a softly pulsing glow, and a wide-screen scale-up. Under prefers-reduced-motion prices snap instantly, the knob jumps, and the glow holds a single static frame.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/pricing-table.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/pricing-table.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "block",
+        "inspiredBy": {
+          "name": "Cult Pro \u2014 pricing blocks (pattern)",
+          "url": "https://cult-ui.com"
+        }
+      }
+    },
+    {
+      "name": "image-reveal",
+      "type": "registry:ui",
+      "title": "Image Reveal",
+      "author": "Parable",
+      "description": "A scroll-triggered curtain wipe that uncovers an image via an animating clip-path inset, a 1.1\u21921 overscan, and a single diagonal sheen sweep, fired once on scroll-into-view. Under prefers-reduced-motion the image is shown immediately at full size with no wipe, scale, or sheen.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/image-reveal.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/image-reveal.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "effect",
+        "inspiredBy": {
+          "name": "Skiper UI \u2014 image reveal (pattern); upstream interaction genre",
+          "url": "https://skiper-ui.com"
+        }
+      }
+    },
+    {
+      "name": "cursor-image-trail",
+      "type": "registry:ui",
+      "title": "Cursor Image Trail",
+      "author": "Parable",
+      "description": "A hover region that leaves a trail of images chasing the cursor \u2014 images from a pool pop in at pointer positions (throttled by distance) and fade/scale out a moment later, driven by a single rAF loop over a recycled pool of nodes with zero per-frame React state. Under prefers-reduced-motion the trail is disabled entirely and only the children render.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/cursor-image-trail.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/cursor-image-trail.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "effect",
+        "inspiredBy": {
+          "name": "Skiper UI \u2014 image cursor trail (pattern)",
+          "url": "https://skiper-ui.com"
+        }
+      }
+    },
+    {
+      "name": "drag-scroll-gallery",
+      "type": "registry:ui",
+      "title": "Drag Scroll Gallery",
+      "author": "Parable",
+      "description": "A horizontal rail you drag, flick, or wheel to scroll, with hand-written inertia, rubber-band ends, and optional flick-to-snap; items scale, tilt, and fade by distance from centre. Keyboard-navigable with role=list and focusable items, and under prefers-reduced-motion it degrades to a plain overflow-x scroller with CSS scroll-snap \u2014 no inertia or scaling.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/drag-scroll-gallery.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/drag-scroll-gallery.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "Skiper UI \u2014 things drag and scroll (pattern)",
+          "url": "https://skiper-ui.com"
+        }
+      }
+    },
+    {
+      "name": "rich-tooltip",
+      "type": "registry:ui",
+      "title": "Rich Tooltip",
+      "author": "Parable",
+      "description": "A Vercel-style rich tooltip that springs open from its trigger with a scale + fade and a real arrow, holding arbitrary ReactNode content rather than a bare string. Placement is computed by hand (no positioning lib) \u2014 measuring trigger and tooltip to auto-flip top\u21c4bottom / left\u21c4right on viewport overflow and clamp the cross axis \u2014 and it renders through a portal to document.body so ancestor overflow never clips it. Hover and focus open it with small delays, moving into the tooltip keeps it open, and Escape closes; under prefers-reduced-motion the show/hide is instant with no scale.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/rich-tooltip.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/rich-tooltip.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "Skiper UI \u2014 Vercel-style tooltip (pattern)",
+          "url": "https://skiper-ui.com"
+        }
+      }
+    },
+    {
+      "name": "token-swap-card",
+      "type": "registry:ui",
+      "title": "Token Swap Card",
+      "author": "Parable",
+      "description": "A demo-grade crypto swap card with two token fields (searchable keyboard-driven picker + amount input) whose amounts derive from the USD price ratio, a center button that flips 180\u00b0 and swaps the sides on a spring, a live rate line, and a Swap button that runs an inline pending \u2192 done animation. The flip, card cross, and spinner drop to instant state swaps under prefers-reduced-motion.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/token-swap-card.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/token-swap-card.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "block",
+        "inspiredBy": {
+          "name": "Skiper UI \u2014 Aave token swap (pattern)",
+          "url": "https://skiper-ui.com"
+        }
+      }
+    },
+    {
+      "name": "hover-member-row",
+      "type": "registry:ui",
+      "title": "Hover Member Row",
+      "author": "Parable",
+      "description": "A team roster where pointing at or keyboard-focusing a row lifts it into a rich preview \u2014 the avatar swells, an accent bar draws down the left edge, the role and bio slide open, a corner arrow eases in, and the other rows dim back. Hover and focus drive identical state (pointer wins ties); each row is a real anchor or button carrying a full aria-label so the reveal never gates assistive tech. Under prefers-reduced-motion every transform is dropped and the preview simply cross-fades in via opacity.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/hover-member-row.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/hover-member-row.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "Skiper UI \u2014 hover members (pattern)",
+          "url": "https://skiper-ui.com"
+        }
+      }
+    },
+    {
+      "name": "family-drawer",
+      "type": "registry:ui",
+      "title": "Family Drawer",
+      "author": "Parable",
+      "description": "A bottom sheet that springs up from the edge and morphs its height through a family of steps: swap the children (with an optional contentKey) and it measures the incoming content, springs the panel to fit, and cross-fades the step swap, while a grabber handle drags the sheet down to dismiss (velocity-aware). Fully modal \u2014 focus trap and return, body scroll lock, Escape and backdrop to close; under prefers-reduced-motion the height morph, slide-up, and drag physics are dropped for an instant, legible show/hide.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/family-drawer.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/family-drawer.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "Emil Kowalski / Vaul-style drawer (upstream of Skiper); pattern",
+          "url": "https://emilkowal.ski"
+        }
+      }
+    },
+    {
+      "name": "progress-ring",
+      "type": "registry:ui",
+      "title": "Progress Ring",
+      "author": "Parable",
+      "description": "A circular SVG progress ring whose rounded-cap gradient arc (violet \u2192 fuchsia) sweeps to its value by transitioning stroke-dashoffset in pure CSS over a dim track, with a centred percentage or custom label and real progressbar/aria-value semantics. Under prefers-reduced-motion the sweep is disabled and the ring draws statically at its final value.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/progress-ring.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/progress-ring.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "block",
+        "inspiredBy": {
+          "name": "Watermelon UI \u2014 progress ring",
+          "url": "https://ui.watermelon.sh"
+        }
+      }
+    },
+    {
+      "name": "stat-card",
+      "type": "registry:ui",
+      "title": "Stat Card",
+      "author": "Parable",
+      "description": "A dashboard KPI tile whose tabular-nums value counts up from zero when scrolled into view, with a signed delta chip and an optional inline sparkline.",
+      "registryDependencies": [],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/stat-card.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/stat-card.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "block",
+        "inspiredBy": {
+          "name": "Watermelon UI \u2014 dashboard stat cards",
+          "url": "https://ui.watermelon.sh"
+        }
+      }
+    },
+    {
+      "name": "animated-counter",
+      "type": "registry:ui",
+      "title": "Animated Counter",
+      "author": "Parable",
+      "description": "A number that rolls to its value odometer-style \u2014 each digit column slides vertically to its target through the digits between, with tabular-nums so the width never jitters.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/animated-counter.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/animated-counter.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "text",
+        "inspiredBy": {
+          "name": "Watermelon UI \u2014 animated number",
+          "url": "https://ui.watermelon.sh"
+        }
+      }
+    },
+    {
+      "name": "avatar-stack",
+      "type": "registry:ui",
+      "title": "Avatar Stack",
+      "author": "Parable",
+      "description": "An overlapping avatar group: hovering or focusing an avatar lifts it and reveals a name tooltip while neighbours part slightly; extras collapse into a \u201c+N\u201d chip and images fall back to deterministic colored initials. Under reduced-motion the lift and parting are dropped; the tooltip still appears.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/avatar-stack.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/avatar-stack.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "Watermelon UI \u2014 avatar group",
+          "url": "https://ui.watermelon.sh"
+        }
+      }
     }
   ]
 }

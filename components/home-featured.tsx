@@ -49,23 +49,29 @@ export function HomeFeatured() {
         {comps.map(
           (c) =>
             c && (
-              <Link
+              <div
                 key={c.slug}
-                href={`/components/${c.slug}`}
-                className="group flex flex-col overflow-hidden rounded-2xl border bg-card transition-colors hover:border-foreground/25"
+                className="group relative flex flex-col overflow-hidden rounded-2xl border bg-card transition-colors focus-within:border-foreground/25 hover:border-foreground/25"
               >
                 <PreviewStage
                   minH="min-h-[160px]"
                   className="rounded-none border-0 border-b"
                 >
-                  <div className="pointer-events-none scale-[0.7]">
+                  <div className="pointer-events-none scale-[0.7]" aria-hidden inert>
                     <Preview slug={c.slug} />
                   </div>
                 </PreviewStage>
                 <div className="p-3.5">
-                  <h3 className="text-sm font-medium">{c.title}</h3>
+                  <h3 className="text-sm font-medium">
+                    <Link
+                      href={`/components/${c.slug}`}
+                      className="after:absolute after:inset-0 after:rounded-2xl focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-ring"
+                    >
+                      {c.title}
+                    </Link>
+                  </h3>
                 </div>
-              </Link>
+              </div>
             )
         )}
       </div>
