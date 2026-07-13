@@ -7,7 +7,6 @@ export type Category =
   | "effect"
   | "loader"
   | "template";
-export type Tier = "free" | "pro";
 export type Family = "component" | "template";
 
 export interface CatalogItem {
@@ -16,7 +15,6 @@ export interface CatalogItem {
   title: string;
   description: string;
   category: Category;
-  tier: Tier;
   family: Family;
   dependencies: string[];
   registryDependencies: string[];
@@ -45,7 +43,7 @@ type RawItem = {
   description?: string;
   dependencies?: string[];
   registryDependencies?: string[];
-  meta?: { family?: Family; category?: Category; tier?: Tier };
+  meta?: { family?: Family; category?: Category };
 };
 
 export const COMPONENTS: CatalogItem[] = (registry.items as RawItem[]).map(
@@ -55,7 +53,6 @@ export const COMPONENTS: CatalogItem[] = (registry.items as RawItem[]).map(
     title: it.title ?? it.name,
     description: it.description ?? "",
     category: it.meta?.category ?? "interactive",
-    tier: it.meta?.tier ?? "free",
     family: it.meta?.family ?? "component",
     dependencies: it.dependencies ?? [],
     registryDependencies: it.registryDependencies ?? [],

@@ -12,7 +12,6 @@ export interface Template {
   pitch: string;
   family: TemplateFamily;
   stack: TemplateStack;
-  tier: "free" | "pro";
   tags: string[];
   /** Live GitHub Pages URL — iframe + Open target. */
   liveUrl: string;
@@ -40,7 +39,6 @@ function t(
     pitch,
     family,
     stack,
-    tier: "free",
     tags,
     liveUrl: gh(slug),
     repo: repo(slug),

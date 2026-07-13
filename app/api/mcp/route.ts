@@ -18,7 +18,7 @@ const TOOLS = [
   {
     name: "list_components",
     description:
-      "List all Parable UI components (name, category, tier, description). Optional filter by category or tier.",
+      "List all Parable UI components (name, category, description). Optional filter by category. Everything is free.",
     inputSchema: {
       type: "object",
       properties: {
@@ -26,7 +26,6 @@ const TOOLS = [
           type: "string",
           enum: ["text", "interactive", "hero", "effect", "loader"],
         },
-        tier: { type: "string", enum: ["free", "pro"] },
       },
     },
   },
@@ -72,12 +71,10 @@ function callTool(name: string, args: Record<string, unknown>) {
     case "list_components": {
       let list = COMPONENTS;
       if (args.category) list = list.filter((c) => c.category === args.category);
-      if (args.tier) list = list.filter((c) => c.tier === args.tier);
       return list.map((c) => ({
         slug: c.slug,
         title: c.title,
         category: c.category,
-        tier: c.tier,
         description: c.description,
       }));
     }

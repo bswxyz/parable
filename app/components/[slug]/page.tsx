@@ -55,11 +55,6 @@ export default async function ComponentDetail({
             <Badge variant="secondary" className="font-mono text-[10px]">
               {CATEGORY_LABEL[c.category]}
             </Badge>
-            {c.tier === "free" ? (
-              <span className="font-mono text-xs text-emerald-500">free</span>
-            ) : (
-              <Badge className="bg-amber-500 text-black">Pro</Badge>
-            )}
           </div>
           <p className="mt-2 max-w-xl text-muted-foreground">{c.description}</p>
         </div>

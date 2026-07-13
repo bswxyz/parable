@@ -53,7 +53,6 @@ export default async function TemplateDetail({
             <Badge variant="outline" className="font-mono text-[10px]">
               {tpl.family}
             </Badge>
-            <span className="font-mono text-xs text-emerald-500">free</span>
           </div>
           <p className="mt-2 max-w-xl text-muted-foreground">{tpl.pitch}</p>
         </div>

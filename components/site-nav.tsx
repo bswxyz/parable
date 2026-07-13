@@ -20,7 +20,6 @@ const LINKS = [
   { href: "/components", label: "Components" },
   { href: "/templates", label: "Templates" },
   { href: "/docs", label: "Docs" },
-  { href: "/pricing", label: "Pricing" },
 ];
 
 export function SiteNav() {
