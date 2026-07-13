@@ -1332,6 +1332,377 @@
           "url": "https://cult-ui.com/docs"
         }
       }
+    },
+    {
+      "name": "hero-section",
+      "type": "registry:ui",
+      "title": "Hero Section",
+      "author": "Parable",
+      "description": "A complete marketing hero block \u2014 mono uppercase eyebrow, tracking-tight headline with one gradient-accented word, subcopy, primary/secondary CTA pair, and a mono stats row \u2014 that spring-staggers in on mount over two blurred radial glows drifting on slow keyframe orbits; under prefers-reduced-motion the content reveals instantly with no stagger and the glows hold a static frame.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/hero-section.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/hero-section.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "block",
+        "inspiredBy": {
+          "name": "Cult Pro \u2014 marketing hero blocks (pattern)",
+          "url": "https://cult-ui.com"
+        }
+      }
+    },
+    {
+      "name": "feature-bento",
+      "type": "registry:ui",
+      "title": "Feature Bento",
+      "author": "Parable",
+      "description": "A bento-grid feature section whose cells span mixed footprints (wide, tall, 2x2) on a dense responsive grid, fade-rise into view with a per-cell stagger, and wake a soft accent glow that trails the pointer \u2014 written straight to CSS variables with one pointermove listener per cell and zero per-frame React state \u2014 while the border brightens on hover. Under prefers-reduced-motion the section is fully static: no stagger, no glow tracking, and the icon halo holds a single legible frame.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/feature-bento.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/feature-bento.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "block",
+        "inspiredBy": {
+          "name": "Cult Pro \u2014 bento feature sections (pattern)",
+          "url": "https://cult-ui.com"
+        }
+      }
+    },
+    {
+      "name": "testimonial-marquee",
+      "type": "registry:ui",
+      "title": "Testimonial Marquee",
+      "author": "Parable",
+      "description": "A wall of testimonial rows scrolling infinitely in alternating directions via a seamless two-half translateX(-50%) loop; hovering a row or tabbing onto any card pauses just that row, short rows are tiled with aria-hidden passes so the track always outruns the viewport, and cards fall back to a brand-accent initials disc when no avatar is given. Under prefers-reduced-motion it collapses to a static wrapped grid with no scroll and no duplicates.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/testimonial-marquee.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/testimonial-marquee.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "block",
+        "inspiredBy": {
+          "name": "Cult Pro \u2014 testimonial walls (pattern)",
+          "url": "https://cult-ui.com"
+        }
+      }
+    },
+    {
+      "name": "cta-banner",
+      "type": "registry:ui",
+      "title": "CTA Banner",
+      "author": "Parable",
+      "description": "A closing call-to-action band: an ink panel with a slow aurora gradient sweep, faint edge-masked dotted grid, and a glow that pulses behind the primary button \u2014 with an optional gradient-highlighted accent word.",
+      "registryDependencies": [],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/cta-banner.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/cta-banner.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "block",
+        "inspiredBy": {
+          "name": "Cult Pro \u2014 CTA sections (pattern)",
+          "url": "https://cult-ui.com"
+        }
+      }
+    },
+    {
+      "name": "faq-accordion",
+      "type": "registry:ui",
+      "title": "FAQ Accordion",
+      "author": "Parable",
+      "description": "An FAQ section whose question rows spring-expand to reveal answers \u2014 the panel height morphs while content fades and lifts, and a plus icon rotates into an \u00d7. Single mode collapses siblings; multiple lets several stay open. Every row is a real button with aria-expanded/controls, answers are labelled regions, and Up/Down/Home/End rove between questions. Under reduced-motion panels open and close instantly.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/faq-accordion.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/faq-accordion.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "block",
+        "inspiredBy": {
+          "name": "Cult Pro \u2014 FAQ sections (pattern)",
+          "url": "https://cult-ui.com"
+        }
+      }
+    },
+    {
+      "name": "stats-band",
+      "type": "registry:ui",
+      "title": "Stats Band",
+      "author": "Parable",
+      "description": "A horizontal strip of headline numbers that count up on scroll-in with mono captions, hairline dividers, and per-stat prefix/suffix/decimals.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/stats-band.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/stats-band.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "block",
+        "inspiredBy": {
+          "name": "Cult Pro \u2014 stats strips (pattern)",
+          "url": "https://cult-ui.com"
+        }
+      }
+    },
+    {
+      "name": "section-dots",
+      "type": "registry:ui",
+      "title": "Section Dots",
+      "author": "Parable",
+      "description": "A scroll-spy side rail whose active dot stretches into a labelled pill, tracking the section in view with IntersectionObserver and smooth-scrolling on click.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/section-dots.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/section-dots.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "Skiper UI \u2014 Side Scroll Navigation (pattern)",
+          "url": "https://skiper-ui.com"
+        }
+      }
+    },
+    {
+      "name": "squircle",
+      "type": "registry:ui",
+      "title": "Squircle",
+      "author": "Parable",
+      "description": "An Apple-style superellipse (squircle) mask that clips any content to a true Lam\u00e9-curve silhouette, with an optional constant-width outline.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/squircle.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/squircle.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "effect",
+        "inspiredBy": {
+          "name": "Skiper UI \u2014 Apple squircle (free tier)",
+          "url": "https://skiper-ui.com"
+        }
+      }
+    },
+    {
+      "name": "gooey-toggle",
+      "type": "registry:ui",
+      "title": "Gooey Toggle",
+      "author": "Parable",
+      "description": "A segmented radio toggle whose active pill travels between options with a gooey liquid stretch, rendered through an SVG goo filter with a snappy leader and a softer follower spring.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/gooey-toggle.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/gooey-toggle.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "Skiper UI \u2014 Gooey Effect (free tier)",
+          "url": "https://skiper-ui.com"
+        }
+      }
+    },
+    {
+      "name": "wallet-stack",
+      "type": "registry:ui",
+      "title": "Wallet Stack",
+      "author": "Parable",
+      "description": "A Family-wallet-style deck of gradient credit-card faces; click or press Enter/Space to spring the front card up and tuck it to the back while the rest advance.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/wallet-stack.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/wallet-stack.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "Family wallet (Benji Taylor) \u2014 via Skiper UI recreation",
+          "url": "https://family.co"
+        }
+      }
+    },
+    {
+      "name": "theme-toggle",
+      "type": "registry:ui",
+      "title": "Theme Toggle",
+      "author": "Parable",
+      "description": "An animated sun \u21c4 moon theme button: a masking circle slides in to bite the sun into a crescent while rays retract and stars twinkle in \u2014 CSS-only, controlled or uncontrolled, SSR-safe.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/theme-toggle.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/theme-toggle.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "Skiper UI \u2014 theme toggles (free tier)",
+          "url": "https://skiper-ui.com"
+        }
+      }
+    },
+    {
+      "name": "spotlight-card",
+      "type": "registry:ui",
+      "title": "Spotlight Card",
+      "author": "Parable",
+      "description": "A surface lit by a pointer-following spotlight \u2014 a soft radial face wash plus a mask-composited border-glow ring, both tracked through CSS custom properties written on pointermove so nothing re-renders per frame.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/spotlight-card.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/spotlight-card.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "Componentry \u2014 Spotlight Card (free, MIT)",
+          "url": "https://componentry.dev/docs"
+        }
+      }
+    },
+    {
+      "name": "compare-slider",
+      "type": "registry:ui",
+      "title": "Compare Slider",
+      "author": "Parable",
+      "description": "A before/after reveal with a draggable vertical divider, click-to-jump track, and a full-keyboard ARIA slider grip; panels accept image descriptors or arbitrary nodes.",
+      "registryDependencies": [],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/compare-slider.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/compare-slider.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive"
+      }
+    },
+    {
+      "name": "morph-tabs",
+      "type": "registry:ui",
+      "title": "Morph Tabs",
+      "author": "Parable",
+      "description": "Animated WAI-ARIA tabs whose shared pill/underline indicator springs between triggers while panels cross-fade and slide in the travel direction.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/morph-tabs.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/morph-tabs.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive"
+      }
+    },
+    {
+      "name": "orbit-icons",
+      "type": "registry:ui",
+      "title": "Orbit Icons",
+      "author": "Parable",
+      "description": "A centerpiece encircled by concentric dashed rings of evenly-spaced icon chips that revolve continuously while staying upright.",
+      "registryDependencies": [],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/orbit-icons.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/orbit-icons.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "effect"
+      }
     }
   ]
 }

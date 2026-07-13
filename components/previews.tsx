@@ -54,7 +54,22 @@ import { CommandPalette } from "@/registry/parable/ui/command-palette";
 import { ActivityFeed } from "@/registry/parable/ui/activity-feed";
 import { FileDrop } from "@/registry/parable/ui/file-drop";
 import { LiquidBlobs } from "@/registry/parable/ui/liquid-blobs";
-import { Activity, Aperture, ArrowRight, ArrowUpRight, BookOpen, Boxes, Camera, Cloud, Command, CreditCard, DollarSign, Download, FilePlus, GitBranch, GitPullRequest, Heart, Hexagon, Home, ImageIcon, Layers, LayoutDashboard, LifeBuoy, Lock, Mail, MessageCircle, Moon, Music, Orbit, Palette, Rocket, Search, Settings, SkipForward, Sparkles, Star, Terminal, Triangle, User, UserPlus, Users, Wallet, Zap } from "lucide-react";
+import { HeroSection } from "@/registry/parable/ui/hero-section";
+import { FeatureBento } from "@/registry/parable/ui/feature-bento";
+import { TestimonialMarquee } from "@/registry/parable/ui/testimonial-marquee";
+import { CtaBanner } from "@/registry/parable/ui/cta-banner";
+import { FaqAccordion } from "@/registry/parable/ui/faq-accordion";
+import { StatsBand } from "@/registry/parable/ui/stats-band";
+import { SectionDots } from "@/registry/parable/ui/section-dots";
+import { Squircle } from "@/registry/parable/ui/squircle";
+import { GooeyToggle } from "@/registry/parable/ui/gooey-toggle";
+import { WalletStack } from "@/registry/parable/ui/wallet-stack";
+import { ThemeToggle } from "@/registry/parable/ui/theme-toggle";
+import { SpotlightCard } from "@/registry/parable/ui/spotlight-card";
+import { CompareSlider } from "@/registry/parable/ui/compare-slider";
+import { MorphTabs } from "@/registry/parable/ui/morph-tabs";
+import { OrbitIcons } from "@/registry/parable/ui/orbit-icons";
+import { Activity, Aperture, ArrowRight, ArrowUpRight, BarChart3, BookOpen, Boxes, CalendarDays, CalendarRange, Camera, Cloud, Command, Cpu, CreditCard, Database, DollarSign, Download, FilePlus, GitBranch, GitPullRequest, Globe, Heart, Hexagon, Home, ImageIcon, Layers, LayoutDashboard, LayoutGrid, LifeBuoy, Lock, Mail, MessageCircle, Moon, Music, Orbit, Palette, PenTool, Rocket, Search, Settings, ShieldCheck, SkipForward, SlidersHorizontal, Sparkles, Star, Sun, Terminal, Triangle, User, UserPlus, Users, Wallet, Zap } from "lucide-react";
 
 /** Live demo for each component, keyed by slug. Used by gallery cards + detail. */
 export const PREVIEWS: Record<string, React.ReactNode> = {
@@ -976,6 +991,276 @@ export const PREVIEWS: Record<string, React.ReactNode> = {
         </span>
       </div>
     </LiquidBlobs>
+  ),
+  "hero-section": (
+    <div className="w-full max-w-2xl px-4">
+          <HeroSection
+            className="rounded-2xl border border-white/10 bg-[#0f0f10]"
+            eyebrow="Parable Registry"
+            title="Ship interfaces that feel alive"
+            accentWord="alive"
+            subtitle="Production-grade motion blocks you can paste straight into any React app."
+            primaryLabel="Get started"
+            secondaryLabel="Browse blocks"
+            onPrimary={() => {}}
+            onSecondary={() => {}}
+            stats={[
+              { value: "12k", label: "stars" },
+              { value: "400+", label: "teams" },
+              { value: "54", label: "blocks" },
+            ]}
+          />
+        </div>
+  ),
+  "feature-bento": (
+    <div className="w-full max-w-xl p-6">
+      <FeatureBento
+        columns={2}
+        items={[
+          {
+            icon: <Zap />,
+            title: "Instant previews",
+            description: "Every branch deploys to its own URL in seconds.",
+            size: "wide",
+            visual: (
+              <div className="h-full w-full rounded-xl bg-gradient-to-br from-violet-500/25 via-fuchsia-500/10 to-transparent ring-1 ring-white/10" />
+            ),
+          },
+          {
+            icon: <ShieldCheck />,
+            title: "SOC 2 ready",
+            description: "Audit logs and SSO on every plan.",
+          },
+          {
+            icon: <BarChart3 />,
+            title: "Live analytics",
+            description: "Latency and usage in real time.",
+          },
+        ]}
+      />
+    </div>
+  ),
+  "testimonial-marquee": (
+    <div className="w-full max-w-3xl py-2">
+      <TestimonialMarquee
+        rows={2}
+        speed={26}
+        testimonials={[
+          { quote: "We swapped three tools for this and shipped a week early.", name: "Mara Ellison", role: "CTO, Fieldnote" },
+          { quote: "The polish out of the box is unreal. Our landing page finally feels alive.", name: "Devon Okafor", role: "Design lead, Loomline" },
+          { quote: "Installed one component, kept the whole registry.", name: "Priya Raghavan", role: "Founder, Statlight" },
+          { quote: "Accessibility handled by default. Our audit came back spotless.", name: "Jonas Weber", role: "Engineering, Kupfer" },
+          { quote: "It reads like code we wish we had written ourselves.", name: "Alma Reyes", role: "Staff engineer, Driftwood" },
+          { quote: "Marketing pages went from weeks to an afternoon.", name: "Theo Lindqvist", role: "Product, Norrsken" },
+        ]}
+      />
+    </div>
+  ),
+  "cta-banner": (
+    <div className="w-full max-w-2xl px-4">
+      <CtaBanner
+        title="Ship your best work faster"
+        accentWord="faster"
+        subtitle="Join thousands of teams building with the Parable registry — production-ready components, zero lock-in."
+        primaryLabel="Get started"
+        secondaryLabel="View docs"
+        onPrimary={() => {}}
+        onSecondary={() => {}}
+      />
+    </div>
+  ),
+  "faq-accordion": (
+    <div className="w-full max-w-md px-4">
+      <FaqAccordion
+        defaultOpenIndex={0}
+        items={[
+          { question: "Do I own the code?", answer: "Yes — the source copies into your project. No dependency, no lock-in." },
+          { question: "Is it really free?", answer: "Every component and template, MIT-licensed. No paid tier." },
+          { question: "How do I install?", answer: "One shadcn CLI command per component." },
+        ]}
+      />
+    </div>
+  ),
+  "stats-band": (
+    <div className="flex w-full items-center justify-center rounded-2xl border border-white/10 bg-[#0f0f10] px-4 py-12">
+      <StatsBand
+        stats={[
+          { value: 99.9, suffix: "%", decimals: 1, label: "Uptime" },
+          { value: 4, prefix: "$", suffix: "M+", label: "Raised" },
+          { value: 12, suffix: "k", label: "Developers" },
+          { value: 180, suffix: "ms", label: "P95 Latency" },
+        ]}
+      />
+    </div>
+  ),
+  "section-dots": (
+    <div style={{ position: "relative", width: "100%", minHeight: 380, overflow: "hidden", borderRadius: 16, background: "radial-gradient(120% 120% at 12% 0%, #17151f 0%, #0f0f10 62%)", border: "1px solid rgba(255,255,255,0.08)" }}>
+      <div style={{ position: "absolute", inset: 0, padding: "30px 100px 30px 36px", display: "flex", flexDirection: "column", gap: 14 }}>
+        {[
+          { id: "sd-intro", tag: "01", title: "Introduction", accent: "#8b5cf6" },
+          { id: "sd-features", tag: "02", title: "Features", accent: "#ec4899" },
+          { id: "sd-pricing", tag: "03", title: "Pricing", accent: "#f5a623" },
+          { id: "sd-faq", tag: "04", title: "FAQ", accent: "#22d3ee" },
+        ].map((s) => (
+          <div key={s.id} id={s.id} style={{ borderRadius: 14, padding: "14px 16px", background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.07)" }}>
+            <div style={{ fontSize: 11, letterSpacing: 2, fontFamily: "ui-monospace, monospace", color: s.accent }}>{s.tag}</div>
+            <div style={{ marginTop: 4, fontSize: 15, fontWeight: 600, color: "rgba(255,255,255,0.92)" }}>{s.title}</div>
+            <div style={{ height: 6, width: "58%", borderRadius: 999, marginTop: 10, background: "linear-gradient(90deg, " + s.accent + "66, transparent)" }} />
+            <div style={{ height: 6, width: "40%", borderRadius: 999, marginTop: 6, background: "rgba(255,255,255,0.08)" }} />
+          </div>
+        ))}
+      </div>
+      <SectionDots
+        position="right"
+        className="absolute"
+        sections={[
+          { id: "sd-intro", label: "Introduction" },
+          { id: "sd-features", label: "Features" },
+          { id: "sd-pricing", label: "Pricing" },
+          { id: "sd-faq", label: "FAQ" },
+        ]}
+      />
+    </div>
+  ),
+  "squircle": (
+    <div style={{ display: "flex", gap: 28, alignItems: "center", justifyContent: "center", flexWrap: "wrap", padding: 32 }}>
+      <Squircle size={132} smoothing={4} border={{ width: 1.5, color: "rgba(255,255,255,0.16)" }}>
+        <div style={{ display: "grid", placeItems: "center", height: "100%", width: "100%", background: "linear-gradient(135deg,#8b5cf6,#ec4899)" }}>
+          <Sparkles color="white" size={34} strokeWidth={2} />
+        </div>
+      </Squircle>
+      <Squircle size={132} smoothing={4} border={{ width: 1.5, color: "#22d3ee" }}>
+        <div style={{ height: "100%", width: "100%", background: "radial-gradient(120% 120% at 30% 20%,#f5a623,#0f0f10)" }} />
+      </Squircle>
+      <Squircle size={132} smoothing={8}>
+        <div style={{ display: "grid", placeItems: "center", height: "100%", width: "100%", color: "#0f0f10", fontWeight: 800, fontSize: 44, background: "linear-gradient(135deg,#22d3ee,#8b5cf6)" }}>n</div>
+      </Squircle>
+    </div>
+  ),
+  "gooey-toggle": (
+    <div style={{ display: "grid", placeItems: "center", width: "100%", minHeight: 320, background: "#0f0f10", borderRadius: 16 }}>
+      <GooeyToggle
+        defaultValue="week"
+        options={[
+          { value: "day", label: "Day", icon: <Sun /> },
+          { value: "week", label: "Week", icon: <CalendarDays /> },
+          { value: "month", label: "Month", icon: <CalendarRange /> },
+        ]}
+      />
+    </div>
+  ),
+  "wallet-stack": (
+    <div className="flex min-h-[440px] w-full items-center justify-center bg-[#0f0f10] p-8">
+      <WalletStack
+        cards={[
+          { id: "personal", label: "Personal", number: "•••• 4242", holder: "A. MORGAN" },
+          { id: "business", label: "Business", number: "•••• 8817", holder: "A. MORGAN", gradient: ["#22d3ee", "#8b5cf6"] },
+          { id: "travel", label: "Travel", number: "•••• 0093", holder: "A. MORGAN", gradient: ["#f5a623", "#ec4899"] },
+          { id: "savings", label: "Savings", number: "•••• 5501", holder: "A. MORGAN", gradient: ["#ec4899", "#8b5cf6"] },
+        ]}
+      />
+    </div>
+  ),
+  "theme-toggle": (
+    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 28, padding: 48, borderRadius: 28, background: "radial-gradient(130% 130% at 28% 18%, #1b1b30 0%, #0f0f10 68%)" }}>
+      <ThemeToggle defaultTheme="dark" syncDocumentClass={false} size={30} style={{ background: "rgba(255,255,255,0.045)" }} />
+      <ThemeToggle defaultTheme="light" syncDocumentClass={false} size={30} style={{ background: "rgba(255,255,255,0.045)" }} />
+      <ThemeToggle defaultTheme="dark" syncDocumentClass={false} size={46} sunColor="#f5a623" moonColor="#22d3ee" ringColor="#8b5cf6" style={{ background: "rgba(255,255,255,0.045)" }} />
+    </div>
+  ),
+  "spotlight-card": (
+    <div className="flex w-full items-center justify-center bg-[#0f0f10] p-8">
+      <div className="grid w-full max-w-md grid-cols-1 gap-4 sm:grid-cols-2">
+        <SpotlightCard glowColor="#8b5cf6" className="p-5">
+          <div className="text-sm font-semibold text-white">Pointer light</div>
+          <p className="mt-1.5 text-xs leading-relaxed text-white/55">
+            Move your cursor across the card. The wash and the lit edge follow it.
+          </p>
+        </SpotlightCard>
+        <SpotlightCard glowColor="#22d3ee" radius={260} className="p-5">
+          <div className="text-sm font-semibold text-white">Signal</div>
+          <p className="mt-1.5 text-xs leading-relaxed text-white/55">
+            Each card measures its own bounds, so a whole grid lights independently.
+          </p>
+        </SpotlightCard>
+      </div>
+    </div>
+  ),
+  "compare-slider": (
+    <div className="flex w-full items-center justify-center p-6">
+      <CompareSlider
+        className="h-[320px] w-full max-w-md"
+        labels={{ before: "Draft", after: "Final" }}
+        before={
+          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#151517] via-[#1b1220] to-[#241428]">
+            <span className="text-4xl font-semibold tracking-tight text-white/35">v1</span>
+          </div>
+        }
+        after={
+          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#8b5cf6] via-[#ec4899] to-[#f5a623]">
+            <span className="text-4xl font-semibold tracking-tight text-white">v2</span>
+          </div>
+        }
+      />
+    </div>
+  ),
+  "morph-tabs": (
+    <div style={{ width: "100%", maxWidth: 440, padding: 28 }}>
+      <MorphTabs
+        variant="pill"
+        defaultValue="overview"
+        tabs={[
+          {
+            value: "overview",
+            label: "Overview",
+            icon: <LayoutGrid />,
+            content: (
+              <div style={{ padding: "18px 6px 6px" }}>
+                <p style={{ margin: 0, color: "#fff", fontWeight: 600 }}>Signal, not noise</p>
+                <p style={{ margin: "6px 0 0" }}>A calm snapshot of everything moving through your workspace this week.</p>
+              </div>
+            ),
+          },
+          {
+            value: "insights",
+            label: "Insights",
+            icon: <Sparkles />,
+            content: (
+              <div style={{ padding: "18px 6px 6px" }}>
+                <p style={{ margin: 0, color: "#fff", fontWeight: 600 }}>Up and to the right</p>
+                <p style={{ margin: "6px 0 0" }}>Engagement climbed 24% after the last release. The pill glides; panels slide.</p>
+              </div>
+            ),
+          },
+          {
+            value: "controls",
+            label: "Controls",
+            icon: <SlidersHorizontal />,
+            content: (
+              <div style={{ padding: "18px 6px 6px" }}>
+                <p style={{ margin: 0, color: "#fff", fontWeight: 600 }}>Tune the flow</p>
+                <p style={{ margin: "6px 0 0" }}>Arrow keys move selection, Home/End jump to the ends — focus and selection stay in sync.</p>
+              </div>
+            ),
+          },
+        ]}
+      />
+    </div>
+  ),
+  "orbit-icons": (
+    <div style={{ display: "grid", placeItems: "center", width: "100%", minHeight: 360, background: "radial-gradient(circle at 50% 45%, #17141f, #0f0f10)" }}>
+      <OrbitIcons
+        pauseOnHover
+        rings={[
+          { icons: [<PenTool key="f" />, <MessageCircle key="s" />, <GitBranch key="g" />, <Globe key="c" />], radius: 72, duration: 18 },
+          { icons: [<Cloud key="cl" />, <Database key="d" />, <Cpu key="cp" />, <Zap key="z" />, <Globe key="gl" />, <Boxes key="b" />], radius: 120, duration: 26, reverse: true },
+        ]}
+      >
+        <div style={{ display: "grid", placeItems: "center", width: 64, height: 64, borderRadius: 18, background: "linear-gradient(135deg, #8b5cf6, #ec4899)", boxShadow: "0 12px 40px -8px #8b5cf6aa, inset 0 1px 0 rgba(255,255,255,0.25)", color: "#fff" }}>
+          <Sparkles style={{ width: 28, height: 28 }} />
+        </div>
+      </OrbitIcons>
+    </div>
   ),
 };
 
