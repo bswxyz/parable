@@ -1,0 +1,51 @@
+export const metadata = {
+  title: "Docs — CLI",
+  description: "The shadcn CLI workflow for adding Parable components, and degit for cloning templates.",
+};
+
+# CLI
+
+## Components — `shadcn add`
+
+Every component page has a package-manager selector; here are the four forms:
+
+```bash
+npx shadcn@latest add https://parable.dev/r/shimmer-button.json
+pnpm dlx shadcn@latest add https://parable.dev/r/shimmer-button.json
+yarn dlx shadcn@latest add https://parable.dev/r/shimmer-button.json
+bunx --bun shadcn@latest add https://parable.dev/r/shimmer-button.json
+```
+
+`shadcn add` copies the component source into your project and resolves its
+dependencies. Re-running it re-installs (use `--overwrite` to replace local
+edits).
+
+## Templates — `degit` / clone
+
+Templates are complete sites, not components, so they're cloned rather than
+added:
+
+```bash
+# fastest — no git history
+npx degit bswxyz/formwork-neon my-site
+
+# or a full clone
+git clone https://github.com/bswxyz/formwork-neon.git
+
+# or with the GitHub CLI
+gh repo clone bswxyz/formwork-neon
+```
+
+The Formwork templates are build-step-free static sites (`index.html` +
+`styles.css` + `main.js`). The Parable templates carry their own framework
+(Astro, Next, SvelteKit, Vite) — check each template's page for its stack.
+
+## Building your own registry
+
+Parable's registry is generated from source, never hand-written:
+
+```bash
+npm run registry:build   # shadcn build → public/r/*.json
+```
+
+Add an item to `registry.json`, point its `files` at your source, and rebuild.

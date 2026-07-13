@@ -1,0 +1,58 @@
+export const metadata = {
+  title: "Docs — Installation",
+  description: "Add the @parable registry to your project and install components with the shadcn CLI.",
+};
+
+# Installation
+
+Parable ships through the [shadcn](https://ui.shadcn.com) registry. You need a
+React project with Tailwind and shadcn initialised.
+
+## 1. Set up shadcn
+
+If you haven't already:
+
+```bash
+npx shadcn@latest init
+```
+
+This creates `components.json` and `lib/utils.ts`.
+
+## 2. Add the Parable registry
+
+Register the `@parable` namespace in your `components.json`:
+
+```json
+{
+  "registries": {
+    "@parable": "https://parable.dev/r/{name}.json"
+  }
+}
+```
+
+## 3. Install a component
+
+Either by namespace:
+
+```bash
+npx shadcn@latest add @parable/shimmer-button
+```
+
+…or by full URL (no registry config needed):
+
+```bash
+npx shadcn@latest add https://parable.dev/r/shimmer-button.json
+```
+
+The component source is written to `components/parable/shimmer-button.tsx`, and
+any dependencies (npm packages, other registry components) are resolved
+automatically. It's your code now.
+
+## Requirements
+
+- React 18+ / 19
+- Tailwind CSS (v4 recommended)
+- shadcn CLI (`shadcn@latest`)
+
+Some components pull `motion` (Framer Motion). Each component's page lists its
+exact dependencies.

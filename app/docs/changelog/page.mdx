@@ -1,0 +1,29 @@
+export const metadata = {
+  title: "Docs — Changelog",
+  description: "What's shipped in Parable.",
+};
+
+# Changelog
+
+## v0.1 — first cut
+
+The marketplace foundation, built in phases.
+
+- **Registry infrastructure** — the `@parable` shadcn registry, generated from
+  source (`shadcn build` → `/r/*.json`), never hand-written. Verified end-to-end:
+  `shadcn add` from the registry installs into a fresh app and resolves
+  dependencies.
+- **7 components** across five categories — Shimmer Button, Velocity Marquee,
+  Kinetic Text, Magnetic Dock, Aurora Background, Dot Matrix Loader, Magnet
+  Lines. All reduced-motion aware.
+- **Component gallery + detail** — category and tier filters, ⌘K command
+  palette, live previews, Preview/Code tabs, package-manager selector, and a
+  "Copy Page" markdown export for LLMs.
+- **52 templates** across two families (Parable, Formwork) and five stacks —
+  each a real, deployed site with a live iframe preview, an Open button, and a
+  clone command.
+- **MCP endpoint** — the catalog exposed over Model Context Protocol so agents
+  can browse and pull directly.
+
+Everything is free. A Pro tier is wired into the data model but every item is
+unlocked.

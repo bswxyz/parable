@@ -1,0 +1,38 @@
+export const metadata = {
+  title: "Docs — Theming",
+  description: "How Parable components theme — Tailwind v4 tokens, CSS variables, dark mode, and reduced motion.",
+};
+
+# Theming
+
+Parable components lean on the shadcn / Tailwind v4 token system, so they inherit
+your app's theme automatically.
+
+## Tokens
+
+Components reference semantic tokens — `background`, `foreground`, `muted`,
+`border`, `ring` — rather than hard-coded colours, so they follow your light and
+dark themes without extra work. Most also accept explicit colour props
+(`shimmerColor`, `colors`, `color`) when you want to override.
+
+## Dark mode
+
+Parable uses `next-themes` with `attribute="class"`. Any `.dark` strategy works —
+the components read the same CSS variables in both themes.
+
+## Motion tokens
+
+Each animated component ships its own keyframes (injected once into
+`document.head`, not per instance) and **every one honours
+`prefers-reduced-motion`**: marquees freeze, springs snap to their target,
+loaders hold at mid-opacity. You get this for free — no configuration.
+
+## Customising
+
+Because the source lives in your repo, theming is just editing the file:
+
+- Change the Tailwind classes on the root element.
+- Swap the injected keyframes.
+- Tweak the default prop values.
+
+Nothing is hidden in a package you can't reach.

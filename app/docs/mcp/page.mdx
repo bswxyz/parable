@@ -1,0 +1,66 @@
+export const metadata = {
+  title: "Docs — MCP server",
+  description: "Parable exposes its catalog over a Model Context Protocol endpoint so AI agents can browse and pull components and templates.",
+};
+
+# MCP server
+
+Parable is MCP-native. The catalog is exposed over a
+[Model Context Protocol](https://modelcontextprotocol.io) endpoint so AI agents
+— including Claude Code — can list and fetch components and templates directly,
+then run the install command they get back.
+
+## Endpoint
+
+```
+https://parable.dev/api/mcp
+```
+
+Streamable HTTP transport — JSON-RPC 2.0 over `POST`. A `GET` returns a
+human-readable description and the tool list.
+
+## Tools
+
+| Tool | Arguments | Returns |
+|---|---|---|
+| `list_components` | `category?`, `tier?` | All components, optionally filtered |
+| `get_component` | `slug` | One component + its `shadcn add` command |
+| `list_templates` | `family?`, `stack?` | All templates, optionally filtered |
+| `get_template` | `slug` | One template + its `degit` clone command |
+
+## Example
+
+List the tools:
+
+```bash
+curl -X POST https://parable.dev/api/mcp \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/list"}'
+```
+
+Fetch one component:
+
+```bash
+curl -X POST https://parable.dev/api/mcp \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","id":2,"method":"tools/call",
+       "params":{"name":"get_component","arguments":{"slug":"shimmer-button"}}}'
+```
+
+The response's `content[0].text` is JSON with the component's metadata and the
+exact `npx shadcn@latest add …` command to install it.
+
+## Add it to a client
+
+Point any MCP-capable client at the endpoint. In an `mcp.json`-style config:
+
+```json
+{
+  "mcpServers": {
+    "parable": { "url": "https://parable.dev/api/mcp" }
+  }
+}
+```
+
+Then ask your agent to "list Parable hero backgrounds" or "install the shimmer
+button", and it can act on the catalog directly.
