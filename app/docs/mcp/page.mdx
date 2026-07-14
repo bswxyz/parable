@@ -8,8 +8,8 @@ export const metadata = {
 
 Parable is MCP-native. The catalog is exposed over a
 [Model Context Protocol](https://modelcontextprotocol.io) endpoint so AI agents
-— including Claude Code — can list and fetch components and templates directly,
-then run the install command they get back.
+can list and fetch components and templates directly, then run the install
+command they get back.
 
 ## Endpoint
 
@@ -53,15 +53,65 @@ exact `npx shadcn@latest add …` command to install it.
 
 ## Add it to a client
 
-Point any MCP-capable client at the endpoint. In an `mcp.json`-style config:
+Parable is a remote, stateless Streamable-HTTP server — no install, no API key.
+Point any MCP-capable client at the endpoint below.
+
+> **Domain note:** the `parable.dev` custom domain is not live yet. Until it is,
+> use the Vercel deployment URL: `https://parable-three.vercel.app/api/mcp`.
+
+### Claude Code
+
+One command (or drop a `.mcp.json` in your project root):
+
+```bash
+claude mcp add --transport http parable https://parable-three.vercel.app/api/mcp
+```
 
 ```json
+// .mcp.json
 {
   "mcpServers": {
-    "parable": { "url": "https://parable.dev/api/mcp" }
+    "parable": {
+      "type": "http",
+      "url": "https://parable-three.vercel.app/api/mcp"
+    }
   }
 }
 ```
 
-Then ask your agent to "list Parable hero backgrounds" or "install the shimmer
-button", and it can act on the catalog directly.
+### Cursor
+
+Add to `~/.cursor/mcp.json` (global) or `.cursor/mcp.json` (per project):
+
+```json
+{
+  "mcpServers": {
+    "parable": {
+      "url": "https://parable-three.vercel.app/api/mcp"
+    }
+  }
+}
+```
+
+### Codex
+
+Add to `~/.codex/config.toml`:
+
+```toml
+[mcp_servers.parable]
+url = "https://parable-three.vercel.app/api/mcp"
+```
+
+On older MCP clients that only speak stdio, bridge to the remote server with
+[`mcp-remote`](https://www.npmjs.com/package/mcp-remote):
+
+```toml
+[mcp_servers.parable]
+command = "npx"
+args = ["-y", "mcp-remote", "https://parable-three.vercel.app/api/mcp"]
+```
+
+### Use it
+
+Once connected, ask your agent to "list Parable hero backgrounds" or "install
+the shimmer button", and it can browse and pull from the catalog directly.

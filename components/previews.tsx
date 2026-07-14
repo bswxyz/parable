@@ -806,7 +806,7 @@ export const PREVIEWS: Record<string, React.ReactNode> = {
   "ai-input": (
     <div className="w-full max-w-md px-4">
       <AiInput
-        model="Sonnet 4.5"
+        model="Nova 2.5"
         placeholder="Ask anything…"
         suggestions={["Summarize this thread", "Draft a reply", "Explain like I'm five"]}
         onSubmit={() => new Promise((resolve) => setTimeout(resolve, 900))}
