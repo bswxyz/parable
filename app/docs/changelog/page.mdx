@@ -6,6 +6,30 @@ export const metadata = {
 
 # Changelog
 
+## v0.9 — Template signatures, extracted: 5 new components
+
+83 → **88**. The Expansion's best interactions, distilled into installable
+atoms — each credits the template it came from and links its live source.
+
+- **Waveform Scrubber** (from Earshot) — a seekable canvas waveform with
+  seeded deterministic peaks, a simulated transport, pointer-capture drag
+  seeking, and full keyboard control on a `role="slider"` surface.
+- **Caustics Background** (from Fathom) — rippling underwater light in raw
+  WebGL1: DPR-capped, off-screen paused, context-loss safe, CSS-gradient
+  fallback, one static frame under reduced motion.
+- **Combination Dial** (from Oubliette) — rotary spinbutton dials you drag
+  or arrow-key into alignment; the latch opens onto your children when the
+  combination matches.
+- **Axis Specimen** (from Glyphica) — a variable-font playground: sliders
+  generated from an `axes` prop drive `font-variation-settings` on a giant
+  editable specimen, with presets and a copy-ready CSS readout.
+- **Force Graph** (from Redoubt) — a seeded force-directed canvas graph that
+  settles and *stops ticking*; hover or keyboard-focus traces a node's
+  neighbourhood.
+- House rules throughout: single self-contained file, zero new dependencies,
+  SSR-deterministic, reduced-motion complete, keyboard operable — plus the
+  v0.8 auto-generated props tables cover all five.
+
 ## v0.8 — Component docs: props & usage, generated from source
 
 Every component page now documents itself.

@@ -42,7 +42,7 @@
         "family": "component",
         "category": "text",
         "inspiredBy": {
-          "name": "Componentry \u2014 Velocity Scroll",
+          "name": "Componentry — Velocity Scroll",
           "url": "https://componentry.dev/docs"
         }
       }
@@ -90,7 +90,7 @@
         "family": "component",
         "category": "interactive",
         "inspiredBy": {
-          "name": "Componentry \u2014 Magnetic Dock (and the macOS Dock)",
+          "name": "Componentry — Magnetic Dock (and the macOS Dock)",
           "url": "https://componentry.dev/docs"
         }
       }
@@ -114,7 +114,7 @@
         "family": "component",
         "category": "hero",
         "inspiredBy": {
-          "name": "Componentry \u2014 Silk Aurora",
+          "name": "Componentry — Silk Aurora",
           "url": "https://componentry.dev/docs"
         }
       }
@@ -124,7 +124,7 @@
       "type": "registry:ui",
       "title": "Dot Matrix Loader",
       "author": "Parable",
-      "description": "A matrix of dots choreographed purely by per-dot animation-delay math \u2014 seven variants: diagonal wave, orbit beam, boustrophedon snake, radial pulse, cascading rain, scanline sweep, and outward spiral. Accessible busy status; holds at mid-opacity under reduced-motion.",
+      "description": "A matrix of dots choreographed purely by per-dot animation-delay math — seven variants: diagonal wave, orbit beam, boustrophedon snake, radial pulse, cascading rain, scanline sweep, and outward spiral. Accessible busy status; holds at mid-opacity under reduced-motion.",
       "registryDependencies": [],
       "dependencies": [],
       "files": [
@@ -162,7 +162,7 @@
         "family": "component",
         "category": "effect",
         "inspiredBy": {
-          "name": "React Bits \u2014 Magnet Lines",
+          "name": "React Bits — Magnet Lines",
           "url": "https://reactbits.dev"
         }
       }
@@ -172,7 +172,7 @@
       "type": "registry:ui",
       "title": "Dither Aurora",
       "author": "Parable",
-      "description": "\u201cPrism Drift\u201d \u2014 a WebGL ordered-dither aurora: value noise domain-warped into a slow flow, mapped onto a three-stop gradient, then quantised through a 4\u00d74 Bayer matrix so it renders as a visible pixel lattice, not banding. Pointer parallax is spring-smoothed; renders one static frame under reduced-motion.",
+      "description": "“Prism Drift” — a WebGL ordered-dither aurora: value noise domain-warped into a slow flow, mapped onto a three-stop gradient, then quantised through a 4×4 Bayer matrix so it renders as a visible pixel lattice, not banding. Pointer parallax is spring-smoothed; renders one static frame under reduced-motion.",
       "registryDependencies": [],
       "dependencies": [],
       "files": [
@@ -196,7 +196,7 @@
       "type": "registry:ui",
       "title": "Liquid Metal Button",
       "author": "Parable",
-      "description": "A pill button ringed by a live WebGL liquid-metal shader \u2014 chromatic, silver, or gold reflections that intensify on hover. Polymorphic like Shimmer Button; the shader freezes to a single static frame under reduced-motion.",
+      "description": "A pill button ringed by a live WebGL liquid-metal shader — chromatic, silver, or gold reflections that intensify on hover. Polymorphic like Shimmer Button; the shader freezes to a single static frame under reduced-motion.",
       "registryDependencies": [],
       "dependencies": [],
       "files": [
@@ -236,7 +236,7 @@
         "family": "component",
         "category": "interactive",
         "inspiredBy": {
-          "name": "Cult UI \u2014 Dynamic Island (free, MIT)",
+          "name": "Cult UI — Dynamic Island (free, MIT)",
           "url": "https://cult-ui.com/docs"
         }
       }
@@ -262,7 +262,7 @@
         "family": "component",
         "category": "interactive",
         "inspiredBy": {
-          "name": "Cult UI \u2014 Expandable Card (free, MIT)",
+          "name": "Cult UI — Expandable Card (free, MIT)",
           "url": "https://cult-ui.com/docs"
         }
       }
@@ -272,7 +272,7 @@
       "type": "registry:ui",
       "title": "Logo Carousel",
       "author": "Parable",
-      "description": "A wall of N columns whose tiles flip through a shared pool of logos with a staggered vertical rotateX + y + fade swap \u2014 a single clock advances exactly one column per tick so two tiles never swap at once. Logos sit grayscale at 70% opacity and bloom to full colour on hover; under prefers-reduced-motion it collapses to a static grid of the first N logos with no cycling.",
+      "description": "A wall of N columns whose tiles flip through a shared pool of logos with a staggered vertical rotateX + y + fade swap — a single clock advances exactly one column per tick so two tiles never swap at once. Logos sit grayscale at 70% opacity and bloom to full colour on hover; under prefers-reduced-motion it collapses to a static grid of the first N logos with no cycling.",
       "registryDependencies": [],
       "dependencies": [
         "motion"
@@ -288,7 +288,7 @@
         "family": "component",
         "category": "effect",
         "inspiredBy": {
-          "name": "Cult UI \u2014 Logo Carousel (free, MIT)",
+          "name": "Cult UI — Logo Carousel (free, MIT)",
           "url": "https://cult-ui.com/docs"
         }
       }
@@ -298,7 +298,7 @@
       "type": "registry:ui",
       "title": "Gravity Dots",
       "author": "Parable",
-      "description": "A canvas dot-grid field the cursor bends \u2014 dots within range are pulled in (or repelled) and spring home with damped overshoot, smearing into capsules while they move. Sleeps when settled, offscreen, or tab-hidden; renders a static grid under reduced motion.",
+      "description": "A canvas dot-grid field the cursor bends — dots within range are pulled in (or repelled) and spring home with damped overshoot, smearing into capsules while they move. Sleeps when settled, offscreen, or tab-hidden; renders a static grid under reduced motion.",
       "registryDependencies": [],
       "dependencies": [],
       "files": [
@@ -312,7 +312,7 @@
         "family": "component",
         "category": "effect",
         "inspiredBy": {
-          "name": "Ali Imam \u2014 Attraction (aliimam.in/docs, historical)",
+          "name": "Ali Imam — Attraction (aliimam.in/docs, historical)",
           "url": "https://aliimam.in"
         }
       }
@@ -322,7 +322,7 @@
       "type": "registry:ui",
       "title": "Gradient Heading",
       "author": "Parable",
-      "description": "A polymorphic heading (h1\u2013h6/p) whose text is painted with a background-clipped brand gradient in three variants and four sizes. When motion is allowed the gradient drifts on a slow ~8s ease-in-out loop; under prefers-reduced-motion or animate={false} it renders a legible static gradient with edge-defining shadow.",
+      "description": "A polymorphic heading (h1–h6/p) whose text is painted with a background-clipped brand gradient in three variants and four sizes. When motion is allowed the gradient drifts on a slow ~8s ease-in-out loop; under prefers-reduced-motion or animate={false} it renders a legible static gradient with edge-defining shadow.",
       "registryDependencies": [],
       "dependencies": [],
       "files": [
@@ -336,7 +336,7 @@
         "family": "component",
         "category": "text",
         "inspiredBy": {
-          "name": "Cult UI \u2014 Gradient Heading (free, MIT)",
+          "name": "Cult UI — Gradient Heading (free, MIT)",
           "url": "https://cult-ui.com/docs"
         }
       }
@@ -362,7 +362,7 @@
         "family": "component",
         "category": "block",
         "inspiredBy": {
-          "name": "Watermelon UI \u2014 dashboard charts",
+          "name": "Watermelon UI — dashboard charts",
           "url": "https://ui.watermelon.sh"
         }
       }
@@ -388,7 +388,7 @@
         "family": "component",
         "category": "block",
         "inspiredBy": {
-          "name": "Watermelon UI \u2014 Transaction List",
+          "name": "Watermelon UI — Transaction List",
           "url": "https://ui.watermelon.sh"
         }
       }
@@ -398,7 +398,7 @@
       "type": "registry:ui",
       "title": "Device Frame",
       "author": "Parable",
-      "description": "Pure-CSS device mockups that clip children into a browser window (traffic lights, address bar, optional tab strip) or a phone (dynamic-island notch, side buttons, screen inner shadow). Hairline edges stay crisp in light and dark, and the phone scales proportionally at any width via container-query units. Fully static \u2014 no animation, so nothing to disable under reduced motion.",
+      "description": "Pure-CSS device mockups that clip children into a browser window (traffic lights, address bar, optional tab strip) or a phone (dynamic-island notch, side buttons, screen inner shadow). Hairline edges stay crisp in light and dark, and the phone scales proportionally at any width via container-query units. Fully static — no animation, so nothing to disable under reduced motion.",
       "registryDependencies": [],
       "dependencies": [],
       "files": [
@@ -412,7 +412,7 @@
         "family": "component",
         "category": "block",
         "inspiredBy": {
-          "name": "Ali Imam \u2014 Device (aliimam.in/docs, historical)",
+          "name": "Ali Imam — Device (aliimam.in/docs, historical)",
           "url": "https://aliimam.in"
         }
       }
@@ -438,7 +438,7 @@
         "family": "component",
         "category": "block",
         "inspiredBy": {
-          "name": "Skiper UI \u2014 product slices (approach)",
+          "name": "Skiper UI — product slices (approach)",
           "url": "https://skiper-ui.com"
         }
       }
@@ -464,7 +464,7 @@
         "family": "component",
         "category": "interactive",
         "inspiredBy": {
-          "name": "Componentry \u2014 Sticky Scroll Cards",
+          "name": "Componentry — Sticky Scroll Cards",
           "url": "https://componentry.dev/docs"
         }
       }
@@ -488,7 +488,7 @@
         "family": "component",
         "category": "text",
         "inspiredBy": {
-          "name": "Componentry \u2014 Split Flap Display (and Solari boards)",
+          "name": "Componentry — Split Flap Display (and Solari boards)",
           "url": "https://componentry.dev/docs"
         }
       }
@@ -498,7 +498,7 @@
       "type": "registry:ui",
       "title": "Eye Tracking",
       "author": "Parable",
-      "description": "A set of cartoon oval eyes whose pupils chase the pointer anywhere in the viewport \u2014 spring-smoothed and geometrically clamped inside each eye \u2014 with an occasional natural blink that pauses during fast pointer flicks. Under prefers-reduced-motion the pupils rest centered and the blink is disabled.",
+      "description": "A set of cartoon oval eyes whose pupils chase the pointer anywhere in the viewport — spring-smoothed and geometrically clamped inside each eye — with an occasional natural blink that pauses during fast pointer flicks. Under prefers-reduced-motion the pupils rest centered and the blink is disabled.",
       "registryDependencies": [],
       "dependencies": [
         "motion"
@@ -514,7 +514,7 @@
         "family": "component",
         "category": "effect",
         "inspiredBy": {
-          "name": "Componentry \u2014 Eye Tracking",
+          "name": "Componentry — Eye Tracking",
           "url": "https://componentry.dev/docs"
         }
       }
@@ -540,7 +540,7 @@
         "family": "component",
         "category": "interactive",
         "inspiredBy": {
-          "name": "Cult Pro \u2014 Shift Cards (pattern)",
+          "name": "Cult Pro — Shift Cards (pattern)",
           "url": "https://cult-ui.com"
         }
       }
@@ -566,7 +566,7 @@
         "family": "component",
         "category": "interactive",
         "inspiredBy": {
-          "name": "Cult Pro \u2014 notification system (pattern)",
+          "name": "Cult Pro — notification system (pattern)",
           "url": "https://cult-ui.com"
         }
       }
@@ -590,7 +590,7 @@
         "family": "component",
         "category": "hero",
         "inspiredBy": {
-          "name": "Cult Pro \u2014 animated grid background (pattern)",
+          "name": "Cult Pro — animated grid background (pattern)",
           "url": "https://cult-ui.com"
         }
       }
@@ -614,7 +614,7 @@
         "family": "component",
         "category": "text",
         "inspiredBy": {
-          "name": "Cult Pro \u2014 text effects (pattern)",
+          "name": "Cult Pro — text effects (pattern)",
           "url": "https://cult-ui.com"
         }
       }
@@ -640,7 +640,7 @@
         "family": "component",
         "category": "text",
         "inspiredBy": {
-          "name": "Cult Pro / Componentry \u2014 text highlight (pattern)",
+          "name": "Cult Pro / Componentry — text highlight (pattern)",
           "url": "https://cult-ui.com"
         }
       }
@@ -650,7 +650,7 @@
       "type": "registry:ui",
       "title": "Animated Input",
       "author": "Parable",
-      "description": "A text field with a spring floating label that rises on focus/fill, a centre-drawn accent underline, an optional tinting leading icon, and typed feedback \u2014 an error string shakes the field once, paints a live-announced red hint and sets aria-invalid, while success draws a check tick; controlled or uncontrolled with real label/id/aria-describedby wiring. Under prefers-reduced-motion every transition collapses to an instant, legible state (no shake, draw, or float tween) and the focus ring uses :focus-visible.",
+      "description": "A text field with a spring floating label that rises on focus/fill, a centre-drawn accent underline, an optional tinting leading icon, and typed feedback — an error string shakes the field once, paints a live-announced red hint and sets aria-invalid, while success draws a check tick; controlled or uncontrolled with real label/id/aria-describedby wiring. Under prefers-reduced-motion every transition collapses to an instant, legible state (no shake, draw, or float tween) and the focus ring uses :focus-visible.",
       "registryDependencies": [],
       "dependencies": [
         "motion"
@@ -666,7 +666,7 @@
         "family": "component",
         "category": "interactive",
         "inspiredBy": {
-          "name": "Cult Pro \u2014 animated inputs (pattern)",
+          "name": "Cult Pro — animated inputs (pattern)",
           "url": "https://cult-ui.com"
         }
       }
@@ -693,7 +693,7 @@
         "family": "component",
         "category": "block",
         "inspiredBy": {
-          "name": "Cult Pro \u2014 pricing blocks (pattern)",
+          "name": "Cult Pro — pricing blocks (pattern)",
           "url": "https://cult-ui.com"
         }
       }
@@ -703,7 +703,7 @@
       "type": "registry:ui",
       "title": "Image Reveal",
       "author": "Parable",
-      "description": "A scroll-triggered curtain wipe that uncovers an image via an animating clip-path inset, a 1.1\u21921 overscan, and a single diagonal sheen sweep, fired once on scroll-into-view. Under prefers-reduced-motion the image is shown immediately at full size with no wipe, scale, or sheen.",
+      "description": "A scroll-triggered curtain wipe that uncovers an image via an animating clip-path inset, a 1.1→1 overscan, and a single diagonal sheen sweep, fired once on scroll-into-view. Under prefers-reduced-motion the image is shown immediately at full size with no wipe, scale, or sheen.",
       "registryDependencies": [],
       "dependencies": [
         "motion"
@@ -719,7 +719,7 @@
         "family": "component",
         "category": "effect",
         "inspiredBy": {
-          "name": "Skiper UI \u2014 image reveal (pattern); upstream interaction genre",
+          "name": "Skiper UI — image reveal (pattern); upstream interaction genre",
           "url": "https://skiper-ui.com"
         }
       }
@@ -729,7 +729,7 @@
       "type": "registry:ui",
       "title": "Cursor Image Trail",
       "author": "Parable",
-      "description": "A hover region that leaves a trail of images chasing the cursor \u2014 images from a pool pop in at pointer positions (throttled by distance) and fade/scale out a moment later, driven by a single rAF loop over a recycled pool of nodes with zero per-frame React state. Under prefers-reduced-motion the trail is disabled entirely and only the children render.",
+      "description": "A hover region that leaves a trail of images chasing the cursor — images from a pool pop in at pointer positions (throttled by distance) and fade/scale out a moment later, driven by a single rAF loop over a recycled pool of nodes with zero per-frame React state. Under prefers-reduced-motion the trail is disabled entirely and only the children render.",
       "registryDependencies": [],
       "dependencies": [],
       "files": [
@@ -743,7 +743,7 @@
         "family": "component",
         "category": "effect",
         "inspiredBy": {
-          "name": "Skiper UI \u2014 image cursor trail (pattern)",
+          "name": "Skiper UI — image cursor trail (pattern)",
           "url": "https://skiper-ui.com"
         }
       }
@@ -753,7 +753,7 @@
       "type": "registry:ui",
       "title": "Drag Scroll Gallery",
       "author": "Parable",
-      "description": "A horizontal rail you drag, flick, or wheel to scroll, with hand-written inertia, rubber-band ends, and optional flick-to-snap; items scale, tilt, and fade by distance from centre. Keyboard-navigable with role=list and focusable items, and under prefers-reduced-motion it degrades to a plain overflow-x scroller with CSS scroll-snap \u2014 no inertia or scaling.",
+      "description": "A horizontal rail you drag, flick, or wheel to scroll, with hand-written inertia, rubber-band ends, and optional flick-to-snap; items scale, tilt, and fade by distance from centre. Keyboard-navigable with role=list and focusable items, and under prefers-reduced-motion it degrades to a plain overflow-x scroller with CSS scroll-snap — no inertia or scaling.",
       "registryDependencies": [],
       "dependencies": [],
       "files": [
@@ -767,7 +767,7 @@
         "family": "component",
         "category": "interactive",
         "inspiredBy": {
-          "name": "Skiper UI \u2014 things drag and scroll (pattern)",
+          "name": "Skiper UI — things drag and scroll (pattern)",
           "url": "https://skiper-ui.com"
         }
       }
@@ -777,7 +777,7 @@
       "type": "registry:ui",
       "title": "Rich Tooltip",
       "author": "Parable",
-      "description": "A Vercel-style rich tooltip that springs open from its trigger with a scale + fade and a real arrow, holding arbitrary ReactNode content rather than a bare string. Placement is computed by hand (no positioning lib) \u2014 measuring trigger and tooltip to auto-flip top\u21c4bottom / left\u21c4right on viewport overflow and clamp the cross axis \u2014 and it renders through a portal to document.body so ancestor overflow never clips it. Hover and focus open it with small delays, moving into the tooltip keeps it open, and Escape closes; under prefers-reduced-motion the show/hide is instant with no scale.",
+      "description": "A Vercel-style rich tooltip that springs open from its trigger with a scale + fade and a real arrow, holding arbitrary ReactNode content rather than a bare string. Placement is computed by hand (no positioning lib) — measuring trigger and tooltip to auto-flip top⇄bottom / left⇄right on viewport overflow and clamp the cross axis — and it renders through a portal to document.body so ancestor overflow never clips it. Hover and focus open it with small delays, moving into the tooltip keeps it open, and Escape closes; under prefers-reduced-motion the show/hide is instant with no scale.",
       "registryDependencies": [],
       "dependencies": [
         "motion"
@@ -793,7 +793,7 @@
         "family": "component",
         "category": "interactive",
         "inspiredBy": {
-          "name": "Skiper UI \u2014 Vercel-style tooltip (pattern)",
+          "name": "Skiper UI — Vercel-style tooltip (pattern)",
           "url": "https://skiper-ui.com"
         }
       }
@@ -803,7 +803,7 @@
       "type": "registry:ui",
       "title": "Token Swap Card",
       "author": "Parable",
-      "description": "A demo-grade crypto swap card with two token fields (searchable keyboard-driven picker + amount input) whose amounts derive from the USD price ratio, a center button that flips 180\u00b0 and swaps the sides on a spring, a live rate line, and a Swap button that runs an inline pending \u2192 done animation. The flip, card cross, and spinner drop to instant state swaps under prefers-reduced-motion.",
+      "description": "A demo-grade crypto swap card with two token fields (searchable keyboard-driven picker + amount input) whose amounts derive from the USD price ratio, a center button that flips 180° and swaps the sides on a spring, a live rate line, and a Swap button that runs an inline pending → done animation. The flip, card cross, and spinner drop to instant state swaps under prefers-reduced-motion.",
       "registryDependencies": [],
       "dependencies": [
         "motion"
@@ -819,7 +819,7 @@
         "family": "component",
         "category": "block",
         "inspiredBy": {
-          "name": "Skiper UI \u2014 Aave token swap (pattern)",
+          "name": "Skiper UI — Aave token swap (pattern)",
           "url": "https://skiper-ui.com"
         }
       }
@@ -829,7 +829,7 @@
       "type": "registry:ui",
       "title": "Hover Member Row",
       "author": "Parable",
-      "description": "A team roster where pointing at or keyboard-focusing a row lifts it into a rich preview \u2014 the avatar swells, an accent bar draws down the left edge, the role and bio slide open, a corner arrow eases in, and the other rows dim back. Hover and focus drive identical state (pointer wins ties); each row is a real anchor or button carrying a full aria-label so the reveal never gates assistive tech. Under prefers-reduced-motion every transform is dropped and the preview simply cross-fades in via opacity.",
+      "description": "A team roster where pointing at or keyboard-focusing a row lifts it into a rich preview — the avatar swells, an accent bar draws down the left edge, the role and bio slide open, a corner arrow eases in, and the other rows dim back. Hover and focus drive identical state (pointer wins ties); each row is a real anchor or button carrying a full aria-label so the reveal never gates assistive tech. Under prefers-reduced-motion every transform is dropped and the preview simply cross-fades in via opacity.",
       "registryDependencies": [],
       "dependencies": [
         "motion"
@@ -845,7 +845,7 @@
         "family": "component",
         "category": "interactive",
         "inspiredBy": {
-          "name": "Skiper UI \u2014 hover members (pattern)",
+          "name": "Skiper UI — hover members (pattern)",
           "url": "https://skiper-ui.com"
         }
       }
@@ -855,7 +855,7 @@
       "type": "registry:ui",
       "title": "Family Drawer",
       "author": "Parable",
-      "description": "A bottom sheet that springs up from the edge and morphs its height through a family of steps: swap the children (with an optional contentKey) and it measures the incoming content, springs the panel to fit, and cross-fades the step swap, while a grabber handle drags the sheet down to dismiss (velocity-aware). Fully modal \u2014 focus trap and return, body scroll lock, Escape and backdrop to close; under prefers-reduced-motion the height morph, slide-up, and drag physics are dropped for an instant, legible show/hide.",
+      "description": "A bottom sheet that springs up from the edge and morphs its height through a family of steps: swap the children (with an optional contentKey) and it measures the incoming content, springs the panel to fit, and cross-fades the step swap, while a grabber handle drags the sheet down to dismiss (velocity-aware). Fully modal — focus trap and return, body scroll lock, Escape and backdrop to close; under prefers-reduced-motion the height morph, slide-up, and drag physics are dropped for an instant, legible show/hide.",
       "registryDependencies": [],
       "dependencies": [
         "motion"
@@ -881,7 +881,7 @@
       "type": "registry:ui",
       "title": "Progress Ring",
       "author": "Parable",
-      "description": "A circular SVG progress ring whose rounded-cap gradient arc (violet \u2192 fuchsia) sweeps to its value by transitioning stroke-dashoffset in pure CSS over a dim track, with a centred percentage or custom label and real progressbar/aria-value semantics. Under prefers-reduced-motion the sweep is disabled and the ring draws statically at its final value.",
+      "description": "A circular SVG progress ring whose rounded-cap gradient arc (violet → fuchsia) sweeps to its value by transitioning stroke-dashoffset in pure CSS over a dim track, with a centred percentage or custom label and real progressbar/aria-value semantics. Under prefers-reduced-motion the sweep is disabled and the ring draws statically at its final value.",
       "registryDependencies": [],
       "dependencies": [],
       "files": [
@@ -895,7 +895,7 @@
         "family": "component",
         "category": "block",
         "inspiredBy": {
-          "name": "Watermelon UI \u2014 progress ring",
+          "name": "Watermelon UI — progress ring",
           "url": "https://ui.watermelon.sh"
         }
       }
@@ -921,7 +921,7 @@
         "family": "component",
         "category": "block",
         "inspiredBy": {
-          "name": "Watermelon UI \u2014 dashboard stat cards",
+          "name": "Watermelon UI — dashboard stat cards",
           "url": "https://ui.watermelon.sh"
         }
       }
@@ -931,7 +931,7 @@
       "type": "registry:ui",
       "title": "Animated Counter",
       "author": "Parable",
-      "description": "A number that rolls to its value odometer-style \u2014 each digit column slides vertically to its target through the digits between, with tabular-nums so the width never jitters.",
+      "description": "A number that rolls to its value odometer-style — each digit column slides vertically to its target through the digits between, with tabular-nums so the width never jitters.",
       "registryDependencies": [],
       "dependencies": [],
       "files": [
@@ -945,7 +945,7 @@
         "family": "component",
         "category": "text",
         "inspiredBy": {
-          "name": "Watermelon UI \u2014 animated number",
+          "name": "Watermelon UI — animated number",
           "url": "https://ui.watermelon.sh"
         }
       }
@@ -955,7 +955,7 @@
       "type": "registry:ui",
       "title": "Avatar Stack",
       "author": "Parable",
-      "description": "An overlapping avatar group: hovering or focusing an avatar lifts it and reveals a name tooltip while neighbours part slightly; extras collapse into a \u201c+N\u201d chip and images fall back to deterministic colored initials. Under reduced-motion the lift and parting are dropped; the tooltip still appears.",
+      "description": "An overlapping avatar group: hovering or focusing an avatar lifts it and reveals a name tooltip while neighbours part slightly; extras collapse into a “+N” chip and images fall back to deterministic colored initials. Under reduced-motion the lift and parting are dropped; the tooltip still appears.",
       "registryDependencies": [],
       "dependencies": [],
       "files": [
@@ -969,7 +969,7 @@
         "family": "component",
         "category": "interactive",
         "inspiredBy": {
-          "name": "Watermelon UI \u2014 avatar group",
+          "name": "Watermelon UI — avatar group",
           "url": "https://ui.watermelon.sh"
         }
       }
@@ -979,7 +979,7 @@
       "type": "registry:ui",
       "title": "Texture Button",
       "author": "Parable",
-      "description": "A tactile button built from stacked surface layers \u2014 a gradient face, inlined grayscale noise grain, a soft top-inner sheen, and a composed inset+drop shadow that sinks on press \u2014 in accent, surface, and glass variants. The press transform is dropped under prefers-reduced-motion while the pressed colour/shadow still fires, and the focus-visible ring is an outline sitting outside the button.",
+      "description": "A tactile button built from stacked surface layers — a gradient face, inlined grayscale noise grain, a soft top-inner sheen, and a composed inset+drop shadow that sinks on press — in accent, surface, and glass variants. The press transform is dropped under prefers-reduced-motion while the pressed colour/shadow still fires, and the focus-visible ring is an outline sitting outside the button.",
       "registryDependencies": [],
       "dependencies": [],
       "files": [
@@ -993,7 +993,7 @@
         "family": "component",
         "category": "interactive",
         "inspiredBy": {
-          "name": "Cult UI \u2014 Texture / Border-Beam buttons (free, MIT)",
+          "name": "Cult UI — Texture / Border-Beam buttons (free, MIT)",
           "url": "https://cult-ui.com/docs"
         }
       }
@@ -1017,7 +1017,7 @@
         "family": "component",
         "category": "effect",
         "inspiredBy": {
-          "name": "Cult UI \u2014 Border Beam (free, MIT)",
+          "name": "Cult UI — Border Beam (free, MIT)",
           "url": "https://cult-ui.com/docs"
         }
       }
@@ -1043,7 +1043,7 @@
         "family": "component",
         "category": "interactive",
         "inspiredBy": {
-          "name": "Cult UI \u2014 Intro Disclosure / Onboarding (free, MIT)",
+          "name": "Cult UI — Intro Disclosure / Onboarding (free, MIT)",
           "url": "https://cult-ui.com/docs"
         }
       }
@@ -1053,7 +1053,7 @@
       "type": "registry:ui",
       "title": "Tweet Grid",
       "author": "Parable",
-      "description": "A masonry-ish testimonial wall of tweet cards that fade and rise into view with a staggered column cascade and lift on hover, built on pure CSS multi-column layout that steps down responsively while keeping screen-reader reading order. Under prefers-reduced-motion the grid is fully static \u2014 no stagger, hover lift, or sheen \u2014 with every card legible at rest.",
+      "description": "A masonry-ish testimonial wall of tweet cards that fade and rise into view with a staggered column cascade and lift on hover, built on pure CSS multi-column layout that steps down responsively while keeping screen-reader reading order. Under prefers-reduced-motion the grid is fully static — no stagger, hover lift, or sheen — with every card legible at rest.",
       "registryDependencies": [],
       "dependencies": [
         "motion"
@@ -1069,7 +1069,7 @@
         "family": "component",
         "category": "block",
         "inspiredBy": {
-          "name": "Cult UI \u2014 Tweet Grid (free, MIT)",
+          "name": "Cult UI — Tweet Grid (free, MIT)",
           "url": "https://cult-ui.com/docs"
         }
       }
@@ -1095,7 +1095,7 @@
         "family": "component",
         "category": "block",
         "inspiredBy": {
-          "name": "Skiper UI \u2014 AI Input (pattern); Vercel AI SDK chat genre",
+          "name": "Skiper UI — AI Input (pattern); Vercel AI SDK chat genre",
           "url": "https://skiper-ui.com"
         }
       }
@@ -1122,7 +1122,7 @@
         "family": "component",
         "category": "interactive",
         "inspiredBy": {
-          "name": "Skiper UI \u2014 Apple / Dia carousel (pattern)",
+          "name": "Skiper UI — Apple / Dia carousel (pattern)",
           "url": "https://skiper-ui.com"
         }
       }
@@ -1148,7 +1148,7 @@
         "family": "component",
         "category": "hero",
         "inspiredBy": {
-          "name": "Skiper UI \u2014 Interactive 3D Hero (pattern)",
+          "name": "Skiper UI — Interactive 3D Hero (pattern)",
           "url": "https://skiper-ui.com"
         }
       }
@@ -1172,7 +1172,7 @@
         "family": "component",
         "category": "effect",
         "inspiredBy": {
-          "name": "Skiper UI \u2014 ASCII simulation (pattern)",
+          "name": "Skiper UI — ASCII simulation (pattern)",
           "url": "https://skiper-ui.com"
         }
       }
@@ -1199,7 +1199,7 @@
         "family": "component",
         "category": "block",
         "inspiredBy": {
-          "name": "Skiper UI \u2014 Apple Navbar V002 (pattern)",
+          "name": "Skiper UI — Apple Navbar V002 (pattern)",
           "url": "https://skiper-ui.com"
         }
       }
@@ -1209,7 +1209,7 @@
       "type": "registry:ui",
       "title": "Scroll Text Reveal",
       "author": "Parable",
-      "description": "A block of copy that illuminates word-by-word as it scrolls through the viewport \u2014 a reading highlighter driven by useScroll, each word cross-fading from muted to foreground over its own slice of scroll progress. The animated layer is aria-hidden with an intact screen-reader copy; under prefers-reduced-motion every word renders fully lit with no scroll mapping.",
+      "description": "A block of copy that illuminates word-by-word as it scrolls through the viewport — a reading highlighter driven by useScroll, each word cross-fading from muted to foreground over its own slice of scroll progress. The animated layer is aria-hidden with an intact screen-reader copy; under prefers-reduced-motion every word renders fully lit with no scroll mapping.",
       "registryDependencies": [],
       "dependencies": [
         "motion"
@@ -1225,7 +1225,7 @@
         "family": "component",
         "category": "text",
         "inspiredBy": {
-          "name": "Skiper UI \u2014 Horizontal / word text reveal (pattern)",
+          "name": "Skiper UI — Horizontal / word text reveal (pattern)",
           "url": "https://skiper-ui.com"
         }
       }
@@ -1235,7 +1235,7 @@
       "type": "registry:ui",
       "title": "Command Palette",
       "author": "Parable",
-      "description": "A self-written \u2318K command palette (no cmdk): a body-portalled modal that substring/subsequence-filters grouped commands, with wrapping arrow-key navigation, Enter to run, focus trap and return, body-scroll lock, and a spring scale-and-fade entrance. Under prefers-reduced-motion every transition is instant and the ambient brand sheen holds still.",
+      "description": "A self-written ⌘K command palette (no cmdk): a body-portalled modal that substring/subsequence-filters grouped commands, with wrapping arrow-key navigation, Enter to run, focus trap and return, body-scroll lock, and a spring scale-and-fade entrance. Under prefers-reduced-motion every transition is instant and the ambient brand sheen holds still.",
       "registryDependencies": [],
       "dependencies": [
         "motion"
@@ -1251,7 +1251,7 @@
         "family": "component",
         "category": "interactive",
         "inspiredBy": {
-          "name": "cmdk by Paco Coursey (\u2318K palette genre)",
+          "name": "cmdk by Paco Coursey (⌘K palette genre)",
           "url": "https://cmdk.paco.me"
         }
       }
@@ -1277,7 +1277,7 @@
         "family": "component",
         "category": "block",
         "inspiredBy": {
-          "name": "Watermelon UI \u2014 activity timeline (pattern)",
+          "name": "Watermelon UI — activity timeline (pattern)",
           "url": "https://ui.watermelon.sh"
         }
       }
@@ -1304,7 +1304,7 @@
         "family": "component",
         "category": "interactive",
         "inspiredBy": {
-          "name": "Cult UI \u2014 file upload dropzone (pattern)",
+          "name": "Cult UI — file upload dropzone (pattern)",
           "url": "https://cult-ui.com/docs"
         }
       }
@@ -1328,7 +1328,7 @@
         "family": "component",
         "category": "hero",
         "inspiredBy": {
-          "name": "Cult UI \u2014 Hero gradient / metaball backgrounds (pattern)",
+          "name": "Cult UI — Hero gradient / metaball backgrounds (pattern)",
           "url": "https://cult-ui.com/docs"
         }
       }
@@ -1338,7 +1338,7 @@
       "type": "registry:ui",
       "title": "Hero Section",
       "author": "Parable",
-      "description": "A complete marketing hero block \u2014 mono uppercase eyebrow, tracking-tight headline with one gradient-accented word, subcopy, primary/secondary CTA pair, and a mono stats row \u2014 that spring-staggers in on mount over two blurred radial glows drifting on slow keyframe orbits; under prefers-reduced-motion the content reveals instantly with no stagger and the glows hold a static frame.",
+      "description": "A complete marketing hero block — mono uppercase eyebrow, tracking-tight headline with one gradient-accented word, subcopy, primary/secondary CTA pair, and a mono stats row — that spring-staggers in on mount over two blurred radial glows drifting on slow keyframe orbits; under prefers-reduced-motion the content reveals instantly with no stagger and the glows hold a static frame.",
       "registryDependencies": [],
       "dependencies": [
         "motion",
@@ -1355,7 +1355,7 @@
         "family": "component",
         "category": "block",
         "inspiredBy": {
-          "name": "Cult Pro \u2014 marketing hero blocks (pattern)",
+          "name": "Cult Pro — marketing hero blocks (pattern)",
           "url": "https://cult-ui.com"
         }
       }
@@ -1365,7 +1365,7 @@
       "type": "registry:ui",
       "title": "Feature Bento",
       "author": "Parable",
-      "description": "A bento-grid feature section whose cells span mixed footprints (wide, tall, 2x2) on a dense responsive grid, fade-rise into view with a per-cell stagger, and wake a soft accent glow that trails the pointer \u2014 written straight to CSS variables with one pointermove listener per cell and zero per-frame React state \u2014 while the border brightens on hover. Under prefers-reduced-motion the section is fully static: no stagger, no glow tracking, and the icon halo holds a single legible frame.",
+      "description": "A bento-grid feature section whose cells span mixed footprints (wide, tall, 2x2) on a dense responsive grid, fade-rise into view with a per-cell stagger, and wake a soft accent glow that trails the pointer — written straight to CSS variables with one pointermove listener per cell and zero per-frame React state — while the border brightens on hover. Under prefers-reduced-motion the section is fully static: no stagger, no glow tracking, and the icon halo holds a single legible frame.",
       "registryDependencies": [],
       "dependencies": [
         "motion"
@@ -1381,7 +1381,7 @@
         "family": "component",
         "category": "block",
         "inspiredBy": {
-          "name": "Cult Pro \u2014 bento feature sections (pattern)",
+          "name": "Cult Pro — bento feature sections (pattern)",
           "url": "https://cult-ui.com"
         }
       }
@@ -1405,7 +1405,7 @@
         "family": "component",
         "category": "block",
         "inspiredBy": {
-          "name": "Cult Pro \u2014 testimonial walls (pattern)",
+          "name": "Cult Pro — testimonial walls (pattern)",
           "url": "https://cult-ui.com"
         }
       }
@@ -1415,7 +1415,7 @@
       "type": "registry:ui",
       "title": "CTA Banner",
       "author": "Parable",
-      "description": "A closing call-to-action band: an ink panel with a slow aurora gradient sweep, faint edge-masked dotted grid, and a glow that pulses behind the primary button \u2014 with an optional gradient-highlighted accent word.",
+      "description": "A closing call-to-action band: an ink panel with a slow aurora gradient sweep, faint edge-masked dotted grid, and a glow that pulses behind the primary button — with an optional gradient-highlighted accent word.",
       "registryDependencies": [],
       "dependencies": [
         "lucide-react"
@@ -1431,7 +1431,7 @@
         "family": "component",
         "category": "block",
         "inspiredBy": {
-          "name": "Cult Pro \u2014 CTA sections (pattern)",
+          "name": "Cult Pro — CTA sections (pattern)",
           "url": "https://cult-ui.com"
         }
       }
@@ -1441,7 +1441,7 @@
       "type": "registry:ui",
       "title": "FAQ Accordion",
       "author": "Parable",
-      "description": "An FAQ section whose question rows spring-expand to reveal answers \u2014 the panel height morphs while content fades and lifts, and a plus icon rotates into an \u00d7. Single mode collapses siblings; multiple lets several stay open. Every row is a real button with aria-expanded/controls, answers are labelled regions, and Up/Down/Home/End rove between questions. Under reduced-motion panels open and close instantly.",
+      "description": "An FAQ section whose question rows spring-expand to reveal answers — the panel height morphs while content fades and lifts, and a plus icon rotates into an ×. Single mode collapses siblings; multiple lets several stay open. Every row is a real button with aria-expanded/controls, answers are labelled regions, and Up/Down/Home/End rove between questions. Under reduced-motion panels open and close instantly.",
       "registryDependencies": [],
       "dependencies": [
         "motion"
@@ -1457,7 +1457,7 @@
         "family": "component",
         "category": "block",
         "inspiredBy": {
-          "name": "Cult Pro \u2014 FAQ sections (pattern)",
+          "name": "Cult Pro — FAQ sections (pattern)",
           "url": "https://cult-ui.com"
         }
       }
@@ -1481,7 +1481,7 @@
         "family": "component",
         "category": "block",
         "inspiredBy": {
-          "name": "Cult Pro \u2014 stats strips (pattern)",
+          "name": "Cult Pro — stats strips (pattern)",
           "url": "https://cult-ui.com"
         }
       }
@@ -1507,7 +1507,7 @@
         "family": "component",
         "category": "interactive",
         "inspiredBy": {
-          "name": "Skiper UI \u2014 Side Scroll Navigation (pattern)",
+          "name": "Skiper UI — Side Scroll Navigation (pattern)",
           "url": "https://skiper-ui.com"
         }
       }
@@ -1517,7 +1517,7 @@
       "type": "registry:ui",
       "title": "Squircle",
       "author": "Parable",
-      "description": "An Apple-style superellipse (squircle) mask that clips any content to a true Lam\u00e9-curve silhouette, with an optional constant-width outline.",
+      "description": "An Apple-style superellipse (squircle) mask that clips any content to a true Lamé-curve silhouette, with an optional constant-width outline.",
       "registryDependencies": [],
       "dependencies": [],
       "files": [
@@ -1531,7 +1531,7 @@
         "family": "component",
         "category": "effect",
         "inspiredBy": {
-          "name": "Skiper UI \u2014 Apple squircle (free tier)",
+          "name": "Skiper UI — Apple squircle (free tier)",
           "url": "https://skiper-ui.com"
         }
       }
@@ -1558,7 +1558,7 @@
         "family": "component",
         "category": "interactive",
         "inspiredBy": {
-          "name": "Skiper UI \u2014 Gooey Effect (free tier)",
+          "name": "Skiper UI — Gooey Effect (free tier)",
           "url": "https://skiper-ui.com"
         }
       }
@@ -1584,7 +1584,7 @@
         "family": "component",
         "category": "interactive",
         "inspiredBy": {
-          "name": "Family wallet (Benji Taylor) \u2014 via Skiper UI recreation",
+          "name": "Family wallet (Benji Taylor) — via Skiper UI recreation",
           "url": "https://family.co"
         }
       }
@@ -1594,7 +1594,7 @@
       "type": "registry:ui",
       "title": "Theme Toggle",
       "author": "Parable",
-      "description": "An animated sun \u21c4 moon theme button: a masking circle slides in to bite the sun into a crescent while rays retract and stars twinkle in \u2014 CSS-only, controlled or uncontrolled, SSR-safe.",
+      "description": "An animated sun ⇄ moon theme button: a masking circle slides in to bite the sun into a crescent while rays retract and stars twinkle in — CSS-only, controlled or uncontrolled, SSR-safe.",
       "registryDependencies": [],
       "dependencies": [],
       "files": [
@@ -1608,7 +1608,7 @@
         "family": "component",
         "category": "interactive",
         "inspiredBy": {
-          "name": "Skiper UI \u2014 theme toggles (free tier)",
+          "name": "Skiper UI — theme toggles (free tier)",
           "url": "https://skiper-ui.com"
         }
       }
@@ -1618,7 +1618,7 @@
       "type": "registry:ui",
       "title": "Spotlight Card",
       "author": "Parable",
-      "description": "A surface lit by a pointer-following spotlight \u2014 a soft radial face wash plus a mask-composited border-glow ring, both tracked through CSS custom properties written on pointermove so nothing re-renders per frame.",
+      "description": "A surface lit by a pointer-following spotlight — a soft radial face wash plus a mask-composited border-glow ring, both tracked through CSS custom properties written on pointermove so nothing re-renders per frame.",
       "registryDependencies": [],
       "dependencies": [],
       "files": [
@@ -1632,7 +1632,7 @@
         "family": "component",
         "category": "interactive",
         "inspiredBy": {
-          "name": "Componentry \u2014 Spotlight Card (free, MIT)",
+          "name": "Componentry — Spotlight Card (free, MIT)",
           "url": "https://componentry.dev/docs"
         }
       }
@@ -1723,7 +1723,7 @@
         "family": "component",
         "category": "effect",
         "inspiredBy": {
-          "name": "balloons-js by Artur Bie\u0144 (MIT)",
+          "name": "balloons-js by Artur Bień (MIT)",
           "url": "https://github.com/arturbien/balloons-js"
         }
       }
@@ -1733,7 +1733,7 @@
       "type": "registry:ui",
       "title": "Matrix Rain",
       "author": "Parable",
-      "description": "The falling-glyph \"digital rain\" on a single canvas: monospace columns cascade downward with a bright white head, a coloured glow, a power-curve fading trail, and glyphs that mutate as they fall \u2014 all driven by one DPR-capped rAF loop that rebuilds on resize and idles off-screen via IntersectionObserver. Layout and the opening frame come from a fixed-seed PRNG so the first client frame is deterministic; under prefers-reduced-motion it paints a single dim static frame with no fall, and the aria-hidden canvas sits behind children on a z-10 layer.",
+      "description": "The falling-glyph \"digital rain\" on a single canvas: monospace columns cascade downward with a bright white head, a coloured glow, a power-curve fading trail, and glyphs that mutate as they fall — all driven by one DPR-capped rAF loop that rebuilds on resize and idles off-screen via IntersectionObserver. Layout and the opening frame come from a fixed-seed PRNG so the first client frame is deterministic; under prefers-reduced-motion it paints a single dim static frame with no fall, and the aria-hidden canvas sits behind children on a z-10 layer.",
       "registryDependencies": [],
       "dependencies": [],
       "files": [
@@ -1747,7 +1747,7 @@
         "family": "component",
         "category": "effect",
         "inspiredBy": {
-          "name": "Componentry \u2014 Matrix Rain (free, MIT)",
+          "name": "Componentry — Matrix Rain (free, MIT)",
           "url": "https://componentry.dev/docs"
         }
       }
@@ -1757,7 +1757,7 @@
       "type": "registry:ui",
       "title": "Pixel Canvas",
       "author": "Parable",
-      "description": "A single-canvas grid of pixels that ripples to life on hover or focus \u2014 pixels grow in size and opacity staggered by their distance from the cursor, then settle back when the pointer leaves or focus moves away. Colours and jitter come from a pure per-cell hash (SSR-safe, no render-time randomness); a lone rAF loop runs only while pixels move and idles off-screen. Under prefers-reduced-motion it paints a static faint pixel field once and skips every ripple.",
+      "description": "A single-canvas grid of pixels that ripples to life on hover or focus — pixels grow in size and opacity staggered by their distance from the cursor, then settle back when the pointer leaves or focus moves away. Colours and jitter come from a pure per-cell hash (SSR-safe, no render-time randomness); a lone rAF loop runs only while pixels move and idles off-screen. Under prefers-reduced-motion it paints a static faint pixel field once and skips every ripple.",
       "registryDependencies": [],
       "dependencies": [],
       "files": [
@@ -1771,7 +1771,7 @@
         "family": "component",
         "category": "effect",
         "inspiredBy": {
-          "name": "Componentry \u2014 Pixel Canvas (free, MIT)",
+          "name": "Componentry — Pixel Canvas (free, MIT)",
           "url": "https://componentry.dev/docs"
         }
       }
@@ -1798,7 +1798,7 @@
         "family": "component",
         "category": "interactive",
         "inspiredBy": {
-          "name": "Componentry \u2014 Orbit Card Stack (free, MIT)",
+          "name": "Componentry — Orbit Card Stack (free, MIT)",
           "url": "https://componentry.dev/docs"
         }
       }
@@ -1825,7 +1825,7 @@
         "family": "component",
         "category": "interactive",
         "inspiredBy": {
-          "name": "Cult UI \u2014 Family Button (free, MIT)",
+          "name": "Cult UI — Family Button (free, MIT)",
           "url": "https://cult-ui.com/docs"
         }
       }
@@ -1835,7 +1835,7 @@
       "type": "registry:ui",
       "title": "Morph Surface",
       "author": "Parable",
-      "description": "A container that morphs in place between a compact chip and a rich panel \u2014 a single Motion layout element springs its size and corner radius while the two content states cross-fade (AnimatePresence popLayout), with a close affordance, Escape-to-collapse, and managed focus. Controlled or uncontrolled via expanded/defaultExpanded/onExpandedChange. Under prefers-reduced-motion it swaps instantly with no size, radius, or cross-fade animation.",
+      "description": "A container that morphs in place between a compact chip and a rich panel — a single Motion layout element springs its size and corner radius while the two content states cross-fade (AnimatePresence popLayout), with a close affordance, Escape-to-collapse, and managed focus. Controlled or uncontrolled via expanded/defaultExpanded/onExpandedChange. Under prefers-reduced-motion it swaps instantly with no size, radius, or cross-fade animation.",
       "registryDependencies": [],
       "dependencies": [
         "motion",
@@ -1852,7 +1852,7 @@
         "family": "component",
         "category": "interactive",
         "inspiredBy": {
-          "name": "Cult UI \u2014 Morph / Dock Surface (free, MIT)",
+          "name": "Cult UI — Morph / Dock Surface (free, MIT)",
           "url": "https://cult-ui.com/docs"
         }
       }
@@ -1879,7 +1879,7 @@
         "family": "component",
         "category": "block",
         "inspiredBy": {
-          "name": "Cult Pro \u2014 AI chat interfaces (pattern, UI only)",
+          "name": "Cult Pro — AI chat interfaces (pattern, UI only)",
           "url": "https://cult-ui.com"
         }
       }
@@ -1926,7 +1926,7 @@
         "family": "component",
         "category": "block",
         "inspiredBy": {
-          "name": "Watermelon UI \u2014 dashboard charts",
+          "name": "Watermelon UI — dashboard charts",
           "url": "https://ui.watermelon.sh"
         }
       }
@@ -1950,7 +1950,7 @@
         "family": "component",
         "category": "block",
         "inspiredBy": {
-          "name": "Watermelon UI \u2014 dashboard charts",
+          "name": "Watermelon UI — dashboard charts",
           "url": "https://ui.watermelon.sh"
         }
       }
@@ -1976,7 +1976,7 @@
         "family": "component",
         "category": "block",
         "inspiredBy": {
-          "name": "Watermelon UI \u2014 activity heatmap",
+          "name": "Watermelon UI — activity heatmap",
           "url": "https://ui.watermelon.sh"
         }
       }
@@ -1986,7 +1986,7 @@
       "type": "registry:ui",
       "title": "Kanban Board",
       "author": "Parable",
-      "description": "A drag-and-drop task board (no DnD deps): pointer-drag cards to reorder within a column or move across columns, with a pointer-tracking overlay, a dashed placeholder gap, Motion layout springs, and a cubic-bezier drop settle. Full Ctrl/Cmd+arrow keyboard moves announced via a live region. Under prefers-reduced-motion there is no lift easing, gliding gap or settle \u2014 moves land instantly on a legible static list.",
+      "description": "A drag-and-drop task board (no DnD deps): pointer-drag cards to reorder within a column or move across columns, with a pointer-tracking overlay, a dashed placeholder gap, Motion layout springs, and a cubic-bezier drop settle. Full Ctrl/Cmd+arrow keyboard moves announced via a live region. Under prefers-reduced-motion there is no lift easing, gliding gap or settle — moves land instantly on a legible static list.",
       "registryDependencies": [],
       "dependencies": [
         "motion"
@@ -2002,7 +2002,7 @@
         "family": "component",
         "category": "block",
         "inspiredBy": {
-          "name": "Watermelon UI \u2014 task board",
+          "name": "Watermelon UI — task board",
           "url": "https://ui.watermelon.sh"
         }
       }
@@ -2057,7 +2057,7 @@
       "type": "registry:ui",
       "title": "Skeleton",
       "author": "Parable",
-      "description": "A content-placeholder loader with a soft pure-CSS shimmer sweep \u2014 rect, text, circle, and card variants plus Skeleton.Text/Avatar/Card presets, currentColor theming, and an aria-busy opt-in; collapses to a static muted block under reduced motion.",
+      "description": "A content-placeholder loader with a soft pure-CSS shimmer sweep — rect, text, circle, and card variants plus Skeleton.Text/Avatar/Card presets, currentColor theming, and an aria-busy opt-in; collapses to a static muted block under reduced motion.",
       "registryDependencies": [],
       "dependencies": [],
       "files": [
@@ -2070,6 +2070,126 @@
       "meta": {
         "family": "component",
         "category": "loader"
+      }
+    },
+    {
+      "name": "waveform-scrubber",
+      "type": "registry:ui",
+      "title": "Waveform Scrubber",
+      "author": "Parable",
+      "description": "A seekable audio-waveform scrubber on canvas: deterministic seeded peaks (or your own peak data), a simulated transport with play/pause and elapsed/total readouts, pointer-capture drag seeking, and full keyboard control on a role=\"slider\" surface. Under prefers-reduced-motion the animation loop is disabled and the playhead steps once per second.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/waveform-scrubber.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/waveform-scrubber.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "Extracted from the Earshot template",
+          "url": "https://bswxyz.github.io/earshot/"
+        }
+      }
+    },
+    {
+      "name": "caustics-background",
+      "type": "registry:ui",
+      "title": "Caustics Background",
+      "author": "Parable",
+      "description": "A full-bleed underwater-caustics WebGL background (raw WebGL1, zero deps): layered domain-warp folds render rippling light that concentrates near the surface, with tint/background/intensity/speed props accepting any CSS color including var() tokens. ~30fps with DPR capped at 1.5, pauses off-screen and on hidden tabs, survives context loss, CSS-gradient fallback without WebGL. One static lit frame under prefers-reduced-motion.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/caustics-background.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/caustics-background.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "hero",
+        "inspiredBy": {
+          "name": "Extracted from the Fathom template",
+          "url": "https://bswxyz.github.io/fathom/"
+        }
+      }
+    },
+    {
+      "name": "combination-dial",
+      "type": "registry:ui",
+      "title": "Combination Dial",
+      "author": "Parable",
+      "description": "A rotary combination-lock control: accessible role=\"spinbutton\" dials rotated by pointer drag or arrow keys, each with aria-valuetext and SVG notch ticks; when every dial matches the combination it fires onUnlock and animates a latch-open reveal. Controlled or uncontrolled, SSR-deterministic. Dials snap without tweening under prefers-reduced-motion.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/combination-dial.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/combination-dial.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "Extracted from the Oubliette template",
+          "url": "https://bswxyz.github.io/oubliette/"
+        }
+      }
+    },
+    {
+      "name": "axis-specimen",
+      "type": "registry:ui",
+      "title": "Axis Specimen",
+      "author": "Parable",
+      "description": "A live variable-font specimen playground: a giant editable specimen line driven through font-variation-settings by labelled range sliders generated from an axes prop, plus size and tracking controls, preset chips, and a copy-ready CSS readout. Bring your own variable font. Idle axis \"breathe\" never starts under prefers-reduced-motion and presets jump instantly.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/axis-specimen.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/axis-specimen.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "text",
+        "inspiredBy": {
+          "name": "Extracted from the Glyphica template",
+          "url": "https://bswxyz.github.io/glyphica/"
+        }
+      }
+    },
+    {
+      "name": "force-graph",
+      "type": "registry:ui",
+      "title": "Force Graph",
+      "author": "Parable",
+      "description": "A canvas force-directed graph with a seeded deterministic layout: nodes repel, links act as springs, and the simulation cools until it settles and stops ticking entirely. Hover or keyboard-focus highlights a node's neighbourhood with per-group theme-aware colours and pulse rings on emphasis nodes. Pre-settles synchronously to a static frame under prefers-reduced-motion.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/force-graph.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/force-graph.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "effect",
+        "inspiredBy": {
+          "name": "Extracted from the Redoubt template",
+          "url": "https://bswxyz.github.io/redoubt/"
+        }
       }
     }
   ]

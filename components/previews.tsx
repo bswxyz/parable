@@ -84,6 +84,11 @@ import { KanbanBoard } from "@/registry/parable/ui/kanban-board";
 import { ImageZoom } from "@/registry/parable/ui/image-zoom";
 import { Stepper } from "@/registry/parable/ui/stepper";
 import { Skeleton } from "@/registry/parable/ui/skeleton";
+import { WaveformScrubber } from "@/registry/parable/ui/waveform-scrubber";
+import { CausticsBackground } from "@/registry/parable/ui/caustics-background";
+import { CombinationDial } from "@/registry/parable/ui/combination-dial";
+import { AxisSpecimen } from "@/registry/parable/ui/axis-specimen";
+import { ForceGraph } from "@/registry/parable/ui/force-graph";
 import { Activity, Aperture, ArrowRight, ArrowUpRight, BarChart3, Bell, BookOpen, Boxes, Building2, CalendarDays, CalendarRange, Camera, ChevronRight, Cloud, Command, Copy, Cpu, CreditCard, Database, DollarSign, Download, FilePlus, GitBranch, GitPullRequest, Globe, Heart, Hexagon, Home, ImageIcon, Layers, LayoutDashboard, LayoutGrid, LifeBuoy, Lock, Mail, MessageCircle, Moon, Music, Orbit, Palette, PartyPopper, PenTool, Rocket, Search, Settings, Share2, ShieldCheck, SkipForward, SlidersHorizontal, Sparkles, Star, Sun, Terminal, Triangle, User, UserPlus, Users, Wallet, Zap } from "lucide-react";
 
 /** Live demo for each component, keyed by slug. Used by gallery cards + detail. */
@@ -1599,6 +1604,83 @@ export const PREVIEWS: Record<string, React.ReactNode> = {
       <Skeleton variant="rect" height={132} radius={16} />
       <Skeleton.Text lines={3} />
     </div>
+  ),
+  "waveform-scrubber": (
+    <div className="w-full max-w-md px-4">
+      <WaveformScrubber seed={7} duration={214} label="Scrub episode 14" />
+    </div>
+  ),
+  "caustics-background": (
+    <CausticsBackground className="flex h-72 w-full items-end rounded-2xl p-6">
+      <div>
+        <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-cyan-200/70">
+          Fathom — 412 m
+        </p>
+        <p className="mt-2 text-2xl font-semibold text-white">
+          Light finds a way down
+        </p>
+      </div>
+    </CausticsBackground>
+  ),
+  "combination-dial": (
+    <div className="w-full px-4 py-2">
+      <CombinationDial
+        dialSize={72}
+        combination={[1, 2, 0]}
+        hint="Drag a dial · or focus it and use ↑ ↓"
+        dials={[
+          { label: "Dial one of three", faces: [{ label: "Moon", symbol: "🌙" }, { label: "Star", symbol: "⭐" }, { label: "Sun", symbol: "☀️" }] },
+          { label: "Dial two of three", faces: [{ label: "Key", symbol: "🔑" }, { label: "Lock", symbol: "🔒" }, { label: "Gem", symbol: "💎" }] },
+          { label: "Dial three of three", faces: [{ label: "Owl", symbol: "🦉" }, { label: "Raven", symbol: "🦢" }, { label: "Dove", symbol: "🕊️" }] },
+        ]}
+      >
+        <p style={{ textAlign: "center", margin: 0, fontSize: 14 }}>
+          The latch gives — whisper <strong>CANDLEWICK</strong> at the door.
+        </p>
+      </CombinationDial>
+    </div>
+  ),
+  "axis-specimen": (
+    <div style={{ width: "100%" }}>
+      <style>{"@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,100..900,0..100,0..1&display=swap');"}</style>
+      <AxisSpecimen text="Fraunces" defaultSize={72} />
+    </div>
+  ),
+  "force-graph": (
+    <ForceGraph
+      height={300}
+      seed={7}
+      nodes={[
+        { id: "gateway", label: "gateway", group: "core", emphasis: true },
+        { id: "auth", label: "auth", group: "core" },
+        { id: "billing", label: "billing", group: "core" },
+        { id: "worker", label: "worker", group: "core" },
+        { id: "mailer", label: "mailer", group: "core" },
+        { id: "postgres", label: "postgres", group: "data", emphasis: true },
+        { id: "redis", label: "redis", group: "data" },
+        { id: "queue", label: "queue", group: "data" },
+        { id: "search", label: "search", group: "data" },
+        { id: "web", label: "web", group: "client" },
+        { id: "ios", label: "ios", group: "client" },
+        { id: "android", label: "android", group: "client" },
+      ]}
+      links={[
+        { source: "web", target: "gateway" },
+        { source: "ios", target: "gateway" },
+        { source: "android", target: "gateway" },
+        { source: "gateway", target: "auth" },
+        { source: "gateway", target: "billing" },
+        { source: "gateway", target: "search" },
+        { source: "auth", target: "postgres" },
+        { source: "auth", target: "redis" },
+        { source: "billing", target: "postgres" },
+        { source: "billing", target: "queue" },
+        { source: "queue", target: "worker" },
+        { source: "worker", target: "mailer" },
+        { source: "worker", target: "postgres" },
+        { source: "search", target: "postgres" },
+      ]}
+    />
   ),
 };
 

@@ -4105,5 +4105,493 @@
         "description": "When set, the placeholder becomes an accessible busy region (`role=\"status\" aria-busy`) announcing this label to assistive tech. Omitted, the whole placeholder is `aria-hidden` — purely decorative."
       }
     ]
+  },
+  "waveform-scrubber": {
+    "interface": "WaveformScrubberProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"children\">"
+    ],
+    "props": [
+      {
+        "name": "peaks",
+        "type": "number[]",
+        "required": false,
+        "default": null,
+        "description": "Explicit peak amplitudes (0–1). When provided, wins over `seed`."
+      },
+      {
+        "name": "seed",
+        "type": "number",
+        "required": false,
+        "default": "1",
+        "description": "Seed for the procedural waveform. Deterministic across SSR and client."
+      },
+      {
+        "name": "duration",
+        "type": "number",
+        "required": false,
+        "default": "180",
+        "description": "Total duration in seconds."
+      },
+      {
+        "name": "currentTime",
+        "type": "number",
+        "required": false,
+        "default": null,
+        "description": "Controlled playhead position in seconds. When set, the internal transport stops self-advancing — drive time from the parent and listen to `onSeek`."
+      },
+      {
+        "name": "defaultTime",
+        "type": "number",
+        "required": false,
+        "default": "0",
+        "description": "Initial playhead position (uncontrolled), in seconds."
+      },
+      {
+        "name": "playing",
+        "type": "boolean",
+        "required": false,
+        "default": null,
+        "description": "Controlled playing state. Pair with `onPlayPause`."
+      },
+      {
+        "name": "defaultPlaying",
+        "type": "boolean",
+        "required": false,
+        "default": "false",
+        "description": "Initial playing state (uncontrolled)."
+      },
+      {
+        "name": "onSeek",
+        "type": "(seconds: number) => void",
+        "required": false,
+        "default": null,
+        "description": "Fires with the target time (seconds) on every user seek: click, drag, or keyboard."
+      },
+      {
+        "name": "onPlayPause",
+        "type": "(playing: boolean) => void",
+        "required": false,
+        "default": null,
+        "description": "Fires with the requested state when the user toggles play/pause, and with `false` when playback reaches the end."
+      },
+      {
+        "name": "accentColor",
+        "type": "string",
+        "required": false,
+        "default": "\"var(--foreground, #171717)\"",
+        "description": "Played-region / playhead colour. Any CSS colour, `var()` welcome."
+      },
+      {
+        "name": "inactiveColor",
+        "type": "string",
+        "required": false,
+        "default": "\"var(--muted-foreground, #8a8a8a)\"",
+        "description": "Unplayed-region colour. Any CSS colour, `var()` welcome."
+      },
+      {
+        "name": "height",
+        "type": "number",
+        "required": false,
+        "default": "96",
+        "description": "Waveform height in px."
+      },
+      {
+        "name": "barWidth",
+        "type": "number",
+        "required": false,
+        "default": "3",
+        "description": "Width of each waveform bar in px."
+      },
+      {
+        "name": "barGap",
+        "type": "number",
+        "required": false,
+        "default": "2",
+        "description": "Gap between bars in px."
+      },
+      {
+        "name": "hideControls",
+        "type": "boolean",
+        "required": false,
+        "default": "false",
+        "description": "Hide the play button + time readout row."
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": false,
+        "default": "\"Audio position\"",
+        "description": "Accessible label for the scrub surface."
+      }
+    ]
+  },
+  "caustics-background": {
+    "interface": "CausticsBackgroundProps",
+    "extends": [
+      "React.HTMLAttributes<HTMLDivElement>"
+    ],
+    "props": [
+      {
+        "name": "tint",
+        "type": "string",
+        "required": false,
+        "default": "\"#4cf5e0\"",
+        "description": "Caustic light colour. Any CSS colour, including `var(--token)` — CSS variables are resolved against this element's cascade on the client."
+      },
+      {
+        "name": "background",
+        "type": "string",
+        "required": false,
+        "default": "\"#041019\"",
+        "description": "Deep-water base colour (also painted behind the canvas, so there is no flash before the first GL frame). Accepts `var(--token)` like `tint`."
+      },
+      {
+        "name": "intensity",
+        "type": "number",
+        "required": false,
+        "default": "1",
+        "description": "Glow strength multiplier. ~0.5 is faint shimmer, 2 is full sunbeams."
+      },
+      {
+        "name": "speed",
+        "type": "number",
+        "required": false,
+        "default": "1",
+        "description": "Flow-speed multiplier. 1 is the slow, hero-grade drift."
+      },
+      {
+        "name": "paused",
+        "type": "boolean",
+        "required": false,
+        "default": "false",
+        "description": "Idle the render loop (the last frame stays up)."
+      }
+    ]
+  },
+  "combination-dial": {
+    "interface": "CombinationDialProps",
+    "extends": [
+      "Omit< React.HTMLAttributes<HTMLDivElement>, \"onChange\" | \"children\" | \"defaultValue\" >"
+    ],
+    "props": [
+      {
+        "name": "dials",
+        "type": "DialConfig[]",
+        "required": true,
+        "default": null,
+        "description": "The dials, in left-to-right order. Each dial declares its ordered faces. The number of dials is `dials.length`."
+      },
+      {
+        "name": "combination",
+        "type": "number[]",
+        "required": true,
+        "default": null,
+        "description": "Winning face indices, one per dial (same length/order as `dials`). When every dial's value equals this, the lock unlocks."
+      },
+      {
+        "name": "value",
+        "type": "number[]",
+        "required": false,
+        "default": null,
+        "description": "Controlled face indices, one per dial. Provide with `onChange`."
+      },
+      {
+        "name": "defaultValue",
+        "type": "number[]",
+        "required": false,
+        "default": null,
+        "description": "Uncontrolled initial face indices. Defaults to all zeros."
+      },
+      {
+        "name": "onChange",
+        "type": "(value: number[]) => void",
+        "required": false,
+        "default": null,
+        "description": "Called whenever any dial changes (controlled or uncontrolled)."
+      },
+      {
+        "name": "onUnlock",
+        "type": "() => void",
+        "required": false,
+        "default": null,
+        "description": "Fired once when the combination is first matched."
+      },
+      {
+        "name": "children",
+        "type": "React.ReactNode | ((state: { solved: boolean }) => React.ReactNode)",
+        "required": false,
+        "default": null,
+        "description": "Revealed content once unlocked. A function receives `{ solved }` so callers can render before/after states; a node is shown only after unlock."
+      },
+      {
+        "name": "hint",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Compact hint shown under the dials (e.g. \"Drag or use ↑ ↓\")."
+      },
+      {
+        "name": "dialSize",
+        "type": "number",
+        "required": false,
+        "default": "88",
+        "description": "Diameter of each dial in px. Default 88."
+      },
+      {
+        "name": "accentColor",
+        "type": "string",
+        "required": false,
+        "default": "\"var(--primary, #c9a227)\"",
+        "description": "Accent colour (pointer, solved glow, focus ring)."
+      },
+      {
+        "name": "faceColor",
+        "type": "string",
+        "required": false,
+        "default": "\"var(--foreground, #f5f5f4)\"",
+        "description": "Face glyph colour."
+      },
+      {
+        "name": "mutedColor",
+        "type": "string",
+        "required": false,
+        "default": "\"var(--muted-foreground, #8a8578)\"",
+        "description": "Muted colour for tick marks and labels."
+      },
+      {
+        "name": "trackColor",
+        "type": "string",
+        "required": false,
+        "default": "\"var(--border, #3a352c)\"",
+        "description": "Dial track/plate stroke colour."
+      },
+      {
+        "name": "showShackle",
+        "type": "boolean",
+        "required": false,
+        "default": "true",
+        "description": "Show the decorative padlock shackle above the dials. Default true."
+      }
+    ]
+  },
+  "axis-specimen": {
+    "interface": "AxisSpecimenProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"onChange\">"
+    ],
+    "props": [
+      {
+        "name": "fontFamily",
+        "type": "string",
+        "required": false,
+        "default": "'\"Fraunces\", Georgia, serif'",
+        "description": "CSS `font-family` the specimen renders in. Loading the font is the consumer's job (`next/font`, `@font-face`, or a Google Fonts link)."
+      },
+      {
+        "name": "axes",
+        "type": "AxisDef[]",
+        "required": false,
+        "default": "FRAUNCES_AXES",
+        "description": "Variable axes exposed as sliders. Defaults to Fraunces' opsz/wght/SOFT/WONK."
+      },
+      {
+        "name": "text",
+        "type": "string",
+        "required": false,
+        "default": "\"Hamburgefonstiv\"",
+        "description": "Initial specimen text. When `editable`, typing replaces it in place."
+      },
+      {
+        "name": "editable",
+        "type": "boolean",
+        "required": false,
+        "default": "true",
+        "description": "Render the specimen as a `plaintext-only` contentEditable line."
+      },
+      {
+        "name": "presets",
+        "type": "AxisPreset[]",
+        "required": false,
+        "default": null,
+        "description": "Preset chips. Defaults to four Fraunces presets when `axes` is default, else none."
+      },
+      {
+        "name": "showSize",
+        "type": "boolean",
+        "required": false,
+        "default": "true",
+        "description": "Show the font-size slider."
+      },
+      {
+        "name": "showTracking",
+        "type": "boolean",
+        "required": false,
+        "default": "true",
+        "description": "Show the tracking (letter-spacing) slider."
+      },
+      {
+        "name": "defaultSize",
+        "type": "number",
+        "required": false,
+        "default": "112",
+        "description": "Initial specimen size in px (clamped to the viewport at render)."
+      },
+      {
+        "name": "sizeRange",
+        "type": "[number, number]",
+        "required": false,
+        "default": "[28, 220]",
+        "description": "[min, max] px for the size slider."
+      },
+      {
+        "name": "defaultTracking",
+        "type": "number",
+        "required": false,
+        "default": "-1",
+        "description": "Initial tracking in hundredths of an em (−1 → −0.010em)."
+      },
+      {
+        "name": "trackingRange",
+        "type": "[number, number]",
+        "required": false,
+        "default": "[-6, 12]",
+        "description": "[min, max] for the tracking slider, in hundredths of an em."
+      },
+      {
+        "name": "breathe",
+        "type": "boolean",
+        "required": false,
+        "default": "true",
+        "description": "Idle \"auto specimen\": until any control is touched, the first two wide axes breathe through a slow sine loop (paused off-screen, stopped forever on first interaction, never started under prefers-reduced-motion)."
+      },
+      {
+        "name": "onChange",
+        "type": "(values: Record<string, number>) => void",
+        "required": false,
+        "default": null,
+        "description": "Fires with the full axis map (tag → value) on every user-driven change."
+      },
+      {
+        "name": "accentColor",
+        "type": "string",
+        "required": false,
+        "default": "\"var(--pb-violet, #8b5cf6)\"",
+        "description": "Accent for slider thumbs, active presets, focus rings, axis tags."
+      },
+      {
+        "name": "textColor",
+        "type": "string",
+        "required": false,
+        "default": "\"var(--foreground, #17171a)\"",
+        "description": "Specimen text colour. Defaults to the `--foreground` token."
+      },
+      {
+        "name": "specimenLabel",
+        "type": "string",
+        "required": false,
+        "default": "\"Specimen text — type to replace it\"",
+        "description": "aria-label for the editable specimen line."
+      }
+    ]
+  },
+  "force-graph": {
+    "interface": "ForceGraphProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"children\">"
+    ],
+    "props": [
+      {
+        "name": "nodes",
+        "type": "ForceGraphNode[]",
+        "required": true,
+        "default": null,
+        "description": "Graph nodes. Prefer a stable (memoised) array."
+      },
+      {
+        "name": "links",
+        "type": "ForceGraphLink[]",
+        "required": true,
+        "default": null,
+        "description": "Graph links, referencing node ids. Unknown ids are ignored."
+      },
+      {
+        "name": "groupColors",
+        "type": "Record<string, string>",
+        "required": false,
+        "default": null,
+        "description": "Explicit colour per group key, e.g. `{ core: \"#8b5cf6\" }`. Accepts any CSS colour or a `var(--token, fallback)` expression."
+      },
+      {
+        "name": "groupPalette",
+        "type": "string[]",
+        "required": false,
+        "default": "DEFAULT_GROUP_PALETTE",
+        "description": "Fallback palette cycled through groups (in first-appearance order) that have no `groupColors` entry."
+      },
+      {
+        "name": "nodeColor",
+        "type": "string",
+        "required": false,
+        "default": "\"var(--primary, #8b5cf6)\"",
+        "description": "Colour for ungrouped nodes. Defaults to the theme `--primary` token."
+      },
+      {
+        "name": "linkColor",
+        "type": "string",
+        "required": false,
+        "default": "\"var(--muted-foreground, #9ca3af)\"",
+        "description": "Edge colour. Defaults to the theme `--muted-foreground` token."
+      },
+      {
+        "name": "labelColor",
+        "type": "string",
+        "required": false,
+        "default": "\"var(--muted-foreground, #9ca3af)\"",
+        "description": "Label colour. Defaults to the theme `--muted-foreground` token."
+      },
+      {
+        "name": "pulse",
+        "type": "boolean",
+        "required": false,
+        "default": "true",
+        "description": "Show a pulsing ring on `emphasis` nodes (static ring under reduced motion)."
+      },
+      {
+        "name": "nodeRadius",
+        "type": "number",
+        "required": false,
+        "default": "5",
+        "description": "Base node radius in px (grows slightly with degree and emphasis)."
+      },
+      {
+        "name": "linkDistance",
+        "type": "number",
+        "required": false,
+        "default": null,
+        "description": "Link rest length in px. Defaults to ~22% of the shorter canvas edge."
+      },
+      {
+        "name": "height",
+        "type": "number | string",
+        "required": false,
+        "default": "360",
+        "description": "Canvas height. Width always fills the container."
+      },
+      {
+        "name": "seed",
+        "type": "number",
+        "required": false,
+        "default": "42",
+        "description": "Layout seed — change it to get a different deterministic arrangement."
+      },
+      {
+        "name": "canvasClassName",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Class applied to the canvas element itself."
+      }
+    ]
   }
 }
