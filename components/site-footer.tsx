@@ -19,7 +19,7 @@ export function SiteFooter() {
             Docs
           </Link>
           <a
-            href="https://github.com/bswxyz"
+            href="https://github.com/bswxyz/parable"
             target="_blank"
             rel="noopener"
             className="hover:text-foreground"
