@@ -69,7 +69,22 @@ import { SpotlightCard } from "@/registry/parable/ui/spotlight-card";
 import { CompareSlider } from "@/registry/parable/ui/compare-slider";
 import { MorphTabs } from "@/registry/parable/ui/morph-tabs";
 import { OrbitIcons } from "@/registry/parable/ui/orbit-icons";
-import { Activity, Aperture, ArrowRight, ArrowUpRight, BarChart3, BookOpen, Boxes, CalendarDays, CalendarRange, Camera, Cloud, Command, Cpu, CreditCard, Database, DollarSign, Download, FilePlus, GitBranch, GitPullRequest, Globe, Heart, Hexagon, Home, ImageIcon, Layers, LayoutDashboard, LayoutGrid, LifeBuoy, Lock, Mail, MessageCircle, Moon, Music, Orbit, Palette, PenTool, Rocket, Search, Settings, ShieldCheck, SkipForward, SlidersHorizontal, Sparkles, Star, Sun, Terminal, Triangle, User, UserPlus, Users, Wallet, Zap } from "lucide-react";
+import { BalloonBurst } from "@/registry/parable/ui/balloon-burst";
+import { MatrixRain } from "@/registry/parable/ui/matrix-rain";
+import { PixelCanvas } from "@/registry/parable/ui/pixel-canvas";
+import { OrbitCardStack } from "@/registry/parable/ui/orbit-card-stack";
+import { FamilyButton } from "@/registry/parable/ui/family-button";
+import { MorphSurface } from "@/registry/parable/ui/morph-surface";
+import { AiChat } from "@/registry/parable/ui/ai-chat";
+import { MultiStepForm } from "@/registry/parable/ui/multi-step-form";
+import { BarChart } from "@/registry/parable/ui/bar-chart";
+import { DonutChart } from "@/registry/parable/ui/donut-chart";
+import { CalendarHeatmap } from "@/registry/parable/ui/calendar-heatmap";
+import { KanbanBoard } from "@/registry/parable/ui/kanban-board";
+import { ImageZoom } from "@/registry/parable/ui/image-zoom";
+import { Stepper } from "@/registry/parable/ui/stepper";
+import { Skeleton } from "@/registry/parable/ui/skeleton";
+import { Activity, Aperture, ArrowRight, ArrowUpRight, BarChart3, Bell, BookOpen, Boxes, Building2, CalendarDays, CalendarRange, Camera, ChevronRight, Cloud, Command, Copy, Cpu, CreditCard, Database, DollarSign, Download, FilePlus, GitBranch, GitPullRequest, Globe, Heart, Hexagon, Home, ImageIcon, Layers, LayoutDashboard, LayoutGrid, LifeBuoy, Lock, Mail, MessageCircle, Moon, Music, Orbit, Palette, PartyPopper, PenTool, Rocket, Search, Settings, Share2, ShieldCheck, SkipForward, SlidersHorizontal, Sparkles, Star, Sun, Terminal, Triangle, User, UserPlus, Users, Wallet, Zap } from "lucide-react";
 
 /** Live demo for each component, keyed by slug. Used by gallery cards + detail. */
 export const PREVIEWS: Record<string, React.ReactNode> = {
@@ -1260,6 +1275,329 @@ export const PREVIEWS: Record<string, React.ReactNode> = {
           <Sparkles style={{ width: 28, height: 28 }} />
         </div>
       </OrbitIcons>
+    </div>
+  ),
+  "balloon-burst": (
+    <div style={{ position: "relative", width: "100%", minHeight: 340, overflow: "hidden", borderRadius: 16, background: "radial-gradient(120% 100% at 50% 0%, #1b1436 0%, #0f0f10 62%)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <BalloonBurst interval={2600} count={16} duration={3200} origin="bottom" position="absolute" />
+      <div style={{ position: "relative", zIndex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 8, padding: "18px 24px", borderRadius: 16, border: "1px solid rgba(255,255,255,0.1)", background: "rgba(24,24,27,0.55)", backdropFilter: "blur(8px)", color: "white", textAlign: "center" }}>
+        <PartyPopper size={30} color="#f5a623" strokeWidth={2} aria-hidden />
+        <div style={{ fontSize: 18, fontWeight: 600, letterSpacing: "-0.01em" }}>Deploy successful</div>
+        <div style={{ fontSize: 12.5, fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace", color: "rgba(255,255,255,0.5)" }}>useBalloons().release()</div>
+      </div>
+    </div>
+  ),
+  "matrix-rain": (
+    <MatrixRain
+      color="#22d3ee"
+      fontSize={15}
+      speed={1.1}
+      fade={0.08}
+      className="h-[320px] w-full rounded-xl bg-[#0f0f10] ring-1 ring-white/10"
+    >
+      <div className="flex h-[320px] flex-col items-center justify-center gap-3 px-6 text-center">
+        <div className="inline-flex items-center gap-2 rounded-full bg-black/40 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.22em] text-cyan-300 ring-1 ring-white/10 backdrop-blur-sm">
+          <Terminal size={13} aria-hidden />
+          system online
+        </div>
+        <div className="text-2xl font-semibold text-white drop-shadow-[0_2px_14px_rgba(0,0,0,0.85)]">
+          Follow the white rabbit
+        </div>
+      </div>
+    </MatrixRain>
+  ),
+  "pixel-canvas": (
+    <PixelCanvas
+      colors={["#8b5cf6", "#ec4899", "#22d3ee"]}
+      gap={6}
+      pixelSize={7}
+      speed={1}
+      className="w-full max-w-[420px] rounded-2xl border border-white/10 bg-[#0f0f10]"
+    >
+      <div className="flex min-h-[260px] flex-col items-center justify-center gap-3 px-8 py-12 text-center">
+        <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)]">
+          <Sparkles className="h-5 w-5 text-violet-300" aria-hidden />
+        </div>
+        <div className="text-lg font-semibold tracking-tight text-white">Hover to ignite</div>
+        <div className="max-w-[240px] text-sm leading-relaxed text-zinc-400">
+          A deterministic pixel field that ripples outward from your cursor.
+        </div>
+      </div>
+    </PixelCanvas>
+  ),
+  "orbit-card-stack": (
+    <div style={{ width: "100%", maxWidth: 320, margin: "0 auto" }}>
+      <OrbitCardStack
+        accent="#8b5cf6"
+        cards={[
+          { q: "Flick the top card and it arcs off-screen with a proper spring throw, then orbits to the back.", a: "Ada Lovelace", r: "Head of Design", c: "#8b5cf6" },
+          { q: "Drag, buttons, and arrow keys all land on the same clean motion. Shipped it in an afternoon.", a: "Grace Hopper", r: "VP Engineering", c: "#ec4899" },
+          { q: "The reduced-motion fallback stays fully legible. Rare to see it done right.", a: "Alan Turing", r: "Principal", c: "#22d3ee" },
+        ].map((t, i) => (
+          <div key={i} className="flex h-full flex-col justify-between">
+            <div className="flex gap-1" style={{ color: t.c }} aria-hidden>
+              {[0, 1, 2, 3, 4].map((s) => (
+                <Star key={s} size={13} fill="currentColor" strokeWidth={0} />
+              ))}
+            </div>
+            <p className="text-[15px] leading-relaxed text-white/90">{t.q}</p>
+            <div>
+              <div className="text-sm font-semibold text-white">{t.a}</div>
+              <div className="text-xs text-white/50">{t.r}</div>
+            </div>
+          </div>
+        ))}
+      />
+    </div>
+  ),
+  "family-button": (
+    <div className="flex min-h-[320px] w-full items-end justify-center p-8">
+      <FamilyButton
+        expandDirection="up"
+        actions={[
+          { icon: <Share2 />, label: "Share" },
+          { icon: <Copy />, label: "Duplicate" },
+          { icon: <Star />, label: "Favorite" },
+          { icon: <Bell />, label: "Remind me" },
+        ]}
+      />
+    </div>
+  ),
+  "morph-surface": (
+    <div style={{ display: "flex", minHeight: 340, width: "100%", alignItems: "center", justifyContent: "center", padding: 24 }}>
+      <MorphSurface
+        accent="#8b5cf6"
+        panelLabel="Team member"
+        closeLabel="Collapse profile"
+        compact={
+          <>
+            <span style={{ display: "grid", placeItems: "center", height: 24, width: 24, borderRadius: 999, background: "linear-gradient(135deg,#8b5cf6,#ec4899)", fontSize: 11, fontWeight: 700, color: "#fff" }}>AK</span>
+            <span style={{ fontWeight: 600 }}>Ada Kessler</span>
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 5, marginLeft: 2, fontSize: 12, color: "#22d3ee" }}>
+              <span style={{ height: 6, width: 6, borderRadius: 999, background: "#22d3ee", boxShadow: "0 0 8px #22d3ee" }} />
+              online
+            </span>
+            <ChevronRight size={15} style={{ marginLeft: 2, color: "rgba(255,255,255,0.4)" }} />
+          </>
+        }
+        expandedContent={
+          <div style={{ width: 268 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+              <span style={{ display: "grid", placeItems: "center", height: 44, width: 44, borderRadius: 999, background: "linear-gradient(135deg,#8b5cf6,#ec4899)", fontWeight: 700, color: "#fff" }}>AK</span>
+              <div>
+                <div style={{ fontWeight: 600, fontSize: 15 }}>Ada Kessler</div>
+                <div style={{ fontSize: 12.5, color: "rgba(255,255,255,0.55)" }}>Staff Engineer · Platform</div>
+              </div>
+            </div>
+            <p style={{ margin: "12px 0 0", fontSize: 13, lineHeight: 1.55, color: "rgba(255,255,255,0.72)" }}>
+              Owns the ingestion pipeline and on-call tooling. Usually replies within a few hours.
+            </p>
+            <div style={{ marginTop: 14, display: "flex", gap: 8 }}>
+              <span style={{ display: "inline-flex", alignItems: "center", gap: 6, borderRadius: 10, border: "1px solid rgba(255,255,255,0.12)", background: "rgba(255,255,255,0.03)", padding: "7px 11px", fontSize: 12.5, fontWeight: 500 }}>
+                <MessageCircle size={14} style={{ color: "#8b5cf6" }} /> Message
+              </span>
+              <span style={{ display: "inline-flex", alignItems: "center", gap: 6, borderRadius: 10, border: "1px solid rgba(255,255,255,0.12)", background: "rgba(255,255,255,0.03)", padding: "7px 11px", fontSize: 12.5, fontWeight: 500 }}>
+                <CalendarDays size={14} style={{ color: "#f5a623" }} /> Schedule
+              </span>
+            </div>
+          </div>
+        }
+      />
+    </div>
+  ),
+  "ai-chat": (
+    <div className="w-full max-w-sm mx-auto"><AiChat className="h-[26rem]" title="Parable AI" placeholder="Ask about a component…" /></div>
+  ),
+  "multi-step-form": (
+    <div className="w-full max-w-[440px]">
+      <MultiStepForm
+        steps={[
+          {
+            id: "account",
+            title: "Create your account",
+            validate: () => true,
+            content: (
+              <div className="space-y-3">
+                <div className="space-y-1.5">
+                  <span className="flex items-center gap-1.5 text-xs font-medium text-white/50">
+                    <Mail className="size-3.5" aria-hidden /> Work email
+                  </span>
+                  <div className="flex h-9 items-center rounded-lg border border-white/10 bg-white/[0.04] px-3 text-[13px] text-white/80">
+                    jordan@parable.dev
+                  </div>
+                </div>
+                <div className="space-y-1.5">
+                  <span className="flex items-center gap-1.5 text-xs font-medium text-white/50">
+                    <Lock className="size-3.5" aria-hidden /> Password
+                  </span>
+                  <div className="flex h-9 items-center rounded-lg border border-white/10 bg-white/[0.04] px-3 text-[13px] tracking-[0.3em] text-white/80">
+                    ••••••••
+                  </div>
+                </div>
+              </div>
+            ),
+          },
+          {
+            id: "workspace",
+            title: "Set up your workspace",
+            content: (
+              <div className="space-y-1.5">
+                <span className="flex items-center gap-1.5 text-xs font-medium text-white/50">
+                  <Building2 className="size-3.5" aria-hidden /> Workspace name
+                </span>
+                <div className="flex h-9 items-center rounded-lg border border-white/10 bg-white/[0.04] px-3 text-[13px] text-white/80">
+                  Parable Studio
+                </div>
+                <p className="pt-1 text-[12px] leading-relaxed text-white/45">
+                  This is where your team collaborates. You can rename it anytime.
+                </p>
+              </div>
+            ),
+          },
+          {
+            id: "review",
+            title: "Review & finish",
+            content: (
+              <div className="space-y-2.5">
+                <div className="flex items-center justify-between rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 text-[13px]">
+                  <span className="text-white/50">Email</span>
+                  <span className="text-white/80">jordan@parable.dev</span>
+                </div>
+                <div className="flex items-center justify-between rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 text-[13px]">
+                  <span className="text-white/50">Workspace</span>
+                  <span className="text-white/80">Parable Studio</span>
+                </div>
+                <p className="flex items-center gap-1.5 pt-1 text-[12px] text-white/45">
+                  <Sparkles className="size-3.5 text-violet-300" aria-hidden /> Everything looks good — submit to create your account.
+                </p>
+              </div>
+            ),
+          },
+        ]}
+      />
+    </div>
+  ),
+  "bar-chart": (
+    <div className="w-full max-w-md">
+      <BarChart
+        title="Weekly signups"
+        seriesLabel="This week"
+        secondaryLabel="Last week"
+        height={200}
+        data={[
+          { label: "Mon", value: 320 },
+          { label: "Tue", value: 510 },
+          { label: "Wed", value: 440 },
+          { label: "Thu", value: 680 },
+          { label: "Fri", value: 740 },
+          { label: "Sat", value: 390 },
+          { label: "Sun", value: 580 },
+        ]}
+        secondaryData={[
+          { label: "Mon", value: 210 },
+          { label: "Tue", value: 300 },
+          { label: "Wed", value: 260 },
+          { label: "Thu", value: 410 },
+          { label: "Fri", value: 520 },
+          { label: "Sat", value: 240 },
+          { label: "Sun", value: 380 },
+        ]}
+      />
+    </div>
+  ),
+  "donut-chart": (
+    <div className="w-full max-w-[460px] px-2">
+      <DonutChart
+        data={[
+          { label: "Direct", value: 4200 },
+          { label: "Referral", value: 3100 },
+          { label: "Organic", value: 2400 },
+          { label: "Social", value: 1500 },
+          { label: "Email", value: 900 },
+        ]}
+        size={188}
+        thickness={24}
+      />
+    </div>
+  ),
+  "calendar-heatmap": (
+    <div className="w-full max-w-[560px]">
+      <CalendarHeatmap
+        weeks={18}
+        endDate="2026-07-14"
+        data={Array.from({ length: 220 }, (_, i) => {
+          const iso = new Date(Date.UTC(2026, 0, 1) + i * 86400000)
+            .toISOString()
+            .slice(0, 10);
+          const seed = (i * 1103515245 + 12345) >>> 8;
+          return { date: iso, count: seed % 9 === 0 ? 0 : seed % 13 };
+        })}
+      />
+    </div>
+  ),
+  "kanban-board": (
+    <div className="w-full max-w-[520px] px-1">
+      <KanbanBoard
+        columns={[
+          {
+            id: "todo",
+            title: "To Do",
+            cards: [
+              { id: "a1", title: "Design the empty states", tag: "Design", color: "#8b5cf6" },
+              { id: "a2", title: "Write the API reference", tag: "Docs", color: "#22d3ee" },
+            ],
+          },
+          {
+            id: "doing",
+            title: "In Progress",
+            cards: [
+              { id: "b1", title: "Rebuild the auth flow", tag: "Feature", color: "#ec4899" },
+            ],
+          },
+          {
+            id: "done",
+            title: "Done",
+            cards: [
+              { id: "c1", title: "Ship the pricing page", tag: "Growth", color: "#f5a623" },
+            ],
+          },
+        ]}
+      />
+    </div>
+  ),
+  "image-zoom": (
+    <div className="flex w-full items-center justify-center p-6">
+      <ImageZoom
+        className="w-[300px] max-w-full shadow-[0_24px_60px_-30px_rgba(0,0,0,0.9)]"
+        zoom={2.6}
+        alt="Parable poster — the number 42 inside concentric rings, hover to magnify"
+        src={"data:image/svg+xml," + encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 480'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='#8b5cf6'/><stop offset='.5' stop-color='#ec4899'/><stop offset='1' stop-color='#f5a623'/></linearGradient><radialGradient id='v' cx='.5' cy='.42' r='.72'><stop offset='0' stop-color='#0f0f10' stop-opacity='0'/><stop offset='1' stop-color='#0f0f10' stop-opacity='.55'/></radialGradient></defs><rect width='640' height='480' fill='#0f0f10'/><rect width='640' height='480' fill='url(#g)' opacity='.92'/><circle cx='320' cy='202' r='120' fill='#0f0f10' fill-opacity='.28'/><circle cx='320' cy='202' r='120' fill='none' stroke='#fff' stroke-opacity='.5' stroke-width='2'/><circle cx='320' cy='202' r='80' fill='none' stroke='#fff' stroke-opacity='.35' stroke-width='1.5'/><text x='320' y='224' font-family='ui-monospace,Menlo,monospace' font-size='76' font-weight='700' fill='#fff' text-anchor='middle'>42</text><text x='320' y='356' font-family='ui-monospace,Menlo,monospace' font-size='27' letter-spacing='9' fill='#fff' fill-opacity='.92' text-anchor='middle'>PARABLE</text><text x='320' y='390' font-family='ui-monospace,Menlo,monospace' font-size='12' letter-spacing='3' fill='#fff' fill-opacity='.6' text-anchor='middle'>HOVER TO MAGNIFY</text><rect x='.5' y='.5' width='639' height='479' fill='url(#v)'/></svg>`)}
+      />
+    </div>
+  ),
+  "stepper": (
+    <div style={{ width: "100%", maxWidth: 460, padding: "28px 22px", borderRadius: 20, background: "linear-gradient(180deg,#161618,#0f0f10)", border: "1px solid rgba(255,255,255,0.08)", boxShadow: "inset 0 1px 0 0 rgba(255,255,255,0.04), 0 24px 48px -28px rgba(0,0,0,0.85)" }}>
+      <Stepper
+        current={2}
+        steps={[
+          { label: "Account", description: "Your details" },
+          { label: "Payment", description: "Card on file" },
+          { label: "Review", description: "Confirm order" },
+          { label: "Done", description: "All set" },
+        ]}
+      />
+    </div>
+  ),
+  "skeleton": (
+    <div className="flex w-full max-w-[380px] flex-col gap-5 rounded-2xl bg-[#0f0f10] p-6 text-zinc-100 ring-1 ring-white/10">
+      <div className="flex items-center gap-3">
+        <Skeleton.Avatar width={44} />
+        <div className="min-w-0 flex-1">
+          <Skeleton.Text lines={2} />
+        </div>
+      </div>
+      <Skeleton variant="rect" height={132} radius={16} />
+      <Skeleton.Text lines={3} />
     </div>
   ),
 };

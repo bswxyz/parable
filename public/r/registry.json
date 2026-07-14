@@ -1703,6 +1703,374 @@
         "family": "component",
         "category": "effect"
       }
+    },
+    {
+      "name": "balloon-burst",
+      "type": "registry:ui",
+      "title": "Balloon Burst",
+      "author": "Parable",
+      "description": "A success-moment balloon release: call release() via useBalloons (or bump a controlled trigger prop) and a burst of brand-coloured balloons rises with sway, tilt, string tails, and a fade near the top from a deterministic seeded layout, then self-cleans. Decorative, non-blocking overlay; under prefers-reduced-motion it shows a single brief static cluster fade with no motion.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/balloon-burst.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/balloon-burst.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "effect",
+        "inspiredBy": {
+          "name": "balloons-js by Artur Bie\u0144 (MIT)",
+          "url": "https://github.com/arturbien/balloons-js"
+        }
+      }
+    },
+    {
+      "name": "matrix-rain",
+      "type": "registry:ui",
+      "title": "Matrix Rain",
+      "author": "Parable",
+      "description": "The falling-glyph \"digital rain\" on a single canvas: monospace columns cascade downward with a bright white head, a coloured glow, a power-curve fading trail, and glyphs that mutate as they fall \u2014 all driven by one DPR-capped rAF loop that rebuilds on resize and idles off-screen via IntersectionObserver. Layout and the opening frame come from a fixed-seed PRNG so the first client frame is deterministic; under prefers-reduced-motion it paints a single dim static frame with no fall, and the aria-hidden canvas sits behind children on a z-10 layer.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/matrix-rain.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/matrix-rain.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "effect",
+        "inspiredBy": {
+          "name": "Componentry \u2014 Matrix Rain (free, MIT)",
+          "url": "https://componentry.dev/docs"
+        }
+      }
+    },
+    {
+      "name": "pixel-canvas",
+      "type": "registry:ui",
+      "title": "Pixel Canvas",
+      "author": "Parable",
+      "description": "A single-canvas grid of pixels that ripples to life on hover or focus \u2014 pixels grow in size and opacity staggered by their distance from the cursor, then settle back when the pointer leaves or focus moves away. Colours and jitter come from a pure per-cell hash (SSR-safe, no render-time randomness); a lone rAF loop runs only while pixels move and idles off-screen. Under prefers-reduced-motion it paints a static faint pixel field once and skips every ripple.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/pixel-canvas.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/pixel-canvas.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "effect",
+        "inspiredBy": {
+          "name": "Componentry \u2014 Pixel Canvas (free, MIT)",
+          "url": "https://componentry.dev/docs"
+        }
+      }
+    },
+    {
+      "name": "orbit-card-stack",
+      "type": "registry:ui",
+      "title": "Orbit Card Stack",
+      "author": "Parable",
+      "description": "A draggable card deck (testimonials, photos, prompts): the top card can be flung left or right to spring it off-screen and orbit to the back, while prev/next buttons and the arrow keys advance and rewind through a depth-stacked pile. Exposes real carousel semantics with a polite live region and one exposed slide at a time; under prefers-reduced-motion it reorders instantly with no drag or throw physics.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/orbit-card-stack.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/orbit-card-stack.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "Componentry \u2014 Orbit Card Stack (free, MIT)",
+          "url": "https://componentry.dev/docs"
+        }
+      }
+    },
+    {
+      "name": "family-button",
+      "type": "registry:ui",
+      "title": "Family Button",
+      "author": "Parable",
+      "description": "A compact circular button that spring-morphs (Motion layout) into a rounded toolbar of icon-and-label actions unfurling up, down, left, or right, with real disclosure semantics, Escape/outside-click close, focus management, and Arrow/Home/End roving; under reduced motion it expands and collapses instantly as a static, legible control.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/family-button.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/family-button.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "Cult UI \u2014 Family Button (free, MIT)",
+          "url": "https://cult-ui.com/docs"
+        }
+      }
+    },
+    {
+      "name": "morph-surface",
+      "type": "registry:ui",
+      "title": "Morph Surface",
+      "author": "Parable",
+      "description": "A container that morphs in place between a compact chip and a rich panel \u2014 a single Motion layout element springs its size and corner radius while the two content states cross-fade (AnimatePresence popLayout), with a close affordance, Escape-to-collapse, and managed focus. Controlled or uncontrolled via expanded/defaultExpanded/onExpandedChange. Under prefers-reduced-motion it swaps instantly with no size, radius, or cross-fade animation.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/morph-surface.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/morph-surface.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive",
+        "inspiredBy": {
+          "name": "Cult UI \u2014 Morph / Dock Surface (free, MIT)",
+          "url": "https://cult-ui.com/docs"
+        }
+      }
+    },
+    {
+      "name": "ai-chat",
+      "type": "registry:ui",
+      "title": "AI Chat",
+      "author": "Parable",
+      "description": "A presentational AI-chat block: a scrollable user/assistant transcript with avatars and timestamps, an animated typing-dots indicator, and an auto-growing composer that streams a canned reply in character-chunks (Enter sends, Shift+Enter newline). Respects prefers-reduced-motion by dropping the dot bounce and caret and appending replies whole with no character stream.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/ai-chat.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/ai-chat.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "block",
+        "inspiredBy": {
+          "name": "Cult Pro \u2014 AI chat interfaces (pattern, UI only)",
+          "url": "https://cult-ui.com"
+        }
+      }
+    },
+    {
+      "name": "multi-step-form",
+      "type": "registry:ui",
+      "title": "Multi-Step Form",
+      "author": "Parable",
+      "description": "A guided wizard block: a numbered role=progressbar header whose gradient fill springs along the track as you advance, step panels that cross-fade and slide in the travel direction while the panel height morphs to fit, and validation-gated Back/Next with a submit step that fires onComplete. Announces each step change through a polite live region and moves focus to the incoming heading; under prefers-reduced-motion steps swap instantly and the bar fills without transition.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/multi-step-form.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/multi-step-form.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "block"
+      }
+    },
+    {
+      "name": "bar-chart",
+      "type": "registry:ui",
+      "title": "Bar Chart",
+      "author": "Parable",
+      "description": "A dependency-free SVG bar-chart block: gradient-filled vertical bars grow from the zero baseline with a staggered scaleY draw-in, plus an optional slimmer overlay series, mono gridlines/axis ticks, and a header total. Pointer or arrow-key focus highlights a bar and pops a value tooltip while others dim; under prefers-reduced-motion the bars render at full height with no draw-in.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/bar-chart.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/bar-chart.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "block",
+        "inspiredBy": {
+          "name": "Watermelon UI \u2014 dashboard charts",
+          "url": "https://ui.watermelon.sh"
+        }
+      }
+    },
+    {
+      "name": "donut-chart",
+      "type": "registry:ui",
+      "title": "Donut Chart",
+      "author": "Parable",
+      "description": "A hand-rolled SVG donut/ring chart whose slices sweep in clockwise on mount and lift on hover or legend focus, showing that slice's share in the center; the keyboard-operable legend pins a slice, and prefers-reduced-motion paints the full ring instantly with no sweep or lift.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/donut-chart.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/donut-chart.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "block",
+        "inspiredBy": {
+          "name": "Watermelon UI \u2014 dashboard charts",
+          "url": "https://ui.watermelon.sh"
+        }
+      }
+    },
+    {
+      "name": "calendar-heatmap",
+      "type": "registry:ui",
+      "title": "Calendar Heatmap",
+      "author": "Parable",
+      "description": "A GitHub-style contributions heatmap, hand-rolled as SVG with no charting deps: weeks-as-columns day-grid colored by a 5-bucket violet intensity ramp, month/weekday labels, and a hover- or arrow-key-driven tooltip announced via aria-live. Cells pop in with a diagonal (col+row) stagger that is dropped under prefers-reduced-motion, where every cell renders fully visible.",
+      "registryDependencies": [],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/calendar-heatmap.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/calendar-heatmap.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "block",
+        "inspiredBy": {
+          "name": "Watermelon UI \u2014 activity heatmap",
+          "url": "https://ui.watermelon.sh"
+        }
+      }
+    },
+    {
+      "name": "kanban-board",
+      "type": "registry:ui",
+      "title": "Kanban Board",
+      "author": "Parable",
+      "description": "A drag-and-drop task board (no DnD deps): pointer-drag cards to reorder within a column or move across columns, with a pointer-tracking overlay, a dashed placeholder gap, Motion layout springs, and a cubic-bezier drop settle. Full Ctrl/Cmd+arrow keyboard moves announced via a live region. Under prefers-reduced-motion there is no lift easing, gliding gap or settle \u2014 moves land instantly on a legible static list.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/kanban-board.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/kanban-board.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "block",
+        "inspiredBy": {
+          "name": "Watermelon UI \u2014 task board",
+          "url": "https://ui.watermelon.sh"
+        }
+      }
+    },
+    {
+      "name": "image-zoom",
+      "type": "registry:ui",
+      "title": "Image Zoom",
+      "author": "Parable",
+      "description": "A hover/press inner-zoom magnifier whose magnified region tracks the pointer inside the image (no lens box), paired with a click-to-open full-screen lightbox that portals to the body with a blurred backdrop, Escape/backdrop-click close, focus trap, and focus return. Under prefers-reduced-motion the zoom-follow is dropped (the static image stays fully legible) and the lightbox opens instantly.",
+      "registryDependencies": [],
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/image-zoom.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/image-zoom.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive"
+      }
+    },
+    {
+      "name": "stepper",
+      "type": "registry:ui",
+      "title": "Stepper",
+      "author": "Parable",
+      "description": "A horizontal or vertical progress stepper: numbered circles connect via a track whose accent fill grows across completed segments, the current step pulses inside a solid accent ring, and passing onStepClick turns completed/current steps into keyboard-operable buttons (upcoming steps stay inert). Under prefers-reduced-motion the connector fills snap in with no grow and the pulse is suppressed, leaving a static, legible ring.",
+      "registryDependencies": [],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/parable/ui/stepper.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/stepper.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "interactive"
+      }
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "title": "Skeleton",
+      "author": "Parable",
+      "description": "A content-placeholder loader with a soft pure-CSS shimmer sweep \u2014 rect, text, circle, and card variants plus Skeleton.Text/Avatar/Card presets, currentColor theming, and an aria-busy opt-in; collapses to a static muted block under reduced motion.",
+      "registryDependencies": [],
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/parable/ui/skeleton.tsx",
+          "type": "registry:ui",
+          "target": "components/parable/skeleton.tsx"
+        }
+      ],
+      "meta": {
+        "family": "component",
+        "category": "loader"
+      }
     }
   ]
 }
