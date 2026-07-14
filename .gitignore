@@ -45,3 +45,5 @@ next-env.d.ts
 
 # local agent / editor config (not for publishing)
 .claude/
+.mcp.json
+.cursor/
