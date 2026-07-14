@@ -107,7 +107,37 @@ const PARABLE: Template[] = [
   t("ninth-wave-surf", "Ninth Wave", "Surf & outdoor apparel — sun-bleached poster hero + scroll-drift shelf.", "parable", "static", ["gsap", "apparel", "surf"]),
 ];
 
-export const TEMPLATES: Template[] = [...FORMWORK, ...PARABLE];
+// ── Expansion — 26 new product concepts (2026), light/dark, fresh flourishes ──
+const EXPANSION: Template[] = [
+  t("quench", "Quench", "Heritage bladesmith — a raw-WebGL domain-warp Damascus shader on a clipped blade + a colour-coded five-heat forge.", "parable", "static", ["webgl", "shader", "craft"]),
+  t("peony", "Peony", "Pyrotechnics studio — a live canvas fireworks engine you fire by clicking the sky + generated shell diagrams.", "parable", "static", ["canvas", "fireworks", "interactive"]),
+  t("beaufort", "Beaufort", "Classic-yacht charter — an animated inline-SVG sea chart whose compass rose tracks your scroll heading.", "parable", "static", ["svg", "maps", "luxury"]),
+  t("cornice", "Cornice", "Alpine ski resort — a live lift-status board + an interactive SVG piste map with difficulty filter.", "parable", "static", ["svg", "interactive", "alpine"]),
+  t("lather", "Lather", "Barbershop — a CSS barber-pole + an interactive book-a-chair scheduler grid.", "parable", "static", ["css", "interactive", "brand"]),
+  t("longbox", "Longbox", "Indie comics press — a pure-CSS halftone + hard-ink comic-panel scroll strip you read left to right.", "parable", "static", ["css", "halftone", "editorial"]),
+  t("oubliette", "Oubliette", "Immersive escape rooms — four combination-lock dials you drag (or arrow-key) into a hidden alignment that springs the latch.", "parable", "static", ["interactive", "puzzle", "gothic"]),
+  t("dovetail", "Dovetail", "Furniture design studio — an orthographic blueprint chair that turns through its elevations, with live material swaps.", "parable", "static", ["svg", "product", "craft"]),
+  t("fathom", "Fathom", "Public aquarium — a WebGL caustics hero over a descent through four stacked ocean zones with a live depth gauge.", "parable", "static", ["webgl", "shader", "nature"]),
+  t("selvedge", "Selvedge", "Bespoke tailoring house — an annotated SVG measurement mannequin and a fabric bolt that unrolls to its weave.", "parable", "static", ["svg", "luxury", "interactive"]),
+  t("conche", "Conche", "Bean-to-bar chocolate maker — a radial origin flavor-wheel and a tempering curve that draws itself to temper.", "parable", "astro", ["astro", "data", "craft"]),
+  t("yugen", "Yugen", "Izakaya at the end of the alley — indigo noren curtains part in parallax over a build-your-own-bowl.", "parable", "astro", ["astro", "parallax", "food"]),
+  t("nightcap", "Nightcap", "Speakeasy cocktail bar — pour spirit, modifier and bitters into a glass of stacking SVG liquid layers.", "parable", "astro", ["astro", "svg", "brand"]),
+  t("vitrine", "Vitrine", "Museum exhibition microsite — works hung at parallax depth, navigated by a clickable floor plan.", "parable", "astro", ["astro", "parallax", "editorial"]),
+  t("deckle", "Deckle", "Stationery brand — a paper-mode toggle that re-rules the page substrate, plus a pressure-sensitive doodle canvas.", "parable", "astro", ["astro", "interactive", "brand"]),
+  t("rennet", "Rennet", "Farmhouse creamery — drag a time slider and watch a wheel's rind mature across a humidity-by-weeks cave chart.", "parable", "astro", ["astro", "data", "craft"]),
+  t("halfstep", "Halfstep", "Urban e-bike brand — the bike flies apart into a labelled exploded diagram on scroll, with a spec configurator.", "parable", "vite", ["vite", "svg", "product"]),
+  t("crux", "Crux", "Bouldering gym — pick a problem and watch its holds light the line up an SVG wall, filtered by grade.", "parable", "vite", ["vite", "svg", "interactive"]),
+  t("splits", "Splits", "City marathon — a course elevation profile that draws itself, plus a pace calculator that splits your goal time.", "parable", "vite", ["vite", "svg", "data"]),
+  t("patchbay", "Patchbay", "Eurorack synth maker — drag patch cables between jacks on a module rack, with opt-in Web-Audio tones.", "parable", "vite", ["vite", "audio", "interactive"]),
+  t("endgame", "Endgame", "Online chess club — a board replays a classic miniature as you scroll, notation ticker keeping pace.", "parable", "svelte", ["svelte", "canvas", "interactive"]),
+  t("meeplewood", "Meeplewood", "Tabletop publisher — click a tumbling 3D-CSS d20 to pick game night, then learn the rules in a page-flip book.", "parable", "svelte", ["svelte", "3d", "playful"]),
+  t("mise", "Mise", "Meal-kit service — a step-by-step recipe choreography with a servings slider that rescales every ingredient.", "parable", "svelte", ["svelte", "interactive", "food"]),
+  t("glyphica", "Glyphica", "Digital type foundry — drag weight, width and optical axes and watch a giant variable-font specimen morph live.", "parable", "next", ["next", "typography", "interactive"]),
+  t("redoubt", "Redoubt", "Cybersecurity SOC — a force-directed canvas threat graph beside a terminal streaming live incident logs.", "parable", "next", ["next", "canvas", "data"]),
+  t("earshot", "Earshot", "Podcast network — scrub a rendered canvas waveform with a live playhead, then browse the episode timeline.", "parable", "next", ["next", "audio", "canvas"]),
+];
+
+export const TEMPLATES: Template[] = [...FORMWORK, ...PARABLE, ...EXPANSION];
 
 export const TEMPLATE_STACKS: { key: TemplateStack | "all"; label: string }[] = [
   { key: "all", label: "All stacks" },
