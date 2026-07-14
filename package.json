@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "registry:build": "shadcn build"
+    "registry:build": "shadcn build && node scripts/extract-props.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",

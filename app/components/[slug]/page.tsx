@@ -9,6 +9,7 @@ import {
   installCommand,
 } from "@/lib/catalog";
 import { readComponentSource } from "@/lib/source";
+import { getPropDocs, getUsage, type ComponentPropDocs } from "@/lib/docs";
 import { CodeBlock } from "@/components/code-block";
 import { InstallBlock } from "@/components/install-block";
 import { PreviewStage } from "@/components/preview-stage";
@@ -46,7 +47,9 @@ export default async function ComponentDetail({
   if (!c) notFound();
 
   const source = await readComponentSource(slug);
-  const markdown = buildMarkdown(c.title, c.description, slug, source);
+  const propDocs = getPropDocs(slug);
+  const usage = getUsage(slug);
+  const markdown = buildMarkdown(c.title, c.description, slug, source, propDocs);
 
   return (
     <main className="mx-auto max-w-4xl px-4 py-10 md:py-14">
@@ -119,6 +122,80 @@ export default async function ComponentDetail({
         </p>
       </section>
 
+      {/* Usage */}
+      {usage && (
+        <section className="mt-10">
+          <h2 className="mb-3 text-sm font-medium">Usage</h2>
+          <p className="mb-3 text-xs text-muted-foreground">
+            The exact code rendering the preview above.
+          </p>
+          <CodeBlock code={usage} lang="tsx" />
+        </section>
+      )}
+
+      {/* Props */}
+      {propDocs && propDocs.props.length > 0 && (
+        <section className="mt-10">
+          <h2 className="mb-1 text-sm font-medium">Props</h2>
+          <p className="mb-3 font-mono text-xs text-muted-foreground">
+            {propDocs.interface}
+            {propDocs.extends.length > 0 && (
+              <span className="text-muted-foreground/70">
+                {" "}
+                extends {propDocs.extends.join(", ")}
+              </span>
+            )}
+          </p>
+          <div className="overflow-x-auto rounded-xl border">
+            <table className="w-full min-w-[560px] text-left text-sm">
+              <thead>
+                <tr className="border-b bg-muted/40">
+                  <th className="px-3 py-2 font-mono text-xs font-medium">
+                    Prop
+                  </th>
+                  <th className="px-3 py-2 font-mono text-xs font-medium">
+                    Type
+                  </th>
+                  <th className="px-3 py-2 font-mono text-xs font-medium">
+                    Default
+                  </th>
+                  <th className="px-3 py-2 font-mono text-xs font-medium">
+                    Description
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {propDocs.props.map((p) => (
+                  <tr key={p.name} className="border-b last:border-0">
+                    <td className="whitespace-nowrap px-3 py-2 align-top font-mono text-xs">
+                      {p.name}
+                      {p.required && (
+                        <span
+                          className="text-[#ec4899]"
+                          title="Required"
+                          aria-label="required"
+                        >
+                          *
+                        </span>
+                      )}
+                    </td>
+                    <td className="max-w-[220px] px-3 py-2 align-top font-mono text-xs text-muted-foreground">
+                      {p.type}
+                    </td>
+                    <td className="whitespace-nowrap px-3 py-2 align-top font-mono text-xs text-muted-foreground">
+                      {p.default ?? "—"}
+                    </td>
+                    <td className="px-3 py-2 align-top text-xs text-muted-foreground">
+                      {p.description || "—"}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )}
+
       {/* Dependencies */}
       {(c.dependencies.length > 0 || c.registryDependencies.length > 0) && (
         <section className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -159,8 +236,19 @@ function buildMarkdown(
   title: string,
   desc: string,
   slug: string,
-  source: string
+  source: string,
+  propDocs?: ComponentPropDocs
 ): string {
+  const propsTable =
+    propDocs && propDocs.props.length > 0
+      ? `\n## Props (${propDocs.interface})\n\n| Prop | Type | Default | Description |\n| --- | --- | --- | --- |\n${propDocs.props
+          .map(
+            (p) =>
+              `| ${p.name}${p.required ? " (required)" : ""} | \`${p.type.replace(/\|/g, "\\|")}\` | ${p.default ? `\`${p.default.replace(/\|/g, "\\|")}\`` : "—"} | ${p.description.replace(/\|/g, "\\|") || "—"} |`
+          )
+          .join("\n")}\n`
+      : "";
+
   return `# ${title}
 
 ${desc}
@@ -170,7 +258,7 @@ ${desc}
 \`\`\`bash
 ${installCommand(slug, "npm")}
 \`\`\`
-
+${propsTable}
 ## Source — components/parable/${slug}.tsx
 
 \`\`\`tsx

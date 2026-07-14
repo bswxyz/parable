@@ -6,6 +6,23 @@ export const metadata = {
 
 # Changelog
 
+## v0.8 — Component docs: props & usage, generated from source
+
+Every component page now documents itself.
+
+- **Props tables** — every component's `*Props` interface is extracted
+  straight from its TypeScript source (name, type, default, required, and the
+  JSDoc description on each prop) at build time. 83/83 components covered; the
+  table can't drift from the code because it *is* the code.
+- **Usage snippets** — each page shows the exact JSX that renders its live
+  preview, lifted verbatim from the gallery source.
+- **Copy Page & MCP** — the LLM-facing markdown export now includes the props
+  table, and the MCP `get_component` tool returns structured `props`, so
+  agents get the full API without reading source. (Also fixed: the MCP
+  category filter now knows about `block`.)
+- Regeneration is chained into `registry:build`, so docs stay in lockstep
+  with the registry.
+
 ## v0.7 — The Expansion: 26 new templates
 
 Templates 52 → **78**. Twenty-six new product concepts, each an

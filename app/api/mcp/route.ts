@@ -6,6 +6,7 @@ import {
   REGISTRY_BASE,
 } from "@/lib/catalog";
 import { TEMPLATES, getTemplate } from "@/lib/templates";
+import { getPropDocs } from "@/lib/docs";
 
 export const dynamic = "force-dynamic";
 
@@ -29,7 +30,7 @@ const TOOLS = [
       properties: {
         category: {
           type: "string",
-          enum: ["text", "interactive", "hero", "effect", "loader"],
+          enum: ["text", "interactive", "hero", "effect", "loader", "block"],
         },
       },
     },
@@ -90,6 +91,7 @@ function callTool(name: string, args: Record<string, unknown>) {
         ...c,
         install: installCommand(c.slug, "npm"),
         registryUrl: `${REGISTRY_BASE || "https://parable-three.vercel.app"}/r/${c.slug}.json`,
+        props: getPropDocs(c.slug)?.props ?? [],
       };
     }
     case "list_templates": {

@@ -1,0 +1,4109 @@
+{
+  "shimmer-button": {
+    "interface": "ShimmerButtonProps",
+    "extends": [
+      "React.ButtonHTMLAttributes<HTMLButtonElement>"
+    ],
+    "props": [
+      {
+        "name": "shimmerColor",
+        "type": "string",
+        "required": false,
+        "default": "\"#c4b5fd\"",
+        "description": "Colour of the travelling shimmer highlight."
+      },
+      {
+        "name": "shimmerSize",
+        "type": "string",
+        "required": false,
+        "default": "\"0.06em\"",
+        "description": "Diameter of the shimmer highlight."
+      },
+      {
+        "name": "shimmerDuration",
+        "type": "string",
+        "required": false,
+        "default": "\"2.4s\"",
+        "description": "Seconds for one full rotation."
+      },
+      {
+        "name": "radius",
+        "type": "string",
+        "required": false,
+        "default": "\"9999px\"",
+        "description": "Corner radius."
+      },
+      {
+        "name": "background",
+        "type": "string",
+        "required": false,
+        "default": "\"rgba(10,10,12,1)\"",
+        "description": "Background of the button face."
+      },
+      {
+        "name": "as",
+        "type": "React.ElementType",
+        "required": false,
+        "default": null,
+        "description": "Render as a different element for navigation semantics — e.g. an `<a>` or a router `Link`. Defaults to `\"button\"`. Pass `href` alongside for links."
+      },
+      {
+        "name": "href",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Destination, used when rendering as a link element via `as`."
+      }
+    ]
+  },
+  "velocity-marquee": {
+    "interface": "VelocityMarqueeProps",
+    "extends": [
+      "React.HTMLAttributes<HTMLDivElement>"
+    ],
+    "props": [
+      {
+        "name": "items",
+        "type": "React.ReactNode[]",
+        "required": true,
+        "default": null,
+        "description": "Items to scroll. Strings or nodes."
+      },
+      {
+        "name": "baseSpeed",
+        "type": "number",
+        "required": false,
+        "default": "60",
+        "description": "Base pixels/second."
+      },
+      {
+        "name": "direction",
+        "type": "\"left\" | \"right\"",
+        "required": false,
+        "default": "\"left\"",
+        "description": "Scroll direction."
+      },
+      {
+        "name": "scrollBoost",
+        "type": "number",
+        "required": false,
+        "default": "340",
+        "description": "Extra px/sec added at peak scroll velocity."
+      },
+      {
+        "name": "gap",
+        "type": "string",
+        "required": false,
+        "default": "\"3rem\"",
+        "description": "Gap between items, any CSS length."
+      }
+    ]
+  },
+  "kinetic-text": {
+    "interface": "KineticTextProps",
+    "extends": [
+      "React.HTMLAttributes<HTMLSpanElement>"
+    ],
+    "props": [
+      {
+        "name": "text",
+        "type": "string",
+        "required": true,
+        "default": null,
+        "description": "The text to reveal, split per word."
+      },
+      {
+        "name": "stagger",
+        "type": "number",
+        "required": false,
+        "default": "0.06",
+        "description": "Seconds between each word."
+      },
+      {
+        "name": "by",
+        "type": "\"word\" | \"char\"",
+        "required": false,
+        "default": "\"word\"",
+        "description": "Split unit."
+      },
+      {
+        "name": "once",
+        "type": "boolean",
+        "required": false,
+        "default": "true",
+        "description": "Only animate once."
+      },
+      {
+        "name": "as",
+        "type": "React.ElementType",
+        "required": false,
+        "default": null,
+        "description": "Element to render as."
+      }
+    ]
+  },
+  "magnetic-dock": {
+    "interface": "MagneticDockProps",
+    "extends": [
+      "React.HTMLAttributes<HTMLDivElement>"
+    ],
+    "props": [
+      {
+        "name": "items",
+        "type": "DockItem[]",
+        "required": true,
+        "default": null,
+        "description": ""
+      },
+      {
+        "name": "size",
+        "type": "number",
+        "required": false,
+        "default": "44",
+        "description": "Resting icon size (px)."
+      },
+      {
+        "name": "magnification",
+        "type": "number",
+        "required": false,
+        "default": "78",
+        "description": "Peak magnified size (px)."
+      },
+      {
+        "name": "distance",
+        "type": "number",
+        "required": false,
+        "default": "140",
+        "description": "Cursor influence radius (px)."
+      }
+    ]
+  },
+  "aurora-background": {
+    "interface": "AuroraBackgroundProps",
+    "extends": [
+      "React.HTMLAttributes<HTMLDivElement>"
+    ],
+    "props": [
+      {
+        "name": "colors",
+        "type": "string[]",
+        "required": false,
+        "default": "[\"#8b5cf6\", \"#ec4899\", \"#22d3ee\"]",
+        "description": "Two or more colours the aurora blends between."
+      },
+      {
+        "name": "background",
+        "type": "string",
+        "required": false,
+        "default": "\"#0a0a0c\"",
+        "description": "Base backdrop colour."
+      },
+      {
+        "name": "speed",
+        "type": "number",
+        "required": false,
+        "default": "18",
+        "description": "Animation seconds for one cycle."
+      },
+      {
+        "name": "blur",
+        "type": "string",
+        "required": false,
+        "default": "\"72px\"",
+        "description": "Blur radius of the aurora bands."
+      },
+      {
+        "name": "grain",
+        "type": "boolean",
+        "required": false,
+        "default": "true",
+        "description": "Show a subtle grain overlay."
+      }
+    ]
+  },
+  "dot-matrix-loader": {
+    "interface": "DotMatrixLoaderProps",
+    "extends": [
+      "React.HTMLAttributes<HTMLDivElement>"
+    ],
+    "props": [
+      {
+        "name": "cols",
+        "type": "number",
+        "required": false,
+        "default": "7",
+        "description": "Grid columns."
+      },
+      {
+        "name": "rows",
+        "type": "number",
+        "required": false,
+        "default": "7",
+        "description": "Grid rows."
+      },
+      {
+        "name": "dotSize",
+        "type": "number",
+        "required": false,
+        "default": "6",
+        "description": "Dot diameter (px)."
+      },
+      {
+        "name": "gap",
+        "type": "number",
+        "required": false,
+        "default": "6",
+        "description": "Gap between dots (px)."
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "required": false,
+        "default": "\"currentColor\"",
+        "description": "Dot colour."
+      },
+      {
+        "name": "speed",
+        "type": "number",
+        "required": false,
+        "default": "1.6",
+        "description": "Seconds for one animation cycle."
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": false,
+        "default": "\"Loading\"",
+        "description": "Accessible status label."
+      },
+      {
+        "name": "variant",
+        "type": "DotMatrixVariant",
+        "required": false,
+        "default": "\"wave\"",
+        "description": "Which choreography the dots follow. Defaults to the original `\"wave\"`."
+      }
+    ]
+  },
+  "magnet-lines": {
+    "interface": "MagnetLinesProps",
+    "extends": [
+      "React.HTMLAttributes<HTMLDivElement>"
+    ],
+    "props": [
+      {
+        "name": "rows",
+        "type": "number",
+        "required": false,
+        "default": "9",
+        "description": ""
+      },
+      {
+        "name": "columns",
+        "type": "number",
+        "required": false,
+        "default": "9",
+        "description": ""
+      },
+      {
+        "name": "lineWidth",
+        "type": "string",
+        "required": false,
+        "default": "\"0.5vmin\"",
+        "description": "Line container size, any CSS length."
+      },
+      {
+        "name": "lineHeight",
+        "type": "string",
+        "required": false,
+        "default": "\"4vmin\"",
+        "description": ""
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": ""
+      },
+      {
+        "name": "baseAngle",
+        "type": "number",
+        "required": false,
+        "default": "-10",
+        "description": "Base (resting) rotation in degrees."
+      }
+    ]
+  },
+  "dither-aurora": {
+    "interface": "DitherAuroraProps",
+    "extends": [
+      "React.HTMLAttributes<HTMLDivElement>"
+    ],
+    "props": [
+      {
+        "name": "colors",
+        "type": "string[]",
+        "required": false,
+        "default": "[\"#8b5cf6\", \"#ec4899\", \"#f5a623\"]",
+        "description": "Two or three hex colours the aurora gradient sweeps through."
+      },
+      {
+        "name": "background",
+        "type": "string",
+        "required": false,
+        "default": "\"#0f0f10\"",
+        "description": "Base backdrop colour (also the GL clear colour)."
+      },
+      {
+        "name": "speed",
+        "type": "number",
+        "required": false,
+        "default": "0.15",
+        "description": "Flow speed multiplier. ~0.15 is a slow, hero-grade drift."
+      },
+      {
+        "name": "pixelSize",
+        "type": "number",
+        "required": false,
+        "default": "4",
+        "description": "Dither cell size in device pixels — the size of one lattice dot."
+      },
+      {
+        "name": "paused",
+        "type": "boolean",
+        "required": false,
+        "default": "false",
+        "description": "Freeze the flow (rendering idles; the last frame stays up)."
+      },
+      {
+        "name": "grain",
+        "type": "boolean",
+        "required": false,
+        "default": "false",
+        "description": "Add a subtle animated film-grain pass on top of the lattice."
+      }
+    ]
+  },
+  "liquid-metal-button": {
+    "interface": "LiquidMetalButtonProps",
+    "extends": [
+      "React.ButtonHTMLAttributes<HTMLButtonElement>"
+    ],
+    "props": [
+      {
+        "name": "preset",
+        "type": "LiquidMetalPreset",
+        "required": false,
+        "default": "\"chromatic\"",
+        "description": "Metal look for the ring. `\"chromatic\"` hue-rotates iridescent reflections."
+      },
+      {
+        "name": "strength",
+        "type": "number",
+        "required": false,
+        "default": "0.6",
+        "description": "Reflection intensity / turbulence, 0–1. Hover nudges it up. Default `0.6`."
+      },
+      {
+        "name": "paused",
+        "type": "boolean",
+        "required": false,
+        "default": "false",
+        "description": "Freeze the shader on a single rendered frame."
+      },
+      {
+        "name": "ringWidth",
+        "type": "string",
+        "required": false,
+        "default": "\"2.5px\"",
+        "description": "Visual thickness of the metal ring. Default `\"2.5px\"`."
+      },
+      {
+        "name": "radius",
+        "type": "string",
+        "required": false,
+        "default": "\"9999px\"",
+        "description": "Corner radius of the pill. Default `\"9999px\"`."
+      },
+      {
+        "name": "background",
+        "type": "string",
+        "required": false,
+        "default": "\"#0f0f10\"",
+        "description": "Solid colour of the inner button face (mirrors `--pb-ink`). Default `#0f0f10`."
+      },
+      {
+        "name": "as",
+        "type": "React.ElementType",
+        "required": false,
+        "default": null,
+        "description": "Render as a different element for navigation semantics — e.g. an `<a>` or a router `Link`. Defaults to `\"button\"`. Pass `href` alongside for links."
+      },
+      {
+        "name": "href",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Destination, used when rendering as a link element via `as`."
+      }
+    ]
+  },
+  "dynamic-island": {
+    "interface": "DynamicIslandProps",
+    "extends": [
+      "Omit< React.HTMLAttributes<HTMLDivElement>, | \"onAnimationStart\" | \"onAnimationEnd\" | \"onAnimationIteration\" | \"onDrag\" | \"onDragStart\" | \"onDragEnd\" | \"children\" >"
+    ],
+    "props": [
+      {
+        "name": "state",
+        "type": "DynamicIslandState",
+        "required": false,
+        "default": null,
+        "description": "Controlled state. Pair with `onStateChange`."
+      },
+      {
+        "name": "defaultState",
+        "type": "DynamicIslandState",
+        "required": false,
+        "default": "\"idle\"",
+        "description": "Initial state when uncontrolled."
+      },
+      {
+        "name": "onStateChange",
+        "type": "(state: DynamicIslandState) => void",
+        "required": false,
+        "default": null,
+        "description": "Fires on every state change (both controlled and uncontrolled)."
+      },
+      {
+        "name": "idleContent",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Compact content shown in the `idle` pill. Falls back to a pulsing dot + `label`."
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": false,
+        "default": "\"Live\"",
+        "description": "Label used by the default idle content when `idleContent` is not supplied."
+      },
+      {
+        "name": "accent",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Accent colour for the idle dot and the ring stroke. Defaults to Parable violet (`--pb-violet`)."
+      },
+      {
+        "name": "background",
+        "type": "string",
+        "required": false,
+        "default": "\"#0f0f10\"",
+        "description": "Pill face colour. Defaults to Parable ink `#0f0f10` (`--pb-ink`)."
+      },
+      {
+        "name": "ringProgress",
+        "type": "number",
+        "required": false,
+        "default": "0.62",
+        "description": "Progress `0..1` for the `ring` state."
+      },
+      {
+        "name": "ringContent",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Centre content for the `ring` state (e.g. a countdown or icon)."
+      },
+      {
+        "name": "collapseOnOutsideClick",
+        "type": "boolean",
+        "required": false,
+        "default": "true",
+        "description": "Collapse to `idle` when a pointer press lands outside the island while expanded."
+      },
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Expanded panel body — title, text, actions, anything."
+      }
+    ]
+  },
+  "expandable-card": {
+    "interface": "ExpandableCardProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"title\">"
+    ],
+    "props": [
+      {
+        "name": "title",
+        "type": "React.ReactNode",
+        "required": true,
+        "default": null,
+        "description": "Primary heading shown in the collapsed row."
+      },
+      {
+        "name": "subtitle",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Optional secondary line under the title."
+      },
+      {
+        "name": "media",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Decorative media — a left thumbnail or a full-width top strip."
+      },
+      {
+        "name": "mediaLayout",
+        "type": "\"thumb\" | \"strip\"",
+        "required": false,
+        "default": "\"thumb\"",
+        "description": "Where `media` renders. `\"thumb\"` = left of the title; `\"strip\"` = above it."
+      },
+      {
+        "name": "accent",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Accent used for the chevron and focus ring. Mirrors the site `--pb-violet` token."
+      },
+      {
+        "name": "defaultExpanded",
+        "type": "boolean",
+        "required": false,
+        "default": "false",
+        "description": "Uncontrolled initial open state."
+      },
+      {
+        "name": "expanded",
+        "type": "boolean",
+        "required": false,
+        "default": null,
+        "description": "Controlled open state. Pair with `onExpandedChange`."
+      },
+      {
+        "name": "onExpandedChange",
+        "type": "(expanded: boolean) => void",
+        "required": false,
+        "default": null,
+        "description": "Fires with the next open state when the header is toggled."
+      },
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "required": true,
+        "default": null,
+        "description": "Expanded body content. Direct children fade/slide in with a slight stagger."
+      }
+    ]
+  },
+  "logo-carousel": {
+    "interface": "LogoCarouselProps",
+    "extends": [
+      "React.HTMLAttributes<HTMLDivElement>"
+    ],
+    "props": [
+      {
+        "name": "logos",
+        "type": "LogoItem[]",
+        "required": true,
+        "default": null,
+        "description": "The logos to cycle through, distributed round-robin across columns."
+      },
+      {
+        "name": "columns",
+        "type": "number",
+        "required": false,
+        "default": "4",
+        "description": "Number of columns (tiles) shown in the wall."
+      },
+      {
+        "name": "interval",
+        "type": "number",
+        "required": false,
+        "default": "2600",
+        "description": "Milliseconds between swaps. One column swaps per tick, so any given column re-swaps every `interval * columns` ms."
+      }
+    ]
+  },
+  "gravity-dots": {
+    "interface": "GravityDotsProps",
+    "extends": [
+      "React.HTMLAttributes<HTMLDivElement>"
+    ],
+    "props": [
+      {
+        "name": "rows",
+        "type": "number",
+        "required": false,
+        "default": null,
+        "description": "Fixed row count. Omit to derive from container height."
+      },
+      {
+        "name": "cols",
+        "type": "number",
+        "required": false,
+        "default": null,
+        "description": "Fixed column count. Omit to derive from container width."
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Dot colour. Default mirrors the site's `--pb-violet` token."
+      },
+      {
+        "name": "dotSize",
+        "type": "number",
+        "required": false,
+        "default": "2",
+        "description": "Dot radius in px."
+      },
+      {
+        "name": "radius",
+        "type": "number",
+        "required": false,
+        "default": "140",
+        "description": "Pointer influence radius in px."
+      },
+      {
+        "name": "strength",
+        "type": "number",
+        "required": false,
+        "default": "1",
+        "description": "Force multiplier — 1 is the tuned default, 2 pulls twice as hard."
+      },
+      {
+        "name": "mode",
+        "type": "\"attract\" | \"repel\"",
+        "required": false,
+        "default": "\"attract\"",
+        "description": "Whether the pointer pulls dots in or pushes them away."
+      }
+    ]
+  },
+  "gradient-heading": {
+    "interface": "GradientHeadingProps",
+    "extends": [
+      "React.HTMLAttributes<HTMLHeadingElement>"
+    ],
+    "props": [
+      {
+        "name": "as",
+        "type": "GradientHeadingTag",
+        "required": false,
+        "default": "\"h2\"",
+        "description": "Element to render. Defaults to `\"h2\"`. Use `h1`–`h6` for document structure, or `p` when the visual style is wanted without heading semantics."
+      },
+      {
+        "name": "variant",
+        "type": "GradientHeadingVariant",
+        "required": false,
+        "default": "\"aurora\"",
+        "description": "Gradient palette. Mirrors the site's `--pb-*` tokens. - `aurora` — violet → fuchsia → ember (default) - `steel` — warm vellum → chrome-ish grays - `signal` — violet → signal cyan"
+      },
+      {
+        "name": "animate",
+        "type": "boolean",
+        "required": false,
+        "default": "true",
+        "description": "Slowly drift the gradient (~8s loop). Ignored under reduced motion."
+      },
+      {
+        "name": "size",
+        "type": "GradientHeadingSize",
+        "required": false,
+        "default": "\"md\"",
+        "description": "Size preset. Defaults to `\"md\"`."
+      }
+    ]
+  },
+  "revenue-chart": {
+    "interface": "RevenueChartProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"title\">"
+    ],
+    "props": [
+      {
+        "name": "data",
+        "type": "RevenueChartDatum[]",
+        "required": false,
+        "default": "DEFAULT_DATA",
+        "description": "Series to plot. Ships a nice 12-point default when omitted."
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "required": false,
+        "default": "\"Revenue\"",
+        "description": "Heading shown top-left of the card."
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Line + fill colour. Defaults to Parable violet `#8b5cf6` (mirrors the site's `--pb-violet` token)."
+      },
+      {
+        "name": "height",
+        "type": "number",
+        "required": false,
+        "default": "220",
+        "description": "Plot area height in pixels (excludes the header row)."
+      },
+      {
+        "name": "valueFormatter",
+        "type": "(n: number) => string",
+        "required": false,
+        "default": "compactUSD",
+        "description": "Formats headline, tooltip and aria values. Defaults to compact USD."
+      }
+    ]
+  },
+  "transaction-list": {
+    "interface": "TransactionListProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"title\">"
+    ],
+    "props": [
+      {
+        "name": "title",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": "\"Transactions\"",
+        "description": "Heading shown in the block header."
+      },
+      {
+        "name": "transactions",
+        "type": "Transaction[]",
+        "required": false,
+        "default": "DEFAULT_TRANSACTIONS",
+        "description": "Rows to render. Defaults to a realistic 7-row sample set."
+      },
+      {
+        "name": "currency",
+        "type": "string",
+        "required": false,
+        "default": "\"USD\"",
+        "description": "Fallback ISO 4217 code when a row omits its own."
+      },
+      {
+        "name": "onRowClick",
+        "type": "(transaction: Transaction) => void",
+        "required": false,
+        "default": null,
+        "description": "Called with the transaction when a row is activated (makes rows buttons)."
+      }
+    ]
+  },
+  "device-frame": {
+    "interface": "DeviceFrameProps",
+    "extends": [
+      "React.HTMLAttributes<HTMLDivElement>"
+    ],
+    "props": [
+      {
+        "name": "variant",
+        "type": "\"phone\" | \"browser\"",
+        "required": false,
+        "default": "\"browser\"",
+        "description": "Which mockup to render around the children."
+      },
+      {
+        "name": "url",
+        "type": "string",
+        "required": false,
+        "default": "\"parable-three.vercel.app\"",
+        "description": "Address-bar text for the `\"browser\"` variant."
+      },
+      {
+        "name": "tab",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Optional tab label for the `\"browser\"` variant. When provided, a tab strip is rendered above the toolbar; omit it for a chromeless single-row window."
+      },
+      {
+        "name": "shadow",
+        "type": "boolean",
+        "required": false,
+        "default": "true",
+        "description": "Layered, realistic drop shadow under the frame."
+      },
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Screen content — clipped to the device's screen area."
+      }
+    ]
+  },
+  "sign-in-slice": {
+    "interface": "SignInSliceProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"title\" | \"onSubmit\" | \"children\">"
+    ],
+    "props": [
+      {
+        "name": "onSubmit",
+        "type": "(email: string) => Promise<void> | void",
+        "required": false,
+        "default": null,
+        "description": "Runs when a valid email is submitted. Resolve to show the success state, throw/reject to fall back to the form with an error hint. Defaults to a fake ~1.2s delay so the slice demos itself."
+      },
+      {
+        "name": "title",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": "\"Sign in to Parable\"",
+        "description": "Card heading."
+      },
+      {
+        "name": "subtitle",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": "\"We'll email you a magic link. No password needed.\"",
+        "description": "One-liner under the heading."
+      },
+      {
+        "name": "logo",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Logo slot above the heading. Defaults to a small violet gradient tile."
+      },
+      {
+        "name": "finePrint",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": "\"By continuing you agree to the Terms · Privacy\"",
+        "description": "Mono fine-print line at the foot of the card."
+      },
+      {
+        "name": "accent",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Accent hex — button, floated label, success check. Default Parable violet."
+      },
+      {
+        "name": "onOAuth",
+        "type": "(provider: \"github\" | \"google\") => void",
+        "required": false,
+        "default": null,
+        "description": "Called when an OAuth-style button is pressed (demo-grade, no real auth)."
+      }
+    ]
+  },
+  "sticky-scroll-cards": {
+    "interface": "StickyScrollCardsProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"children\">"
+    ],
+    "props": [
+      {
+        "name": "items",
+        "type": "StickyScrollItem[]",
+        "required": true,
+        "default": null,
+        "description": "Ordered cards. Each sticks in turn while the next scrolls over it."
+      },
+      {
+        "name": "cardClassName",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Extra classes merged onto every card face."
+      },
+      {
+        "name": "stickyTop",
+        "type": "number",
+        "required": false,
+        "default": "96",
+        "description": "Distance in px from the viewport top where each card pins. Defaults to 96."
+      }
+    ]
+  },
+  "split-flap": {
+    "interface": "SplitFlapProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"children\">"
+    ],
+    "props": [
+      {
+        "name": "text",
+        "type": "string",
+        "required": true,
+        "default": null,
+        "description": "The string to display. On change, the board animates to the new value."
+      },
+      {
+        "name": "charSet",
+        "type": "string",
+        "required": false,
+        "default": "DEFAULT_CHARSET",
+        "description": "Ordered character set the flaps cycle through. Order defines the flip path. Defaults to space + A–Z + 0–9 + basic punctuation."
+      },
+      {
+        "name": "speed",
+        "type": "number",
+        "required": false,
+        "default": "55",
+        "description": "Milliseconds per single flap (one character advance)."
+      },
+      {
+        "name": "loop",
+        "type": "false | number",
+        "required": false,
+        "default": "false",
+        "description": "`false` to run once; a number = ms to pause after settling, then re-run."
+      },
+      {
+        "name": "stagger",
+        "type": "number",
+        "required": false,
+        "default": "70",
+        "description": "Extra ms of start delay between adjacent cells (left-to-right settle)."
+      },
+      {
+        "name": "cellClassName",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Class applied to each flap cell."
+      },
+      {
+        "name": "cellColor",
+        "type": "string",
+        "required": false,
+        "default": "\"#0f0f10\"",
+        "description": "Cell (flap) background. Defaults to Parable ink `--pb-ink`."
+      },
+      {
+        "name": "textColor",
+        "type": "string",
+        "required": false,
+        "default": "\"#f5f5f4\"",
+        "description": "Glyph colour. Defaults to a warm near-white."
+      }
+    ]
+  },
+  "eye-tracking": {
+    "interface": "EyeTrackingProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"color\">"
+    ],
+    "props": [
+      {
+        "name": "count",
+        "type": "number",
+        "required": false,
+        "default": "2",
+        "description": "How many eyes to render."
+      },
+      {
+        "name": "size",
+        "type": "number",
+        "required": false,
+        "default": "96",
+        "description": "Eye height in px (width is derived from it)."
+      },
+      {
+        "name": "eyeColor",
+        "type": "string",
+        "required": false,
+        "default": "\"#fafafa\"",
+        "description": "Sclera / eyeball fill."
+      },
+      {
+        "name": "pupilColor",
+        "type": "string",
+        "required": false,
+        "default": "\"#0f0f10\"",
+        "description": "Pupil fill."
+      },
+      {
+        "name": "irisColor",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Iris ring around the pupil. Defaults to the Parable violet."
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Accessible label. When set, the whole graphic is exposed as `role=\"img\"` with this label; otherwise it stays `aria-hidden` (decorative)."
+      }
+    ]
+  },
+  "shift-card": {
+    "interface": "ShiftCardProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLElement>, \"title\">"
+    ],
+    "props": [
+      {
+        "name": "title",
+        "type": "React.ReactNode",
+        "required": true,
+        "default": null,
+        "description": "Primary heading shown on the resting front face."
+      },
+      {
+        "name": "label",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Optional short eyebrow shown above the title."
+      },
+      {
+        "name": "detail",
+        "type": "React.ReactNode",
+        "required": true,
+        "default": null,
+        "description": "The layer revealed beneath the front face — body copy plus a CTA."
+      },
+      {
+        "name": "href",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "When set, the whole card renders as an `<a>` link to this href."
+      },
+      {
+        "name": "target",
+        "type": "React.HTMLAttributeAnchorTarget",
+        "required": false,
+        "default": null,
+        "description": "Anchor target, applied only when `href` is set."
+      },
+      {
+        "name": "rel",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Anchor rel, applied only when `href` is set."
+      },
+      {
+        "name": "accent",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Accent for the pointer glow, baseline bar, arrow, and focus ring."
+      }
+    ]
+  },
+  "notification-stack": {
+    "interface": "NotificationStackProps",
+    "extends": [
+      "Omit< React.HTMLAttributes<HTMLDivElement>, | \"children\" | \"onDrag\" | \"onDragStart\" | \"onDragEnd\" | \"onAnimationStart\" | \"onAnimationEnd\" | \"onAnimationIteration\" >"
+    ],
+    "props": [
+      {
+        "name": "items",
+        "type": "NotificationItem[]",
+        "required": true,
+        "default": null,
+        "description": "The pile, newest first. Fully controlled — render whatever you keep in state."
+      },
+      {
+        "name": "onDismiss",
+        "type": "(id: string) => void",
+        "required": false,
+        "default": null,
+        "description": "Fires with the dismissed `id` (tap the ✕, or swipe the card sideways)."
+      },
+      {
+        "name": "collapsedCount",
+        "type": "number",
+        "required": false,
+        "default": "3",
+        "description": "How many cards peek in the collapsed stack before the rest are hidden."
+      },
+      {
+        "name": "accent",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Accent for the icon tint, count pill, and focus ring. Mirrors `--pb-violet`."
+      }
+    ]
+  },
+  "animated-grid": {
+    "interface": "AnimatedGridProps",
+    "extends": [
+      "React.HTMLAttributes<HTMLDivElement>"
+    ],
+    "props": [
+      {
+        "name": "cellSize",
+        "type": "number",
+        "required": false,
+        "default": "32",
+        "description": "Edge length of one grid cell, in pixels."
+      },
+      {
+        "name": "lineColor",
+        "type": "string",
+        "required": false,
+        "default": "\"#ffffff\"",
+        "description": "Hex colour of the resting grid lines (drawn faintly)."
+      },
+      {
+        "name": "glowColor",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Hex colour of the pointer spotlight and ambient cells. Mirrors `--pb-violet`."
+      },
+      {
+        "name": "radius",
+        "type": "number",
+        "required": false,
+        "default": "200",
+        "description": "Radius of the pointer spotlight, in pixels."
+      },
+      {
+        "name": "pulse",
+        "type": "boolean",
+        "required": false,
+        "default": "true",
+        "description": "Slowly pulse a scattered, deterministic set of cells."
+      },
+      {
+        "name": "pulseCount",
+        "type": "number",
+        "required": false,
+        "default": "16",
+        "description": "How many ambient cells pulse when `pulse` is on."
+      },
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Foreground content, rendered above the grid via a `z-10` wrapper."
+      }
+    ]
+  },
+  "text-scramble": {
+    "interface": "TextScrambleProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLElement>, \"children\">"
+    ],
+    "props": [
+      {
+        "name": "text",
+        "type": "string",
+        "required": true,
+        "default": null,
+        "description": "The string that resolves out of the glyph noise."
+      },
+      {
+        "name": "trigger",
+        "type": "\"mount\" | \"view\" | \"hover\"",
+        "required": false,
+        "default": "\"view\"",
+        "description": "When the decode fires. `\"view\"` plays once on scroll-in, `\"mount\"` plays once after hydration, `\"hover\"` replays on each pointer-enter / focus."
+      },
+      {
+        "name": "speed",
+        "type": "number",
+        "required": false,
+        "default": "1",
+        "description": "Speed multiplier — 2 runs twice as fast, 0.5 half."
+      },
+      {
+        "name": "scrambleChars",
+        "type": "string",
+        "required": false,
+        "default": "DEFAULT_CHARS",
+        "description": "Characters the scramble draws from."
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "required": false,
+        "default": "\"#22d3ee\"",
+        "description": "Tint for characters still scrambling; they settle to the inherited color. Mirrors `--pb-cyan`."
+      },
+      {
+        "name": "as",
+        "type": "React.ElementType",
+        "required": false,
+        "default": null,
+        "description": "Element to render as. Defaults to `span`."
+      }
+    ]
+  },
+  "text-highlighter": {
+    "interface": "TextHighlighterProps",
+    "extends": [
+      "Omit< React.HTMLAttributes<HTMLSpanElement>, \"color\" | \"onDrag\" | \"onDragStart\" | \"onDragEnd\" | \"onAnimationStart\" >"
+    ],
+    "props": [
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "required": true,
+        "default": null,
+        "description": "The text (or inline nodes) to highlight."
+      },
+      {
+        "name": "variant",
+        "type": "Variant",
+        "required": false,
+        "default": "\"marker\"",
+        "description": "Highlight style: a marker band, a drawn underline, or a framed box."
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Highlight colour. Hex values get sensible low-alpha treatment per variant."
+      },
+      {
+        "name": "duration",
+        "type": "number",
+        "required": false,
+        "default": "0.9",
+        "description": "Sweep duration in seconds."
+      },
+      {
+        "name": "delay",
+        "type": "number",
+        "required": false,
+        "default": "0",
+        "description": "Delay before the sweep starts, in seconds."
+      },
+      {
+        "name": "amount",
+        "type": "number",
+        "required": false,
+        "default": "0.6",
+        "description": "Fraction of the element that must be visible before the sweep fires."
+      },
+      {
+        "name": "once",
+        "type": "boolean",
+        "required": false,
+        "default": "true",
+        "description": "Animate only the first time it enters the viewport."
+      }
+    ]
+  },
+  "animated-input": {
+    "interface": "AnimatedInputProps",
+    "extends": [
+      "Omit< React.InputHTMLAttributes<HTMLInputElement>, \"value\" | \"defaultValue\" | \"onChange\" >"
+    ],
+    "props": [
+      {
+        "name": "label",
+        "type": "React.ReactNode",
+        "required": true,
+        "default": null,
+        "description": "Text of the floating `<label>` (wired to the input via `htmlFor`/`id`)."
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Controlled value. Pair with `onChange`."
+      },
+      {
+        "name": "defaultValue",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Uncontrolled initial value."
+      },
+      {
+        "name": "onChange",
+        "type": "(event: React.ChangeEvent<HTMLInputElement>) => void",
+        "required": false,
+        "default": null,
+        "description": "Native change handler; fires on every keystroke in both modes."
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "When set, the field enters its error state: red hint + shake + `aria-invalid`."
+      },
+      {
+        "name": "icon",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Optional decorative leading icon (rendered `aria-hidden`, tints with state)."
+      },
+      {
+        "name": "success",
+        "type": "boolean",
+        "required": false,
+        "default": "false",
+        "description": "Show the drawn success tick on the right (ignored while `error` is set)."
+      },
+      {
+        "name": "accent",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Accent for the drawn underline, caret, focus ring, and focused label. Mirrors `--pb-violet`."
+      },
+      {
+        "name": "errorColor",
+        "type": "string",
+        "required": false,
+        "default": "\"#ec4899\"",
+        "description": "Error tone for the hint, underline, and label. Mirrors `--pb-fuchsia`."
+      },
+      {
+        "name": "successColor",
+        "type": "string",
+        "required": false,
+        "default": "\"#22d3ee\"",
+        "description": "Success tone for the tick. Mirrors `--pb-cyan`."
+      },
+      {
+        "name": "ink",
+        "type": "string",
+        "required": false,
+        "default": "\"#0f0f10\"",
+        "description": "Backdrop the focus ring offsets against. Mirrors `--pb-ink`."
+      }
+    ]
+  },
+  "pricing-table": {
+    "interface": "PricingTableProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"onSelect\">"
+    ],
+    "props": [
+      {
+        "name": "tiers",
+        "type": "PricingTier[]",
+        "required": true,
+        "default": null,
+        "description": "The plans to render, left to right."
+      },
+      {
+        "name": "defaultCycle",
+        "type": "BillingCycle",
+        "required": false,
+        "default": "\"monthly\"",
+        "description": "Which cycle is active on first paint."
+      },
+      {
+        "name": "currency",
+        "type": "string",
+        "required": false,
+        "default": "\"$\"",
+        "description": "Currency symbol prefixed to every price."
+      },
+      {
+        "name": "accent",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Accent for the popular tier, switch, and check icons. Mirrors `--pb-violet`."
+      },
+      {
+        "name": "onSelect",
+        "type": "(name: string) => void",
+        "required": false,
+        "default": null,
+        "description": "Fires with a tier's `name` when its CTA is pressed."
+      }
+    ]
+  },
+  "image-reveal": {
+    "interface": "ImageRevealProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"children\">"
+    ],
+    "props": [
+      {
+        "name": "src",
+        "type": "string",
+        "required": true,
+        "default": null,
+        "description": "Image source URL."
+      },
+      {
+        "name": "alt",
+        "type": "string",
+        "required": true,
+        "default": null,
+        "description": "Alt text. Required — pass \"\" only for decorative imagery."
+      },
+      {
+        "name": "aspect",
+        "type": "string",
+        "required": false,
+        "default": "\"16/9\"",
+        "description": "CSS aspect-ratio for the frame, e.g. \"16/9\" or \"4/5\". Prevents layout shift."
+      },
+      {
+        "name": "direction",
+        "type": "RevealDirection",
+        "required": false,
+        "default": "\"up\"",
+        "description": "Which way the curtain wipe travels as it uncovers the image."
+      },
+      {
+        "name": "rounded",
+        "type": "string",
+        "required": false,
+        "default": "\"1rem\"",
+        "description": "Border radius for the frame, as any CSS length (e.g. \"1rem\", \"9999px\")."
+      },
+      {
+        "name": "amount",
+        "type": "number",
+        "required": false,
+        "default": "0.35",
+        "description": "Fraction of the frame that must be visible before revealing (0–1)."
+      },
+      {
+        "name": "once",
+        "type": "boolean",
+        "required": false,
+        "default": "true",
+        "description": "Reveal only the first time it scrolls into view."
+      },
+      {
+        "name": "duration",
+        "type": "number",
+        "required": false,
+        "default": "1.05",
+        "description": "Reveal duration in seconds."
+      },
+      {
+        "name": "loading",
+        "type": "\"lazy\" | \"eager\"",
+        "required": false,
+        "default": "\"lazy\"",
+        "description": "`loading` hint forwarded to the underlying <img>."
+      }
+    ]
+  },
+  "cursor-image-trail": {
+    "interface": "CursorImageTrailProps",
+    "extends": [
+      "React.HTMLAttributes<HTMLDivElement>"
+    ],
+    "props": [
+      {
+        "name": "images",
+        "type": "string[]",
+        "required": true,
+        "default": null,
+        "description": "Image URLs cycled through as the trail spawns. Required, non-empty."
+      },
+      {
+        "name": "maxVisible",
+        "type": "number",
+        "required": false,
+        "default": "10",
+        "description": "Maximum images alive at once; the oldest gracefully retires past it."
+      },
+      {
+        "name": "spawnDistance",
+        "type": "number",
+        "required": false,
+        "default": "48",
+        "description": "Pointer travel, in px, between spawns. Larger = sparser trail."
+      }
+    ]
+  },
+  "drag-scroll-gallery": {
+    "interface": "DragScrollGalleryProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"children\">"
+    ],
+    "props": [
+      {
+        "name": "items",
+        "type": "React.ReactNode[]",
+        "required": true,
+        "default": null,
+        "description": "The cards / media to lay out horizontally. Each becomes a focusable list item."
+      },
+      {
+        "name": "gap",
+        "type": "number",
+        "required": false,
+        "default": "20",
+        "description": "Space between items, in pixels."
+      },
+      {
+        "name": "snap",
+        "type": "boolean",
+        "required": false,
+        "default": "false",
+        "description": "Snap the nearest item to centre when a drag / flick / wheel settles."
+      },
+      {
+        "name": "accent",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Focus-ring colour. Mirrors the site's `--pb-violet` token."
+      },
+      {
+        "name": "scaleAmount",
+        "type": "number",
+        "required": false,
+        "default": "0.16",
+        "description": "How much edge items shrink (0 = flat, 0.16 ≈ 84% at the far edge)."
+      },
+      {
+        "name": "rotateAmount",
+        "type": "number",
+        "required": false,
+        "default": "6",
+        "description": "Peak tilt in degrees applied to items as they pass the centre."
+      }
+    ]
+  },
+  "rich-tooltip": {
+    "interface": "RichTooltipProps",
+    "extends": [],
+    "props": [
+      {
+        "name": "content",
+        "type": "React.ReactNode",
+        "required": true,
+        "default": null,
+        "description": "Rich tooltip body — any node, not just a string."
+      },
+      {
+        "name": "children",
+        "type": "React.ReactElement",
+        "required": true,
+        "default": null,
+        "description": "The single element that opens the tooltip on hover / focus."
+      },
+      {
+        "name": "side",
+        "type": "Side",
+        "required": false,
+        "default": "\"top\"",
+        "description": "Preferred side; auto-flips to the opposite side on overflow."
+      },
+      {
+        "name": "delay",
+        "type": "number",
+        "required": false,
+        "default": "150",
+        "description": "Open delay in ms after hover / focus begins."
+      },
+      {
+        "name": "closeDelay",
+        "type": "number",
+        "required": false,
+        "default": "120",
+        "description": "Close delay in ms — the grace window to cross into the tooltip."
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "required": false,
+        "default": "8",
+        "description": "Distance in px between the trigger and the tooltip box."
+      },
+      {
+        "name": "maxWidth",
+        "type": "number",
+        "required": false,
+        "default": "264",
+        "description": "Max tooltip width in px."
+      },
+      {
+        "name": "background",
+        "type": "string",
+        "required": false,
+        "default": "\"#0f0f10\"",
+        "description": "Surface colour. Mirrors the site `--pb-ink` token."
+      },
+      {
+        "name": "accent",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Accent for the hairline edge glow. Mirrors the site `--pb-violet` token."
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Extra classes on the tooltip surface."
+      }
+    ]
+  },
+  "token-swap-card": {
+    "interface": "TokenSwapCardProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"onSubmit\">"
+    ],
+    "props": [
+      {
+        "name": "tokens",
+        "type": "SwapToken[]",
+        "required": true,
+        "default": null,
+        "description": "Tokens offered on both sides. Needs at least two distinct symbols."
+      },
+      {
+        "name": "defaultFrom",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Symbol pre-selected in the \"You pay\" field. Defaults to `tokens[0]`."
+      },
+      {
+        "name": "defaultTo",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Symbol pre-selected in the \"You receive\" field. Defaults to `tokens[1]`."
+      },
+      {
+        "name": "defaultAmount",
+        "type": "string",
+        "required": false,
+        "default": "\"1\"",
+        "description": "Amount pre-filled in the \"You pay\" field. Defaults to `\"1\"`."
+      },
+      {
+        "name": "onSwap",
+        "type": "(payload: TokenSwapPayload) => Promise<void> | void",
+        "required": false,
+        "default": null,
+        "description": "Runs when \"Swap\" is pressed. Resolve to reach the done state, throw to fall back to idle. Defaults to a fake ~1.1s settle so the card demos itself."
+      },
+      {
+        "name": "accent",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Accent hex — button, focus ring, active option. Default Parable violet."
+      }
+    ]
+  },
+  "hover-member-row": {
+    "interface": "HoverMemberRowProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLUListElement>, \"onSelect\">"
+    ],
+    "props": [
+      {
+        "name": "members",
+        "type": "HoverMember[]",
+        "required": true,
+        "default": null,
+        "description": "The people to list. Each becomes one focusable row."
+      },
+      {
+        "name": "accent",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Primary accent (bar, role text, arrow, focus ring). Mirrors `--pb-violet`."
+      },
+      {
+        "name": "accentTo",
+        "type": "string",
+        "required": false,
+        "default": "\"#ec4899\"",
+        "description": "Secondary accent the drawing bar fades toward. Mirrors `--pb-fuchsia`."
+      },
+      {
+        "name": "onSelect",
+        "type": "(member: HoverMember, index: number) => void",
+        "required": false,
+        "default": null,
+        "description": "Fires with the picked member and its index on click / activation."
+      }
+    ]
+  },
+  "family-drawer": {
+    "interface": "FamilyDrawerProps",
+    "extends": [
+      "Omit< React.HTMLAttributes<HTMLDivElement>, | \"children\" | \"title\" | \"onAnimationStart\" | \"onAnimationEnd\" | \"onAnimationIteration\" | \"onDrag\" | \"onDragStart\" | \"onDragEnd\" >"
+    ],
+    "props": [
+      {
+        "name": "open",
+        "type": "boolean",
+        "required": false,
+        "default": null,
+        "description": "Controlled open state. Pair with `onOpenChange`."
+      },
+      {
+        "name": "defaultOpen",
+        "type": "boolean",
+        "required": false,
+        "default": "false",
+        "description": "Uncontrolled initial open state."
+      },
+      {
+        "name": "onOpenChange",
+        "type": "(open: boolean) => void",
+        "required": false,
+        "default": null,
+        "description": "Fires with the next open state on trigger, backdrop, Escape, or drag-dismiss."
+      },
+      {
+        "name": "triggerLabel",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Renders a built-in trigger button with this label. Omit to open via `open`."
+      },
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "required": true,
+        "default": null,
+        "description": "Drawer body. Swap it to move between steps — the height springs to the new content. Change `contentKey` alongside it to cross-fade the swap."
+      },
+      {
+        "name": "contentKey",
+        "type": "React.Key",
+        "required": false,
+        "default": null,
+        "description": "Identity of the current step. When it changes, the outgoing content cross-fades out as the incoming content fades in and the height morphs. Leave undefined to update children in place (height still morphs)."
+      },
+      {
+        "name": "title",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Accessible + visible heading. When set, labels the dialog via `aria-labelledby`."
+      },
+      {
+        "name": "description",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Secondary line under the title; describes the dialog via `aria-describedby`."
+      },
+      {
+        "name": "accent",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Accent hex — trigger, grabber, focus ring. Mirrors the site `--pb-violet` token."
+      },
+      {
+        "name": "background",
+        "type": "string",
+        "required": false,
+        "default": "\"#0f0f10\"",
+        "description": "Panel face colour. Mirrors the site `--pb-ink` token."
+      },
+      {
+        "name": "dismissThreshold",
+        "type": "number",
+        "required": false,
+        "default": "120",
+        "description": "Downward drag distance (px) past which release dismisses the drawer."
+      }
+    ]
+  },
+  "progress-ring": {
+    "interface": "ProgressRingProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"children\">"
+    ],
+    "props": [
+      {
+        "name": "value",
+        "type": "number",
+        "required": true,
+        "default": null,
+        "description": "Progress amount; clamped to 0–100."
+      },
+      {
+        "name": "size",
+        "type": "number",
+        "required": false,
+        "default": "120",
+        "description": "Outer diameter in px."
+      },
+      {
+        "name": "thickness",
+        "type": "number",
+        "required": false,
+        "default": null,
+        "description": "Stroke width in px. Defaults to ~`size / 12`."
+      },
+      {
+        "name": "colors",
+        "type": "[string, string]",
+        "required": false,
+        "default": "[\"#8b5cf6\", \"#ec4899\"]",
+        "description": "Two hex stops for the gradient stroke (start → end)."
+      },
+      {
+        "name": "trackColor",
+        "type": "string",
+        "required": false,
+        "default": "\"rgba(255,255,255,0.1)\"",
+        "description": "Colour of the unfilled track ring behind the progress arc."
+      },
+      {
+        "name": "showValue",
+        "type": "boolean",
+        "required": false,
+        "default": "true",
+        "description": "Render the rounded percentage in the centre when no `children` are given."
+      },
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Custom centred label (node); overrides the percentage when present."
+      }
+    ]
+  },
+  "stat-card": {
+    "interface": "StatCardProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"prefix\">"
+    ],
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "required": true,
+        "default": null,
+        "description": "Small uppercase caption above the value (e.g. \"Monthly revenue\")."
+      },
+      {
+        "name": "value",
+        "type": "number",
+        "required": true,
+        "default": null,
+        "description": "Target number. Counts up from 0 the first time the card scrolls into view."
+      },
+      {
+        "name": "delta",
+        "type": "number",
+        "required": false,
+        "default": null,
+        "description": "Signed percentage change; renders a coloured chip with an up/down arrow."
+      },
+      {
+        "name": "data",
+        "type": "number[]",
+        "required": false,
+        "default": null,
+        "description": "Optional micro-series drawn as a tiny inline sparkline."
+      },
+      {
+        "name": "prefix",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Text placed immediately before the value (e.g. \"$\")."
+      },
+      {
+        "name": "suffix",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Text placed immediately after the value (e.g. \"k\", \"%\")."
+      },
+      {
+        "name": "icon",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Leading icon node, shown top-right. Decorative — hidden from a11y."
+      },
+      {
+        "name": "formatter",
+        "type": "(n: number) => string",
+        "required": false,
+        "default": null,
+        "description": "Formats the (animating) number. Defaults to grouped, precision-matched digits."
+      }
+    ]
+  },
+  "animated-counter": {
+    "interface": "AnimatedCounterProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLSpanElement>, \"children\">"
+    ],
+    "props": [
+      {
+        "name": "value",
+        "type": "number",
+        "required": true,
+        "default": null,
+        "description": "The number to display. Changes animate — up or down — to the new value."
+      },
+      {
+        "name": "duration",
+        "type": "number",
+        "required": false,
+        "default": "1100",
+        "description": "Roll duration in milliseconds."
+      },
+      {
+        "name": "format",
+        "type": "(n: number) => string",
+        "required": false,
+        "default": "defaultFormat",
+        "description": "Format the number into its display string. Defaults to `en-US` grouping."
+      },
+      {
+        "name": "startOnView",
+        "type": "boolean",
+        "required": false,
+        "default": "true",
+        "description": "Start the first roll only once the counter scrolls into view (via `IntersectionObserver`). When `false`, it rolls on mount."
+      }
+    ]
+  },
+  "avatar-stack": {
+    "interface": "AvatarStackProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"onClick\">"
+    ],
+    "props": [
+      {
+        "name": "people",
+        "type": "AvatarStackPerson[]",
+        "required": true,
+        "default": null,
+        "description": ""
+      },
+      {
+        "name": "max",
+        "type": "number",
+        "required": false,
+        "default": "5",
+        "description": "How many avatars to show before collapsing into a \"+N\" chip."
+      },
+      {
+        "name": "size",
+        "type": "number",
+        "required": false,
+        "default": "40",
+        "description": "Avatar diameter in px."
+      },
+      {
+        "name": "onPersonClick",
+        "type": "(person: AvatarStackPerson, index: number) => void",
+        "required": false,
+        "default": null,
+        "description": ""
+      }
+    ]
+  },
+  "texture-button": {
+    "interface": "TextureButtonProps",
+    "extends": [
+      "React.ButtonHTMLAttributes<HTMLButtonElement>"
+    ],
+    "props": [
+      {
+        "name": "variant",
+        "type": "TextureButtonVariant",
+        "required": false,
+        "default": "\"accent\"",
+        "description": "Surface treatment. `\"accent\"` = violet gradient face (default), `\"surface\"` = ink face with a hairline border, `\"glass\"` = translucent face with a backdrop blur."
+      },
+      {
+        "name": "as",
+        "type": "React.ElementType",
+        "required": false,
+        "default": null,
+        "description": "Render as a different element for navigation semantics — e.g. an `<a>` or a router `Link`. Defaults to `\"button\"`. Pass `href` alongside for links."
+      },
+      {
+        "name": "href",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Destination, used when rendering as a link element via `as`."
+      }
+    ]
+  },
+  "border-beam": {
+    "interface": "BorderBeamProps",
+    "extends": [
+      "React.HTMLAttributes<HTMLDivElement>"
+    ],
+    "props": [
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Content that sits on the card face, inside the traced border."
+      },
+      {
+        "name": "size",
+        "type": "number",
+        "required": false,
+        "default": "64",
+        "description": "Beam length in px — the size of the travelling comet head."
+      },
+      {
+        "name": "duration",
+        "type": "number",
+        "required": false,
+        "default": "6",
+        "description": "Seconds for one full lap around the perimeter."
+      },
+      {
+        "name": "delay",
+        "type": "number",
+        "required": false,
+        "default": "0",
+        "description": "Delay in seconds before the beam starts — stagger multiple beams."
+      },
+      {
+        "name": "colorFrom",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Head colour of the comet and one end of the static ring. Mirrors `--pb-violet`."
+      },
+      {
+        "name": "colorTo",
+        "type": "string",
+        "required": false,
+        "default": "\"#ec4899\"",
+        "description": "Tail colour of the comet and the other end of the static ring. Mirrors `--pb-fuchsia`."
+      },
+      {
+        "name": "borderWidth",
+        "type": "number",
+        "required": false,
+        "default": "1.5",
+        "description": "Border thickness in px — how wide the traced ring is."
+      },
+      {
+        "name": "radius",
+        "type": "string",
+        "required": false,
+        "default": "\"16px\"",
+        "description": "Corner radius as any CSS length (e.g. `\"16px\"`, `\"1rem\"`)."
+      },
+      {
+        "name": "reverse",
+        "type": "boolean",
+        "required": false,
+        "default": "false",
+        "description": "Send the comet the other way around the border."
+      }
+    ]
+  },
+  "intro-disclosure": {
+    "interface": "IntroDisclosureProps",
+    "extends": [
+      "Omit< React.HTMLAttributes<HTMLDivElement>, | \"children\" | \"title\" | \"onAnimationStart\" | \"onAnimationEnd\" | \"onAnimationIteration\" | \"onDrag\" | \"onDragStart\" | \"onDragEnd\" >"
+    ],
+    "props": [
+      {
+        "name": "steps",
+        "type": "IntroStep[]",
+        "required": true,
+        "default": null,
+        "description": "Ordered steps the tour walks through."
+      },
+      {
+        "name": "open",
+        "type": "boolean",
+        "required": false,
+        "default": null,
+        "description": "Controlled open state. Pair with `onOpenChange`."
+      },
+      {
+        "name": "defaultOpen",
+        "type": "boolean",
+        "required": false,
+        "default": "false",
+        "description": "Uncontrolled initial open state."
+      },
+      {
+        "name": "onOpenChange",
+        "type": "(open: boolean) => void",
+        "required": false,
+        "default": null,
+        "description": "Fires with the next open state on Skip, Escape, backdrop, or completion."
+      },
+      {
+        "name": "step",
+        "type": "number",
+        "required": false,
+        "default": null,
+        "description": "Controlled active step index. Pair with `onStepChange`."
+      },
+      {
+        "name": "defaultStep",
+        "type": "number",
+        "required": false,
+        "default": "0",
+        "description": "Uncontrolled initial step index."
+      },
+      {
+        "name": "onStepChange",
+        "type": "(step: number) => void",
+        "required": false,
+        "default": null,
+        "description": "Fires with the next step index on Back / Next / dot navigation."
+      },
+      {
+        "name": "onComplete",
+        "type": "() => void",
+        "required": false,
+        "default": null,
+        "description": "Fires when the primary button is pressed on the final step."
+      },
+      {
+        "name": "accent",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Accent hex — primary button, active dot, focus ring. Mirrors `--pb-violet`."
+      },
+      {
+        "name": "background",
+        "type": "string",
+        "required": false,
+        "default": "\"#0f0f10\"",
+        "description": "Card surface colour. Mirrors the site `--pb-ink` token."
+      },
+      {
+        "name": "nextLabel",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": "\"Next\"",
+        "description": "Label for the advance button on non-final steps."
+      },
+      {
+        "name": "backLabel",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": "\"Back\"",
+        "description": "Label for the back button."
+      },
+      {
+        "name": "skipLabel",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": "\"Skip\"",
+        "description": "Label for the dismiss button."
+      },
+      {
+        "name": "doneLabel",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": "\"Get started\"",
+        "description": "Label for the primary button on the final step."
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Extra classes on the dialog card."
+      }
+    ]
+  },
+  "tweet-grid": {
+    "interface": "TweetGridProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLUListElement>, \"children\">"
+    ],
+    "props": [
+      {
+        "name": "tweets",
+        "type": "Tweet[]",
+        "required": true,
+        "default": null,
+        "description": "Demo/testimonial data. No live API — the wall renders what you pass."
+      },
+      {
+        "name": "columns",
+        "type": "number",
+        "required": false,
+        "default": "3",
+        "description": "Maximum columns (default 3). Fewer are used as the container narrows."
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": ""
+      }
+    ]
+  },
+  "ai-input": {
+    "interface": "AiInputProps",
+    "extends": [],
+    "props": [
+      {
+        "name": "placeholder",
+        "type": "string",
+        "required": false,
+        "default": "\"Ask anything…\"",
+        "description": "Placeholder shown while the composer is empty."
+      },
+      {
+        "name": "suggestions",
+        "type": "string[]",
+        "required": false,
+        "default": "[]",
+        "description": "Optional prompt chips shown above the input while it is empty; clicking one fills the field."
+      },
+      {
+        "name": "onSubmit",
+        "type": "(text: string) => void | Promise<void>",
+        "required": false,
+        "default": null,
+        "description": "Called with the trimmed text on submit. If it returns a promise, the spinner holds until it settles."
+      },
+      {
+        "name": "model",
+        "type": "string",
+        "required": false,
+        "default": "\"Auto\"",
+        "description": "Label shown on the leading model pill (decorative in this demo composer)."
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Extra classes on the outer `<form>`."
+      }
+    ]
+  },
+  "peek-carousel": {
+    "interface": "PeekCarouselProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"children\" | \"onChange\">"
+    ],
+    "props": [
+      {
+        "name": "items",
+        "type": "React.ReactNode[]",
+        "required": true,
+        "default": null,
+        "description": "Slides to display. Each is centred in turn with its neighbours peeking."
+      },
+      {
+        "name": "loop",
+        "type": "boolean",
+        "required": false,
+        "default": "false",
+        "description": "Wrap navigation at the ends — next from the last slide returns to the first."
+      },
+      {
+        "name": "onIndexChange",
+        "type": "(index: number) => void",
+        "required": false,
+        "default": null,
+        "description": "Fires with the new active index whenever it changes."
+      },
+      {
+        "name": "peek",
+        "type": "number",
+        "required": false,
+        "default": "48",
+        "description": "How many px of each neighbouring slide peeks past the edge."
+      },
+      {
+        "name": "accent",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Accent for arrows, the active dot, and focus rings. Mirrors `--pb-violet`."
+      }
+    ]
+  },
+  "parallax-hero": {
+    "interface": "ParallaxHeroProps",
+    "extends": [
+      "React.HTMLAttributes<HTMLDivElement>"
+    ],
+    "props": [
+      {
+        "name": "layers",
+        "type": "ParallaxLayerSpec[]",
+        "required": false,
+        "default": null,
+        "description": "Extra mid-ground planes rendered behind the copy. Each `content` translates by `depth × intensity`. Omit to use just the built-in backdrop + accents."
+      },
+      {
+        "name": "background",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Backdrop node (e.g. an image). Falls back to a soft brand gradient."
+      },
+      {
+        "name": "intensity",
+        "type": "number",
+        "required": false,
+        "default": "12",
+        "description": "Max shift in px for a depth-1 plane at the pointer extremes."
+      }
+    ]
+  },
+  "ascii-render": {
+    "interface": "AsciiRenderProps",
+    "extends": [
+      "React.HTMLAttributes<HTMLPreElement>"
+    ],
+    "props": [
+      {
+        "name": "rows",
+        "type": "number",
+        "required": false,
+        "default": "20",
+        "description": "Grid rows."
+      },
+      {
+        "name": "cols",
+        "type": "number",
+        "required": false,
+        "default": "60",
+        "description": "Grid columns."
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Glyph colour. Mirrors the site `--pb-violet` token."
+      },
+      {
+        "name": "speed",
+        "type": "number",
+        "required": false,
+        "default": "1",
+        "description": "Flow speed multiplier."
+      },
+      {
+        "name": "pointerReactive",
+        "type": "boolean",
+        "required": false,
+        "default": "true",
+        "description": "Let the pointer push a bright ripple into the field."
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Accessible name. When set, the field is exposed as an image with this label; otherwise it is decorative (`aria-hidden`)."
+      }
+    ]
+  },
+  "mega-navbar": {
+    "interface": "MegaNavbarProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLElement>, \"children\">"
+    ],
+    "props": [
+      {
+        "name": "brand",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Brand mark shown at the leading edge — a logo node or text."
+      },
+      {
+        "name": "items",
+        "type": "MegaNavItem[]",
+        "required": true,
+        "default": null,
+        "description": "Top-level items. Items with a `panel` open a mega-menu; others are links."
+      },
+      {
+        "name": "accent",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Accent for the gliding pill, focus rings and hover glow. Mirrors `--pb-violet`."
+      },
+      {
+        "name": "background",
+        "type": "string",
+        "required": false,
+        "default": "\"#0f0f10\"",
+        "description": "Bar surface colour, rendered translucent over a blur. Mirrors `--pb-ink`."
+      }
+    ]
+  },
+  "scroll-text-reveal": {
+    "interface": "ScrollTextRevealProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLElement>, \"children\">"
+    ],
+    "props": [
+      {
+        "name": "text",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "The copy to reveal. Takes precedence over `children`."
+      },
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Alternative to `text` — pass the sentence as children instead."
+      },
+      {
+        "name": "as",
+        "type": "React.ElementType",
+        "required": false,
+        "default": null,
+        "description": "Element/component to render as. Defaults to `p`."
+      },
+      {
+        "name": "dimColor",
+        "type": "string",
+        "required": false,
+        "default": "\"color-mix(in srgb, currentColor 32%, transparent)\"",
+        "description": "Colour of the not-yet-read (dim) layer. Defaults to muted foreground."
+      },
+      {
+        "name": "litColor",
+        "type": "string",
+        "required": false,
+        "default": "\"currentColor\"",
+        "description": "Colour of the illuminated (lit) layer. Defaults to the foreground."
+      },
+      {
+        "name": "stagger",
+        "type": "number",
+        "required": false,
+        "default": "0.8",
+        "description": "Overlap between consecutive words' fade windows. `0` = crisp, strictly sequential; higher softens the sweep so several words light at once."
+      },
+      {
+        "name": "offset",
+        "type": "string[]",
+        "required": false,
+        "default": null,
+        "description": "`useScroll` offset band controlling where in the viewport the reveal runs (e.g. `[\"start 0.85\", \"end 0.5\"]`). Two edge strings, entry then exit."
+      }
+    ]
+  },
+  "command-palette": {
+    "interface": "CommandPaletteProps",
+    "extends": [],
+    "props": [
+      {
+        "name": "groups",
+        "type": "CommandPaletteGroup[]",
+        "required": true,
+        "default": null,
+        "description": "Grouped, filterable commands. Empty groups are hidden automatically."
+      },
+      {
+        "name": "open",
+        "type": "boolean",
+        "required": false,
+        "default": null,
+        "description": "Controlled open state. Pair with `onOpenChange`."
+      },
+      {
+        "name": "onOpenChange",
+        "type": "(open: boolean) => void",
+        "required": false,
+        "default": null,
+        "description": "Fires with the next open state whenever the palette opens or closes."
+      },
+      {
+        "name": "hotkey",
+        "type": "boolean",
+        "required": false,
+        "default": "true",
+        "description": "Bind the global ⌘K / Ctrl+K toggle (skipped while typing elsewhere)."
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "required": false,
+        "default": "\"Search commands…\"",
+        "description": "Search field placeholder."
+      },
+      {
+        "name": "emptyMessage",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": "\"No matching commands\"",
+        "description": "Shown when nothing matches the query."
+      },
+      {
+        "name": "accent",
+        "type": "string",
+        "required": false,
+        "default": "PB_VIOLET",
+        "description": "Accent for the active row, focus ring and sheen. Mirrors `--pb-violet`."
+      },
+      {
+        "name": "background",
+        "type": "string",
+        "required": false,
+        "default": "PB_INK",
+        "description": "Surface colour. Mirrors `--pb-ink`."
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Extra classes on the dialog surface."
+      }
+    ]
+  },
+  "activity-feed": {
+    "interface": "ActivityFeedProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLElement>, \"title\">"
+    ],
+    "props": [
+      {
+        "name": "events",
+        "type": "ActivityFeedEvent[]",
+        "required": true,
+        "default": null,
+        "description": "Ordered events, newest first — the first row gets the live pulse."
+      },
+      {
+        "name": "title",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Optional heading rendered above the feed and used as its accessible label."
+      }
+    ]
+  },
+  "file-drop": {
+    "interface": "FileDropProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"onDrop\">"
+    ],
+    "props": [
+      {
+        "name": "accept",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Native `accept` filter, e.g. `\"image/*,application/pdf\"`."
+      },
+      {
+        "name": "multiple",
+        "type": "boolean",
+        "required": false,
+        "default": "false",
+        "description": "Allow selecting/dropping more than one file (chips accumulate)."
+      },
+      {
+        "name": "onFiles",
+        "type": "(files: File[]) => void",
+        "required": false,
+        "default": null,
+        "description": "Fired with the files accepted by the last drop/browse (post size check)."
+      },
+      {
+        "name": "maxSizeMB",
+        "type": "number",
+        "required": false,
+        "default": null,
+        "description": "Reject (and shake) any file larger than this many megabytes."
+      }
+    ]
+  },
+  "liquid-blobs": {
+    "interface": "LiquidBlobsProps",
+    "extends": [
+      "React.HTMLAttributes<HTMLDivElement>"
+    ],
+    "props": [
+      {
+        "name": "colors",
+        "type": "string[]",
+        "required": false,
+        "default": "[\"#8b5cf6\", \"#ec4899\", \"#f5a623\"]",
+        "description": "Colours the blobs cycle through. Defaults to violet / fuchsia / ember."
+      },
+      {
+        "name": "background",
+        "type": "string",
+        "required": false,
+        "default": "\"#0f0f10\"",
+        "description": "Backdrop colour behind the blobs. Mirrors the site `--pb-ink` token."
+      },
+      {
+        "name": "count",
+        "type": "number",
+        "required": false,
+        "default": "5",
+        "description": "How many blobs to render (clamped 1–12)."
+      },
+      {
+        "name": "speed",
+        "type": "number",
+        "required": false,
+        "default": "1",
+        "description": "Drift-speed multiplier. `1` is a slow, hero-grade flow; `0` freezes it."
+      }
+    ]
+  },
+  "hero-section": {
+    "interface": "HeroSectionProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLElement>, \"title\">"
+    ],
+    "props": [
+      {
+        "name": "eyebrow",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Small mono uppercase kicker above the headline."
+      },
+      {
+        "name": "title",
+        "type": "React.ReactNode",
+        "required": true,
+        "default": null,
+        "description": "The headline. Pass a string to let `accentWord` gradient-wrap one word."
+      },
+      {
+        "name": "accentWord",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Substring of a string `title` to paint with the accent gradient."
+      },
+      {
+        "name": "subtitle",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Supporting paragraph under the headline."
+      },
+      {
+        "name": "primaryLabel",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Primary CTA text. Omit to hide the button."
+      },
+      {
+        "name": "onPrimary",
+        "type": "() => void",
+        "required": false,
+        "default": null,
+        "description": "Fires when the primary CTA is pressed."
+      },
+      {
+        "name": "primaryHref",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Renders the primary CTA as a real `<a>` pointing here."
+      },
+      {
+        "name": "secondaryLabel",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Secondary CTA text. Omit to hide the button."
+      },
+      {
+        "name": "onSecondary",
+        "type": "() => void",
+        "required": false,
+        "default": null,
+        "description": "Fires when the secondary CTA is pressed."
+      },
+      {
+        "name": "secondaryHref",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Renders the secondary CTA as a real `<a>` pointing here."
+      },
+      {
+        "name": "stats",
+        "type": "HeroStat[]",
+        "required": false,
+        "default": null,
+        "description": "Mono proof-point row under everything, e.g. 12k stars · 400+ teams."
+      },
+      {
+        "name": "accent",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Gradient/glow start colour and CTA fill. Mirrors `--pb-violet`."
+      },
+      {
+        "name": "accentAlt",
+        "type": "string",
+        "required": false,
+        "default": "\"#ec4899\"",
+        "description": "Gradient/glow end colour. Mirrors `--pb-fuchsia`."
+      },
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Extra content rendered below the actions (e.g. a screenshot or badge)."
+      }
+    ]
+  },
+  "feature-bento": {
+    "interface": "FeatureBentoProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLUListElement>, \"children\">"
+    ],
+    "props": [
+      {
+        "name": "items",
+        "type": "FeatureBentoItem[]",
+        "required": true,
+        "default": null,
+        "description": "The feature cells, in reading order."
+      },
+      {
+        "name": "columns",
+        "type": "number",
+        "required": false,
+        "default": "3",
+        "description": "Column count on wide screens (clamped 1–6). Narrow screens step down."
+      },
+      {
+        "name": "accent",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Accent for the icon tint, pulse halo, and hover glow. Mirrors `--pb-violet`."
+      }
+    ]
+  },
+  "testimonial-marquee": {
+    "interface": "TestimonialMarqueeProps",
+    "extends": [
+      "React.HTMLAttributes<HTMLElement>"
+    ],
+    "props": [
+      {
+        "name": "testimonials",
+        "type": "Testimonial[]",
+        "required": true,
+        "default": null,
+        "description": "The testimonials, distributed round-robin across the rows."
+      },
+      {
+        "name": "rows",
+        "type": "number",
+        "required": false,
+        "default": "2",
+        "description": "How many scrolling rows to render (clamped to the testimonial count)."
+      },
+      {
+        "name": "speed",
+        "type": "number",
+        "required": false,
+        "default": "40",
+        "description": "Seconds one full loop takes. Lower is faster."
+      }
+    ]
+  },
+  "cta-banner": {
+    "interface": "CtaBannerProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"title\">"
+    ],
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "required": true,
+        "default": null,
+        "description": "Headline. Pair with `accentWord` to gradient-highlight one word."
+      },
+      {
+        "name": "subtitle",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Optional supporting line under the title."
+      },
+      {
+        "name": "primaryLabel",
+        "type": "string",
+        "required": true,
+        "default": null,
+        "description": "Primary button label."
+      },
+      {
+        "name": "onPrimary",
+        "type": "() => void",
+        "required": false,
+        "default": null,
+        "description": "Click handler for the primary button."
+      },
+      {
+        "name": "primaryHref",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "If set, the primary CTA renders as a real `<a href>` instead of a button."
+      },
+      {
+        "name": "secondaryLabel",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Optional secondary button label. Omit to render only the primary CTA."
+      },
+      {
+        "name": "onSecondary",
+        "type": "() => void",
+        "required": false,
+        "default": null,
+        "description": "Click handler for the secondary button."
+      },
+      {
+        "name": "secondaryHref",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "If set, the secondary CTA renders as a real `<a href>` instead of a button."
+      },
+      {
+        "name": "align",
+        "type": "\"center\" | \"left\"",
+        "required": false,
+        "default": "\"center\"",
+        "description": "Content alignment within the panel."
+      },
+      {
+        "name": "accentWord",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "A word inside `title` to render with the brand gradient."
+      }
+    ]
+  },
+  "faq-accordion": {
+    "interface": "FaqAccordionProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLElement>, \"title\">"
+    ],
+    "props": [
+      {
+        "name": "items",
+        "type": "FaqItem[]",
+        "required": true,
+        "default": null,
+        "description": "The question/answer pairs, rendered top to bottom."
+      },
+      {
+        "name": "title",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Optional section heading rendered as an `<h2>` above the list."
+      },
+      {
+        "name": "type",
+        "type": "\"single\" | \"multiple\"",
+        "required": false,
+        "default": "\"single\"",
+        "description": "`\"single\"` (default) keeps at most one row open — opening one closes the rest. `\"multiple\"` lets any number stay open at once."
+      },
+      {
+        "name": "defaultOpenIndex",
+        "type": "number",
+        "required": false,
+        "default": null,
+        "description": "Index of the row open on first paint. Out-of-range values open nothing."
+      },
+      {
+        "name": "accent",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Accent for the toggle icon and focus ring. Mirrors the site `--pb-violet` token."
+      }
+    ]
+  },
+  "stats-band": {
+    "interface": "StatsBandProps",
+    "extends": [
+      "React.HTMLAttributes<HTMLDivElement>"
+    ],
+    "props": [
+      {
+        "name": "stats",
+        "type": "Stat[]",
+        "required": true,
+        "default": null,
+        "description": "The statistics to display, left to right. Typically 3–5 entries."
+      }
+    ]
+  },
+  "section-dots": {
+    "interface": "SectionDotsProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLElement>, \"children\">"
+    ],
+    "props": [
+      {
+        "name": "sections",
+        "type": "SectionDotItem[]",
+        "required": true,
+        "default": null,
+        "description": "Ordered sections to track. One dot is rendered per entry, in order."
+      },
+      {
+        "name": "position",
+        "type": "\"right\" | \"left\"",
+        "required": false,
+        "default": "\"right\"",
+        "description": "Which screen edge the rail pins to. Defaults to `\"right\"`."
+      },
+      {
+        "name": "offset",
+        "type": "number",
+        "required": false,
+        "default": "0",
+        "description": "Pixels from the viewport top treated as the fold — subtracted from scroll targets and from the observer's top margin so a fixed header never hides the section a click lands on. Defaults to `0`."
+      },
+      {
+        "name": "accent",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Accent for the active dot, pill ring, and focus ring. Mirrors `--pb-violet`."
+      }
+    ]
+  },
+  "squircle": {
+    "interface": "SquircleProps",
+    "extends": [
+      "React.HTMLAttributes<HTMLElement>"
+    ],
+    "props": [
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Content clipped to the squircle."
+      },
+      {
+        "name": "size",
+        "type": "number | string",
+        "required": false,
+        "default": "128",
+        "description": "Square side length. A number is treated as pixels; a string (e.g. `\"100%\"`, `\"12rem\"`) is used verbatim on both axes. On a non-square box the mask stretches to fit. Defaults to `128`."
+      },
+      {
+        "name": "smoothing",
+        "type": "number",
+        "required": false,
+        "default": "4",
+        "description": "Superellipse exponent: `2` = ellipse, `4` = Apple squircle, `5`+ squarer."
+      },
+      {
+        "name": "border",
+        "type": "{ width: number; color: string }",
+        "required": false,
+        "default": null,
+        "description": "Optional outline that traces the squircle edge (constant screen-px width)."
+      },
+      {
+        "name": "as",
+        "type": "React.ElementType",
+        "required": false,
+        "default": null,
+        "description": "Element/component to render as the root. Defaults to `\"div\"`."
+      }
+    ]
+  },
+  "gooey-toggle": {
+    "interface": "GooeyToggleProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"onChange\" | \"defaultValue\">"
+    ],
+    "props": [
+      {
+        "name": "options",
+        "type": "GooeyToggleOption[]",
+        "required": true,
+        "default": null,
+        "description": "Segments to choose between. Rendered as equal-width columns."
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Controlled active value. Pair with `onValueChange`."
+      },
+      {
+        "name": "defaultValue",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Uncontrolled initial value. Defaults to the first option."
+      },
+      {
+        "name": "onValueChange",
+        "type": "(value: string) => void",
+        "required": false,
+        "default": null,
+        "description": "Fires with the next value when the selection changes."
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Indicator + focus-ring colour. Mirrors the site `--pb-violet` token."
+      },
+      {
+        "name": "size",
+        "type": "\"sm\" | \"md\"",
+        "required": false,
+        "default": "\"md\"",
+        "description": "Visual density."
+      }
+    ]
+  },
+  "wallet-stack": {
+    "interface": "WalletStackProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"onChange\">"
+    ],
+    "props": [
+      {
+        "name": "cards",
+        "type": "WalletCard[]",
+        "required": true,
+        "default": null,
+        "description": "Cards, front-to-back. Three to five read best; any length is handled."
+      },
+      {
+        "name": "onFrontChange",
+        "type": "(id: string) => void",
+        "required": false,
+        "default": null,
+        "description": "Fires with the new front card's `id` after each cycle."
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": ""
+      }
+    ]
+  },
+  "theme-toggle": {
+    "interface": "ThemeToggleProps",
+    "extends": [
+      "Omit< React.ButtonHTMLAttributes<HTMLButtonElement>, \"onChange\" | \"type\" >"
+    ],
+    "props": [
+      {
+        "name": "theme",
+        "type": "Theme",
+        "required": false,
+        "default": null,
+        "description": "Controlled theme. Pair with `onThemeChange`; the parent owns the DOM."
+      },
+      {
+        "name": "defaultTheme",
+        "type": "Theme",
+        "required": false,
+        "default": "\"light\"",
+        "description": "Uncontrolled initial theme. Defaults to `\"light\"`."
+      },
+      {
+        "name": "onThemeChange",
+        "type": "(theme: Theme) => void",
+        "required": false,
+        "default": null,
+        "description": "Fires with the next theme whenever the button is toggled."
+      },
+      {
+        "name": "size",
+        "type": "number",
+        "required": false,
+        "default": "20",
+        "description": "Icon edge length in px. Defaults to 20."
+      },
+      {
+        "name": "sunColor",
+        "type": "string",
+        "required": false,
+        "default": "\"#f5a623\"",
+        "description": "Sun disc + ray colour. Mirrors the site `--pb-ember` token (#f5a623)."
+      },
+      {
+        "name": "moonColor",
+        "type": "string",
+        "required": false,
+        "default": "\"#22d3ee\"",
+        "description": "Moon disc + star colour. Mirrors the site `--pb-signal` token (#22d3ee)."
+      },
+      {
+        "name": "ringColor",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Focus-ring + hover colour. Mirrors the site `--pb-violet` token (#8b5cf6)."
+      },
+      {
+        "name": "syncDocumentClass",
+        "type": "boolean",
+        "required": false,
+        "default": "true",
+        "description": "When uncontrolled, toggle the `dark` class on `document.documentElement` and, on mount, sync the initial state from it. Set `false` for a purely visual toggle with no global side effects. Defaults to `true`."
+      }
+    ]
+  },
+  "spotlight-card": {
+    "interface": "SpotlightCardProps",
+    "extends": [
+      "React.HTMLAttributes<HTMLDivElement>"
+    ],
+    "props": [
+      {
+        "name": "glowColor",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Colour of the spotlight and edge glow. Mirrors the site `--pb-violet` token."
+      },
+      {
+        "name": "radius",
+        "type": "number",
+        "required": false,
+        "default": "320",
+        "description": "Diameter of the light pool, in px. Larger = softer, wider wash."
+      },
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Card contents. Rendered above every decorative layer."
+      }
+    ]
+  },
+  "compare-slider": {
+    "interface": "CompareSliderProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"children\">"
+    ],
+    "props": [
+      {
+        "name": "before",
+        "type": "ComparePanel",
+        "required": true,
+        "default": null,
+        "description": "Left / top-of-stack panel, revealed by the divider. Image descriptor or node."
+      },
+      {
+        "name": "after",
+        "type": "ComparePanel",
+        "required": true,
+        "default": null,
+        "description": "Right / base panel that fills the frame. Image descriptor or node."
+      },
+      {
+        "name": "defaultPosition",
+        "type": "number",
+        "required": false,
+        "default": "50",
+        "description": "Uncontrolled starting divider position, 0–100. Defaults to `50`."
+      },
+      {
+        "name": "position",
+        "type": "number",
+        "required": false,
+        "default": null,
+        "description": "Controlled divider position, 0–100. Pair with `onPositionChange`."
+      },
+      {
+        "name": "onPositionChange",
+        "type": "(position: number) => void",
+        "required": false,
+        "default": null,
+        "description": "Fires with the next clamped position whenever the divider moves."
+      },
+      {
+        "name": "labels",
+        "type": "{ before: React.ReactNode; after: React.ReactNode }",
+        "required": false,
+        "default": null,
+        "description": "Corner captions for each panel."
+      },
+      {
+        "name": "accent",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Accent for the focus ring and idle hint. Mirrors the site `--pb-violet` token."
+      }
+    ]
+  },
+  "morph-tabs": {
+    "interface": "MorphTabsProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"defaultValue\">"
+    ],
+    "props": [
+      {
+        "name": "tabs",
+        "type": "MorphTab[]",
+        "required": true,
+        "default": null,
+        "description": "Tabs to render, in visual order."
+      },
+      {
+        "name": "value",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Controlled selected value. Pair with `onValueChange`."
+      },
+      {
+        "name": "defaultValue",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Uncontrolled initial value. Defaults to the first tab."
+      },
+      {
+        "name": "onValueChange",
+        "type": "(value: string) => void",
+        "required": false,
+        "default": null,
+        "description": "Fires with the next value whenever the selection changes."
+      },
+      {
+        "name": "variant",
+        "type": "\"pill\" | \"underline\"",
+        "required": false,
+        "default": "\"pill\"",
+        "description": "Indicator style: a gliding `pill` behind the label, or an `underline` bar."
+      }
+    ]
+  },
+  "orbit-icons": {
+    "interface": "OrbitIconsProps",
+    "extends": [
+      "React.HTMLAttributes<HTMLDivElement>"
+    ],
+    "props": [
+      {
+        "name": "children",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Centerpiece — e.g. a logo — rendered above the rings, dead center."
+      },
+      {
+        "name": "rings",
+        "type": "OrbitRing[]",
+        "required": true,
+        "default": null,
+        "description": "1–3 concentric rings, each carrying evenly-spaced revolving icon chips."
+      },
+      {
+        "name": "pauseOnHover",
+        "type": "boolean",
+        "required": false,
+        "default": "false",
+        "description": "Freeze all rotation while the pointer is over (or focus is within)."
+      }
+    ]
+  },
+  "balloon-burst": {
+    "interface": "BalloonBurstProps",
+    "extends": [
+      "React.HTMLAttributes<HTMLDivElement>"
+    ],
+    "props": [
+      {
+        "name": "count",
+        "type": "number",
+        "required": false,
+        "default": "18",
+        "description": "Balloons released per burst (clamped 1–80). Defaults to 18."
+      },
+      {
+        "name": "colors",
+        "type": "string[]",
+        "required": false,
+        "default": "DEFAULT_COLORS",
+        "description": "Colours the balloons cycle through. Defaults to violet / fuchsia / ember / signal."
+      },
+      {
+        "name": "duration",
+        "type": "number",
+        "required": false,
+        "default": "3200",
+        "description": "Base rise duration in milliseconds (per-balloon jitter is applied). Defaults to 3200."
+      },
+      {
+        "name": "origin",
+        "type": "\"bottom\" | \"center\"",
+        "required": false,
+        "default": "\"bottom\"",
+        "description": "Where balloons launch from. Defaults to `\"bottom\"`."
+      },
+      {
+        "name": "position",
+        "type": "\"fixed\" | \"absolute\"",
+        "required": false,
+        "default": "\"fixed\"",
+        "description": "Overlay positioning. `\"fixed\"` (default) floats over the whole viewport; `\"absolute\"` fills the nearest positioned ancestor (use inside a `relative` box, e.g. a card or a preview stage)."
+      },
+      {
+        "name": "trigger",
+        "type": "number",
+        "required": false,
+        "default": null,
+        "description": "Controlled trigger: a burst fires whenever this number changes."
+      },
+      {
+        "name": "interval",
+        "type": "number",
+        "required": false,
+        "default": null,
+        "description": "Auto-fire a burst every `interval` ms (ambient / demo use). Under `prefers-reduced-motion` it fires exactly once and does not repeat."
+      }
+    ]
+  },
+  "matrix-rain": {
+    "interface": "MatrixRainProps",
+    "extends": [
+      "React.HTMLAttributes<HTMLDivElement>"
+    ],
+    "props": [
+      {
+        "name": "color",
+        "type": "string",
+        "required": false,
+        "default": "\"#22d3ee\"",
+        "description": "Glyph colour for the falling trail. Head cells stay near-white and glow in this colour. Defaults to Parable signal cyan `#22d3ee` (mirrors the site's `--pb-signal` token). Any CSS colour string works."
+      },
+      {
+        "name": "glyphs",
+        "type": "string",
+        "required": false,
+        "default": "DEFAULT_GLYPHS",
+        "description": "Character pool the columns draw from. Defaults to katakana + digits."
+      },
+      {
+        "name": "fontSize",
+        "type": "number",
+        "required": false,
+        "default": "16",
+        "description": "Cell size in CSS pixels — sets both the font size and column pitch."
+      },
+      {
+        "name": "speed",
+        "type": "number",
+        "required": false,
+        "default": "1",
+        "description": "Fall-speed multiplier. `1` is a lively rain; `0` freezes mid-fall."
+      },
+      {
+        "name": "fade",
+        "type": "number",
+        "required": false,
+        "default": "0.08",
+        "description": "Trail fade factor. Higher fades trails shorter (roughly `1 / fade` cells), lower leaves long comet tails. Defaults to `0.08`."
+      }
+    ]
+  },
+  "pixel-canvas": {
+    "interface": "PixelCanvasProps",
+    "extends": [
+      "React.HTMLAttributes<HTMLDivElement>"
+    ],
+    "props": [
+      {
+        "name": "colors",
+        "type": "string[]",
+        "required": false,
+        "default": "[\"#8b5cf6\", \"#ec4899\", \"#f5a623\", \"#22d3ee\"]",
+        "description": "Colours the pixels are seeded from. Defaults to the brand set violet `#8b5cf6` / fuchsia `#ec4899` / ember `#f5a623` / signal `#22d3ee` (mirrors the site's `--pb-*` tokens)."
+      },
+      {
+        "name": "gap",
+        "type": "number",
+        "required": false,
+        "default": "6",
+        "description": "Space between pixels in CSS px."
+      },
+      {
+        "name": "pixelSize",
+        "type": "number",
+        "required": false,
+        "default": "8",
+        "description": "Edge length of each lit pixel in CSS px."
+      },
+      {
+        "name": "speed",
+        "type": "number",
+        "required": false,
+        "default": "1",
+        "description": "Ripple/ease-speed multiplier. `1` is the default cadence; `0.1`–`8`."
+      }
+    ]
+  },
+  "orbit-card-stack": {
+    "interface": "OrbitCardStackProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"onChange\" | \"children\">"
+    ],
+    "props": [
+      {
+        "name": "cards",
+        "type": "React.ReactNode[]",
+        "required": true,
+        "default": null,
+        "description": "Cards to stack, front-most first. Each is placed inside the deck surface."
+      },
+      {
+        "name": "onChange",
+        "type": "(index: number) => void",
+        "required": false,
+        "default": null,
+        "description": "Fires with the new front-card index whenever the deck advances or rewinds."
+      },
+      {
+        "name": "loop",
+        "type": "boolean",
+        "required": false,
+        "default": "true",
+        "description": "Wrap at the ends — dismissing the last card returns to the first. Default true."
+      },
+      {
+        "name": "accent",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Accent for the swipe hint, focus rings, and the active control. Defaults to Parable violet `#8b5cf6` (mirrors the site's `--pb-violet` token)."
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": false,
+        "default": "\"Card stack\"",
+        "description": "Accessible name for the carousel region."
+      }
+    ]
+  },
+  "family-button": {
+    "interface": "FamilyButtonProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"children\">"
+    ],
+    "props": [
+      {
+        "name": "trigger",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Trigger face. Defaults to a `+` glyph that rotates into an `×` when open."
+      },
+      {
+        "name": "actions",
+        "type": "FamilyButtonAction[]",
+        "required": true,
+        "default": null,
+        "description": "Toolbar items, revealed in order. Item 0 sits nearest the trigger."
+      },
+      {
+        "name": "expandDirection",
+        "type": "FamilyButtonDirection",
+        "required": false,
+        "default": "\"up\"",
+        "description": "Which way the toolbar unfurls from the trigger. Defaults to `up`."
+      },
+      {
+        "name": "accent",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Trigger fill + focus ring. Mirrors the site `--pb-violet` token."
+      },
+      {
+        "name": "background",
+        "type": "string",
+        "required": false,
+        "default": "\"#0f0f10\"",
+        "description": "Toolbar surface colour. Mirrors the site `--pb-ink` token."
+      }
+    ]
+  },
+  "morph-surface": {
+    "interface": "MorphSurfaceProps",
+    "extends": [
+      "PassthroughDivProps"
+    ],
+    "props": [
+      {
+        "name": "compact",
+        "type": "React.ReactNode",
+        "required": true,
+        "default": null,
+        "description": "The collapsed \"chip\" content. Clicking it expands the surface."
+      },
+      {
+        "name": "expandedContent",
+        "type": "React.ReactNode",
+        "required": true,
+        "default": null,
+        "description": "The rich \"panel\" content shown when expanded."
+      },
+      {
+        "name": "expanded",
+        "type": "boolean",
+        "required": false,
+        "default": null,
+        "description": "Controlled open state. Omit to let the component manage its own."
+      },
+      {
+        "name": "defaultExpanded",
+        "type": "boolean",
+        "required": false,
+        "default": "false",
+        "description": "Initial open state when uncontrolled. Defaults to `false`."
+      },
+      {
+        "name": "onExpandedChange",
+        "type": "(expanded: boolean) => void",
+        "required": false,
+        "default": null,
+        "description": "Fires whenever the open state should change (both modes)."
+      },
+      {
+        "name": "accent",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Accent for the focus ring and the expanded-panel sheen. Defaults to Parable violet `#8b5cf6` (mirrors the site's `--pb-violet` token)."
+      },
+      {
+        "name": "panelLabel",
+        "type": "string",
+        "required": false,
+        "default": "\"Details\"",
+        "description": "Accessible name for the expanded panel group. Defaults to \"Details\"."
+      },
+      {
+        "name": "closeLabel",
+        "type": "string",
+        "required": false,
+        "default": "\"Collapse\"",
+        "description": "Accessible label for the collapse control. Defaults to \"Collapse\"."
+      }
+    ]
+  },
+  "ai-chat": {
+    "interface": "AiChatProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"title\">"
+    ],
+    "props": [
+      {
+        "name": "initialMessages",
+        "type": "AiChatMessage[]",
+        "required": false,
+        "default": null,
+        "description": "Seed transcript. Defaults to a short populated conversation."
+      },
+      {
+        "name": "onSend",
+        "type": "(text: string) => Promise<string> | string",
+        "required": false,
+        "default": null,
+        "description": "Resolve a reply for the user's text. May be sync or async; the returned string is streamed into an assistant bubble. Defaults to a canned echo so the block feels alive with no backend."
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "required": false,
+        "default": "\"Assistant\"",
+        "description": "Heading shown in the header."
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "required": false,
+        "default": "\"Send a message…\"",
+        "description": "Composer placeholder."
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Extra classes on the outer card."
+      }
+    ]
+  },
+  "multi-step-form": {
+    "interface": "MultiStepFormProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"onChange\">"
+    ],
+    "props": [
+      {
+        "name": "steps",
+        "type": "WizardStep[]",
+        "required": true,
+        "default": null,
+        "description": "Ordered steps the wizard walks through; the last one is the submit step."
+      },
+      {
+        "name": "onComplete",
+        "type": "() => void",
+        "required": false,
+        "default": null,
+        "description": "Fires when the final step passes validation and the form is submitted."
+      },
+      {
+        "name": "currentIndex",
+        "type": "number",
+        "required": false,
+        "default": null,
+        "description": "Controlled active-step index. Pair with `onIndexChange`."
+      },
+      {
+        "name": "defaultIndex",
+        "type": "number",
+        "required": false,
+        "default": "0",
+        "description": "Uncontrolled initial active-step index."
+      },
+      {
+        "name": "onIndexChange",
+        "type": "(index: number) => void",
+        "required": false,
+        "default": null,
+        "description": "Fires with the next index on Back / Next / step-marker navigation."
+      },
+      {
+        "name": "accent",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Accent hex — progress fill, active marker, focus ring. Mirrors `--pb-violet`."
+      },
+      {
+        "name": "background",
+        "type": "string",
+        "required": false,
+        "default": "\"#0f0f10\"",
+        "description": "Card surface colour. Mirrors the site `--pb-ink` token."
+      },
+      {
+        "name": "backLabel",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": "\"Back\"",
+        "description": "Label for the back button."
+      },
+      {
+        "name": "nextLabel",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": "\"Continue\"",
+        "description": "Label for the advance button on non-final steps."
+      },
+      {
+        "name": "submitLabel",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": "\"Submit\"",
+        "description": "Label for the advance button on the final step."
+      }
+    ]
+  },
+  "bar-chart": {
+    "interface": "BarChartProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"title\">"
+    ],
+    "props": [
+      {
+        "name": "data",
+        "type": "BarChartDatum[]",
+        "required": false,
+        "default": "DEFAULT_DATA",
+        "description": "Bars to plot. Ships an 8-point default when omitted."
+      },
+      {
+        "name": "secondaryData",
+        "type": "BarChartDatum[]",
+        "required": false,
+        "default": null,
+        "description": "Optional second series drawn as a slimmer overlay bar centred in each slot. Matched to `data` by index; extra or missing points are ignored."
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "required": false,
+        "default": "\"Weekly volume\"",
+        "description": "Heading shown top-left of the card."
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Primary bar colour. Defaults to Parable violet `#8b5cf6` (mirrors the site's `--pb-violet` token)."
+      },
+      {
+        "name": "secondaryColor",
+        "type": "string",
+        "required": false,
+        "default": "\"#22d3ee\"",
+        "description": "Overlay bar colour. Defaults to Parable signal cyan `#22d3ee` (mirrors the site's `--pb-signal` token). Only used when `secondaryData` is set."
+      },
+      {
+        "name": "seriesLabel",
+        "type": "string",
+        "required": false,
+        "default": "\"Primary\"",
+        "description": "Legend name for the primary series."
+      },
+      {
+        "name": "secondaryLabel",
+        "type": "string",
+        "required": false,
+        "default": "\"Compare\"",
+        "description": "Legend name for the overlay series."
+      },
+      {
+        "name": "height",
+        "type": "number",
+        "required": false,
+        "default": "240",
+        "description": "Plot area height in pixels (excludes the header row)."
+      },
+      {
+        "name": "valueFormatter",
+        "type": "(n: number) => string",
+        "required": false,
+        "default": "compactNumber",
+        "description": "Formats headline total, tooltip, tick and aria values. Defaults to compact."
+      }
+    ]
+  },
+  "donut-chart": {
+    "interface": "DonutChartProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"onSelect\">"
+    ],
+    "props": [
+      {
+        "name": "data",
+        "type": "DonutChartDatum[]",
+        "required": true,
+        "default": null,
+        "description": "Slices to plot. Zero / negative values are dropped."
+      },
+      {
+        "name": "size",
+        "type": "number",
+        "required": false,
+        "default": "200",
+        "description": "Outer diameter of the ring in pixels. Defaults to 200."
+      },
+      {
+        "name": "thickness",
+        "type": "number",
+        "required": false,
+        "default": "26",
+        "description": "Ring stroke width in pixels (clamped to fit `size`). Defaults to 26."
+      },
+      {
+        "name": "centerLabel",
+        "type": "React.ReactNode",
+        "required": false,
+        "default": null,
+        "description": "Center content. Defaults to the formatted total with a \"Total\" caption."
+      },
+      {
+        "name": "valueFormatter",
+        "type": "(n: number) => string",
+        "required": false,
+        "default": "groupedInt",
+        "description": "Formats legend values, the center total and aria text. Defaults to grouped integers."
+      }
+    ]
+  },
+  "calendar-heatmap": {
+    "interface": "CalendarHeatmapProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"title\">"
+    ],
+    "props": [
+      {
+        "name": "data",
+        "type": "CalendarHeatmapDatum[]",
+        "required": false,
+        "default": null,
+        "description": "Per-day activity. Days absent from the list render as level 0 (empty)."
+      },
+      {
+        "name": "weeks",
+        "type": "number",
+        "required": false,
+        "default": "26",
+        "description": "Number of week columns to show (clamped 1–53). Defaults to 26."
+      },
+      {
+        "name": "colorScale",
+        "type": "string[]",
+        "required": false,
+        "default": null,
+        "description": "Exactly 5 colors, empty → most-active. Falls back to the violet ramp."
+      },
+      {
+        "name": "endDate",
+        "type": "string",
+        "required": false,
+        "default": "DEFAULT_END_DATE",
+        "description": "Last day of the grid, `YYYY-MM-DD`. Fixed constant by default so the grid is deterministic across SSR — pass your own \"today\" to make it live."
+      },
+      {
+        "name": "startWeekday",
+        "type": "number",
+        "required": false,
+        "default": "0",
+        "description": "Top-row weekday, Sunday = 0 … Saturday = 6. Defaults to Sunday."
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "required": false,
+        "default": "\"Contributions\"",
+        "description": "Heading shown top-left of the card."
+      }
+    ]
+  },
+  "kanban-board": {
+    "interface": "KanbanBoardProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"onChange\">"
+    ],
+    "props": [
+      {
+        "name": "columns",
+        "type": "KanbanColumn[]",
+        "required": false,
+        "default": null,
+        "description": "Columns and their cards. Ships a small default board when omitted."
+      },
+      {
+        "name": "onChange",
+        "type": "(columns: KanbanColumn[]) => void",
+        "required": false,
+        "default": null,
+        "description": "Fired with the next board after any move (drag drop or keyboard)."
+      }
+    ]
+  },
+  "image-zoom": {
+    "interface": "ImageZoomProps",
+    "extends": [],
+    "props": [
+      {
+        "name": "src",
+        "type": "string",
+        "required": true,
+        "default": null,
+        "description": "Image source. Used for both the inline frame and the lightbox."
+      },
+      {
+        "name": "alt",
+        "type": "string",
+        "required": true,
+        "default": null,
+        "description": "Alt text (required). Also names the lightbox dialog for assistive tech."
+      },
+      {
+        "name": "zoom",
+        "type": "number",
+        "required": false,
+        "default": "2",
+        "description": "Inner-zoom magnification while hovering/pressing the frame. Default `2`."
+      },
+      {
+        "name": "lightbox",
+        "type": "boolean",
+        "required": false,
+        "default": "true",
+        "description": "Whether clicking the frame opens the full-screen lightbox. Default `true`."
+      },
+      {
+        "name": "width",
+        "type": "number",
+        "required": false,
+        "default": null,
+        "description": "Intrinsic pixel width — set with `height` to reserve space (no CLS)."
+      },
+      {
+        "name": "height",
+        "type": "number",
+        "required": false,
+        "default": null,
+        "description": "Intrinsic pixel height — set with `width` to reserve space (no CLS)."
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "Extra classes on the frame element."
+      }
+    ]
+  },
+  "stepper": {
+    "interface": "StepperProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLOListElement>, \"onClick\">"
+    ],
+    "props": [
+      {
+        "name": "steps",
+        "type": "StepperStep[]",
+        "required": true,
+        "default": null,
+        "description": "Ordered steps to render."
+      },
+      {
+        "name": "current",
+        "type": "number",
+        "required": true,
+        "default": null,
+        "description": "Index of the active step. Steps before it read as complete, this one as current, later ones as upcoming. Pass `steps.length` to mark all complete."
+      },
+      {
+        "name": "orientation",
+        "type": "\"horizontal\" | \"vertical\"",
+        "required": false,
+        "default": "\"horizontal\"",
+        "description": "Layout axis. Defaults to `\"horizontal\"`."
+      },
+      {
+        "name": "onStepClick",
+        "type": "(index: number) => void",
+        "required": false,
+        "default": null,
+        "description": "When provided, completed and current steps become keyboard-operable buttons that fire with their index; upcoming steps stay inert."
+      },
+      {
+        "name": "accent",
+        "type": "string",
+        "required": false,
+        "default": "\"#8b5cf6\"",
+        "description": "Accent used for fills, checks and the current ring. Defaults to Parable violet `#8b5cf6` (mirrors the site `--pb-violet` token)."
+      }
+    ]
+  },
+  "skeleton": {
+    "interface": "SkeletonProps",
+    "extends": [
+      "Omit<React.HTMLAttributes<HTMLDivElement>, \"children\">"
+    ],
+    "props": [
+      {
+        "name": "variant",
+        "type": "SkeletonVariant",
+        "required": false,
+        "default": "\"rect\"",
+        "description": "Which placeholder shape to render. Defaults to `\"rect\"`."
+      },
+      {
+        "name": "width",
+        "type": "number | string",
+        "required": false,
+        "default": null,
+        "description": "Block width. Number → px, string passes through (e.g. `\"60%\"`)."
+      },
+      {
+        "name": "height",
+        "type": "number | string",
+        "required": false,
+        "default": null,
+        "description": "Block height. Number → px, string passes through."
+      },
+      {
+        "name": "radius",
+        "type": "number | string",
+        "required": false,
+        "default": null,
+        "description": "Corner radius. Number → px, string passes through."
+      },
+      {
+        "name": "lines",
+        "type": "number",
+        "required": false,
+        "default": "3",
+        "description": "For `variant=\"text\"`: how many lines to render (clamped 1–16)."
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "required": false,
+        "default": null,
+        "description": "When set, the placeholder becomes an accessible busy region (`role=\"status\" aria-busy`) announcing this label to assistive tech. Omitted, the whole placeholder is `aria-hidden` — purely decorative."
+      }
+    ]
+  }
+}
