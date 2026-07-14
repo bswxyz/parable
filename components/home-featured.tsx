@@ -12,10 +12,10 @@ const FEATURED_COMPONENTS = [
   "gravity-dots",
 ];
 const FEATURED_TEMPLATES = [
-  "formwork-neon",
-  "perigee-astro",
-  "aperture-lab",
-  "backstage-pass",
+  "fathom",
+  "glyphica",
+  "redoubt",
+  "conche",
 ];
 
 export function HomeFeatured() {

@@ -89,6 +89,11 @@ export function TemplateGallery() {
                 <span className="absolute left-2 top-2 rounded-md bg-background/80 px-1.5 py-0.5 font-mono text-[10px] uppercase tracking-wide backdrop-blur">
                   {tpl.family}
                 </span>
+                {tpl.isNew && (
+                  <span className="absolute right-2 top-2 rounded-md bg-foreground px-1.5 py-0.5 font-mono text-[10px] uppercase tracking-wide text-background shadow-sm">
+                    New
+                  </span>
+                )}
               </div>
               <div className="flex flex-1 flex-col p-4">
                 <div className="flex items-start justify-between gap-3">

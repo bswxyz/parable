@@ -20,6 +20,8 @@ export interface Template {
   degit: string;
   /** Thumbnail path under /public. */
   thumb: string;
+  /** Latest release — surfaces first in the gallery with a "New" badge. */
+  isNew?: boolean;
 }
 
 const gh = (slug: string) => `https://bswxyz.github.io/${slug}/`;
@@ -137,7 +139,12 @@ const EXPANSION: Template[] = [
   t("earshot", "Earshot", "Podcast network — scrub a rendered canvas waveform with a live playhead, then browse the episode timeline.", "parable", "next", ["next", "audio", "canvas"]),
 ];
 
-export const TEMPLATES: Template[] = [...FORMWORK, ...PARABLE, ...EXPANSION];
+// Newest release leads the gallery, badged "New"; earlier series follow.
+export const TEMPLATES: Template[] = [
+  ...EXPANSION.map((tpl) => ({ ...tpl, isNew: true })),
+  ...PARABLE,
+  ...FORMWORK,
+];
 
 export const TEMPLATE_STACKS: { key: TemplateStack | "all"; label: string }[] = [
   { key: "all", label: "All stacks" },
