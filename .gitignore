@@ -42,3 +42,6 @@ next-env.d.ts
 
 # parable
 /.vercel
+
+# local agent / editor config (not for publishing)
+.claude/
